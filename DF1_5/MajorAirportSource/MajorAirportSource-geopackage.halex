@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.0.0.release">
+    <name>END DF1_5 MajorAirportSource Sample Data Transformation</name>
+    <author>Thorsten Reitz (wetransform) for the European Environmental Agency</author>
+    <created>2020-12-28T14:08:47.226+01:00</created>
+    <modified>2021-01-31T21:31:32.891+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF1_5/MajorAirportSource/MajorAirportSource-geopackage.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF1_5/MajorAirportSource/MajorAirportSource.hsd.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">d68f042e-a1b8-4d88-982a-91166a2f0fba</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF1_5/MajorAirportSource/AT_Major_Airports.gdb/a00000001.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="C:/wetransform/Box Sync/staff/Projects/European Environmental Agency/2020-03 EEA END/DF1_5/MajorAirportSource/AT_Major_Airports.gdb/a00000001.gdbtable">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>3D Measured Point</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name>AT_Mair_Source</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name>OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name>Real</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name>String</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>1</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>3D Measured Point</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="geometry-metadata">
+                            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:property name="srsText">
+    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;,GEOGCS[&quot;ETRS89&quot;,DATUM[&quot;European_Terrestrial_Reference_System_1989&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]],PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;],PARAMETER[&quot;latitude_of_center&quot;,52],PARAMETER[&quot;longitude_of_center&quot;,10],PARAMETER[&quot;false_easting&quot;,4321000],PARAMETER[&quot;false_northing&quot;,3210000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+</core:property>
+<core:property name="srs">
+    <core:value value="3035"/>
+</core:property>
+<core:property name="authName">
+    <core:value value="EPSG"/>
+</core:property>
+<core:property name="dimension">
+    <core:value value="0"/>
+</core:property>
+                            </core:properties>
+                        </hsd:constraint>
+                        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Geometry"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name>AT_Mair_Source</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="0"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ICAOCode</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ReportingEntityUniqueCode</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>AirportName</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>AnnualTraffic</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name>OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name>Real</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Float"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name>String</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">0e717089-686f-4c84-aa76-d8f49e9d8360</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF1_5/MajorAirportSource/AT_Major_Airports.gdb/a00000001.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+    </resource>
+    <file name="alignment.xml" location="MajorAirportSource-geopackage.halex.alignment.xml"/>
+    <file name="styles.sld" location="MajorAirportSource-geopackage.halex.styles.sld"/>
+    <property name="defaultGeometry:AT_Mair_Source/1">Shape</property>
+    <property name="defaultGeometry:AT_Mair_Source/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorAirportSource/1">geometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorAirportSource/count">1</property>
+    <property name="defaultGeometry:{https://www.epsilon-italia.it/public/end/end_df710}QuietAreaType/1">{http://inspire.ec.europa.eu/schemas/am/4.0}geometry</property>
+    <property name="defaultGeometry:{https://www.epsilon-italia.it/public/end/end_df710}QuietAreaType/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
+    <property name="defaultGeometry:{https://www.epsilon-italia.it/public/end/end_df710}QuietAreaType/count">2</property>
+    <complex-property name="variables">
+        <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+            <core:property name="END_DATASET_NAMESPACE">
+                <core:value value="https://taskman.eionet.europa.eu/issues/127335/"/>
+            </core:property>
+        </core:properties>
+    </complex-property>
+</hale-project>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.0.0.release">
+    <name>END DF1_5 MajorRailwaySource Sample Data Transformation</name>
+    <author>Thorsten Reitz (wetransform) for the European Environmental Agency</author>
+    <created>2020-12-28T14:36:31.867+01:00</created>
+    <modified>2021-01-31T21:43:32.016+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF1_5/MajorRailwaySource/MajorRailwaySource-geopackage.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.geopackage.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">44ae70f7-3694-4e54-a6f7-d3981db81e61</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF1_5/MajorRailwaySource/20201228%20v1.0/MajorRailwaySource_EPSG3035_v1.0.20201118.gpkg</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.geopackage</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/gpkg">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRailwaySource</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRailwaySourceVoidables</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1 2 3</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>codelist</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>attribute</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>defaultValue</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRailwaySource</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>inspireId_localId</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inspireId_namespace</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inspireId_version</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>railName_localName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>railName_localNameLanguage</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>railName_nameEng</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>annualTrafficFlow</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>centrelineGeometry</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">LINESTRING</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;  DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;    SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;    TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;  AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="4258"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.LineString"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>railNationalCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>length</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>linkToReferenceDataset</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>linkToReferenceObject</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>railId_identifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRailwaySourceVoidables</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>beginLifespanVersion</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>validFrom</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>MajorRailwaySource_fid</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="onlyElementsMappable">true</setting>
+        <setting name="resourceId">d7af17c5-6289-4f00-a5a1-8c37ef08018e</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF1_5/MajorRailwaySource/MajorRailways/END-MajorRailways.xsd</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.gml.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">a7c7fc62-81b0-44c8-bd78-ef3415ba9c0c</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF1_5/MajorRailwaySource/MajorRailways/END-MajorRailways.gml</setting>
+        <setting name="interpolation.maxError">0.1</setting>
+        <setting name="interpolation.algorithm">segment</setting>
+        <setting name="ignoreNamespaces">false</setting>
+        <setting name="paginateRequest">true</setting>
+        <setting name="featuresPerWfsRequest">1000</setting>
+        <setting name="ignoreRoot">true</setting>
+        <setting name="ignoreNumberMatched">false</setting>
+        <setting name="interpolation.grid.moveAllToGrid">false</setting>
+        <setting name="strict">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
+    </resource>
+    <file name="alignment.xml" location="MajorRailwaySource-geopackage.halex.alignment.xml"/>
+    <file name="styles.sld" location="MajorRailwaySource-geopackage.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorRailwaySource/1">centrelineGeometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorRailwaySource/count">1</property>
+    <property name="defaultGeometry:{https://taskman.eionet.europa.eu/issues/113514/}MajorRailwaySourceType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}centrelineGeometry</property>
+    <property name="defaultGeometry:{https://taskman.eionet.europa.eu/issues/113514/}MajorRailwaySourceType/2">{http://www.opengis.net/gml/3.2/AbstractCurve}choice</property>
+    <property name="defaultGeometry:{https://taskman.eionet.europa.eu/issues/113514/}MajorRailwaySourceType/count">2</property>
+    <complex-property name="variables">
+        <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+            <core:property name="DP_NILREASON">
+                <core:value value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"/>
+            </core:property>
+        </core:properties>
+    </complex-property>
+</hale-project>

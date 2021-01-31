@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Cbbe38eee-c196-485d-9a67-2a80bd441223" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="1" name="number"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb082dfcb-0816-448a-9ee7-e999e29e1788" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="codelist"/>
+            </property>
+        </target>
+        <parameter value="http://dd.eionet.europa.eu/vocabulary/common/iso639-3" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cd5c4c060-a98e-45cf-be87-9dcee45a9fb3" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C26d18a21-d39b-49f7-860b-8284e205ae8c" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="propertyName"/>
+            </property>
+        </target>
+        <parameter value="roadName_localNameLanguage" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C3001e5b0-3b6a-4f9b-8719-bc55dc0f6c2c" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="tableName"/>
+            </property>
+        </target>
+        <parameter value="MajorRoadSource" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C5359efc2-63c8-4ad3-85ba-ba3a384690f4" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["MajorRoadSource", "inNetwork", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRoadSource", "validFrom", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRoadSource", "beginLifespanVersion", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRoadSource", "ficticious", null, false],&#xD;
+  ["MajorRoadSource", "roadId_identifierScheme", null, &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"]&#xD;
+]&#xD;
+  &#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute ( value[2] )&#xD;
+		defaultValue( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C4de7df1d-d350-4503-9f17-ea35b7e8acf8" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C4a11222d-d855-4777-9434-99c0eef1b095" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8135a8a9-b2d2-43a8-86da-4fd858f03970" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="EURoadId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="EuRoadId"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C29238e76-4fa1-4462-9325-1c77a1a5c721" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="AnnualTraf"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="annualTrafficFlow"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.geometric.aggregate" id="Cdc5f281d-c1b9-4092-b77f-aeeb1ef4e3d9" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="centrelineGeometry"/>
+            </property>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Caba8cba1-ef5c-4fee-8d6a-21a0cd0e3db7" priority="normal">
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C5eb68778-0e77-4528-b6ea-70e455a11dad" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="UnRoad_ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </target>
+        <parameter value="END_MajorRoadSource_{UnRoad_ID}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C54967d72-f60f-4316-94e7-eb958d02c1f5" priority="normal">
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </target>
+        <parameter value="{{project:END_DATASET_NAMESPACE}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C37d562a6-d329-4669-9e07-b4184024e873" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="Length"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="length"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4e8d4a4e-5b13-49a2-bd4d-9016ab17b7ea" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="UnRoad_ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadId_identifier"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cae82fc98-42a2-4273-b862-7f73479b3be1" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="National_1"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadName_localName"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C0bf79ef7-10c1-448f-8be9-3f5e89930a78" priority="normal">
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadName_localNameLanguage"/>
+            </property>
+        </target>
+        <parameter value="deu" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C2a3937fe-b46a-4a11-a680-d4008812c97e" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="National_1"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadName_nameEng"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.text.Normalizer;&#xD;
+&#xD;
+def inputName = National_1&#xD;
+&#xD;
+inputName = Normalizer.normalize(inputName, Normalizer.Form.NFD);&#xD;
+inputName = inputName.replaceAll("ß", "ss");&#xD;
+def resultString = inputName.replaceAll("[^\\x00-\\x7F]", "");&#xD;
+&#xD;
+return resultString;
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C53253b49-20f9-4334-9028-d237e39caa3c" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="NationalRo"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadNationalCode"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C51f39b16-c1a5-4ee3-96f3-60644a15b090" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Mroad" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C47c4fc3e-10a2-4b3b-8260-19cd1755755e" priority="normal">
+        <target>
+            <property>
+                <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="MajorRoadSource_fid"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cd9692ec9-6361-4ea3-bb3f-d1f79e5d303a" priority="normal">
+        <target name="result">
+            <property>
+                <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="beginLifespanVersion"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.time.Instant;&#xD;
+return Instant.parse("2020-01-01T00:00:00.00Z");
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cc2c13867-3088-4147-ac57-e612dcdd3155" priority="normal">
+        <target>
+            <property>
+                <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Caa68b6f9-613e-4788-b469-43d71ed71c2e" priority="normal">
+        <target name="result">
+            <property>
+                <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="validFrom"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.time.Instant;&#xD;
+return Instant.parse("2020-12-31T00:00:00.00Z");
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+</alignment>

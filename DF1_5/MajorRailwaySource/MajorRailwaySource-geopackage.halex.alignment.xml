@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C40c59b98-9185-4bef-936d-49aea5955245" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C9183e507-efce-4e7f-a77c-7ee1e507bf53" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="codelist"/>
+            </property>
+        </target>
+        <parameter value="http://dd.eionet.europa.eu/vocabulary/common/iso639-3" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cefd781b9-67b5-41ff-8e76-a3cd6acaafbd" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C26127293-00f1-4254-9f63-56f098bf4d4c" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="propertyName"/>
+            </property>
+        </target>
+        <parameter value="railName_localNameLanguage" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C9bad29ca-9459-4ece-bafd-2345fa92f9ef" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="tableName"/>
+            </property>
+        </target>
+        <parameter value="MajorRailwaySource" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C11b5a4dd-476a-4dc0-8ecb-503439120bab" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="1" name="number"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["MajorRailwaySource", "inNetwork", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRailwaySource", "validFrom", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRailwaySource", "beginLifespanVersion", "nilReason", _project.vars.DP_NILREASON],&#xD;
+  ["MajorRailwaySource", "ficticious", null, false],&#xD;
+  ["MajorRailwaySource", "railId_identifierScheme", null, "https://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"]&#xD;
+]&#xD;
+  &#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute (value[2])&#xD;
+		defaultValue( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Ca78ea600-6ae8-46a3-861c-af8804f146a7" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cd6e27ff0-91c8-4a93-8618-6149b5b5d221" priority="normal">
+        <source>
+            <class>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9bd24f6b-37c1-49d7-b50f-cecf70e9fc55" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="annualTrafficFlow" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="annualTrafficFlow"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C45dff942-94d9-4109-a1bc-472c75f1a0cd" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="centrelineGeometry" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractCurve"/>
+                <child name="LineString" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="centrelineGeometry"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.regexanalysisfunction" id="C4f1cf000-34f6-4be1-aa6f-37cfe957001c" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="{1}" name="outputFormat"/>
+        <parameter value="END_major_railway_([0-9]*)$" name="regexPattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8ddc059a-ed58-4926-9c4b-0fac7572d89a" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1aa56130-2518-455f-9bfa-6362167e444a" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccf4d50cd-89d7-42ec-ae56-b4f65fe26bc5" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="length" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="length"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2eb196fd-fe89-45ff-a7de-3d7d5daacd1c" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="linkToReferenceDataset" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="linkToReferenceDataset"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc1aa15ff-458d-4237-ba08-a93df9f317cd" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="linkToReferenceObject" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="linkToReferenceObject"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc2d23818-7cf7-4551-98e6-141aa279edb3" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="railId" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="ThematicIdentifier" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="identifier" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="railId_identifier"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbe9b1a35-75b9-4140-94ca-cfd3c4fc09f4" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="railName" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="localName" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="railName_localName"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C59f59d14-286a-469e-9845-5389f9b68f6f" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="railName" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="localNameLanguage" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="railName_localNameLanguage"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf38e2ab4-6044-47cb-a728-a4c889423956" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="railName" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="nameEng" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="railName_nameEng"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1be2c5f4-e15d-4896-b7e9-65aa3fca169b" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="railNationalCode" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="railNationalCode"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C59e45008-b81a-4340-8435-386569bf8326" priority="normal">
+        <source>
+            <class>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.regexanalysisfunction" id="C984ce338-08ce-4416-b828-b816714a5688" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="MajorRailwaySource_fid"/>
+            </property>
+        </target>
+        <parameter value="{1}" name="outputFormat"/>
+        <parameter value="END_major_railway_([0-9]*)$" name="regexPattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4188a307-ea34-487d-b080-08c1d0c6adfa" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="beginLifespanVersion" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="beginLifespanVersion"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.regexanalysisfunction" id="C684de498-58f8-4605-b982-6a5793c870c3" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="{1}" name="outputFormat"/>
+        <parameter value="END_major_railway_([0-9]*)$" name="regexPattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C552b1f65-65b0-4281-976c-20c023d2eba2" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRailwaySourceType" ns="https://taskman.eionet.europa.eu/issues/113514/"/>
+                <child name="validFrom" ns="http://inspire.ec.europa.eu/schemas/tn/4.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="validFrom"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+</alignment>

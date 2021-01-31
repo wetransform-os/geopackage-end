@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Cb1279684-8bd2-432a-b499-3d16dc078854" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cd0ed4a74-640b-4ce7-9460-92f46aaf81f9" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="codelist"/>
+            </property>
+        </target>
+        <parameter value="http://dd.eionet.europa.eu/vocabulary/common/iso639-3" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C2e2fc256-cdff-4933-9158-b5fa3c71d690" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C612314e4-e20d-4b7a-a5fa-5daf65c2c652" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="propertyName"/>
+            </property>
+        </target>
+        <parameter value="airportName_localNameLanguage" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C3ddc2942-1440-4fcc-b8fa-9b3dc045b42b" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="tableName"/>
+            </property>
+        </target>
+        <parameter value="MajorAirportSource" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Ca8c9fc16-1043-4ddb-b178-5db3c173b4af" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C04a83110-7941-4d7e-88fc-2d6c9fcccabf" priority="normal">
+        <source>
+            <class>
+                <type name="AT_Mair_Source"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca964b268-ab66-4944-a49b-95df514a6b5a" priority="normal">
+        <source>
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="ICAOCode"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="ICAOCode"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3201102d-e403-423e-b063-824246ae952f" priority="normal">
+        <source>
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="AirportName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="airportName_localName"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C67291702-0923-45fd-b5b5-e7923d651167" priority="normal">
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="airportName_localNameLanguage"/>
+            </property>
+        </target>
+        <parameter value="deu" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbf2b0c9d-a7e6-41c7-975a-94969e395092" priority="normal">
+        <source>
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="AirportName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="airportName_nameEng"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7667f866-dd74-4208-87e1-16b509164508" priority="normal">
+        <source>
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="AnnualTraffic"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="annualTrafficFlow"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3d621b81-953c-4b41-8988-22dd1c8fe53d" priority="normal">
+        <source>
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="Shape"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="geometry"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C60b3fd2f-2448-46ab-9bad-4d8248d98f23" priority="normal">
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C18c715f6-b5e3-4bf2-9e4a-75c7cffb2c26" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_Mair_Source"/>
+                <child name="ICAOCode"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </target>
+        <parameter value="MajorAirportSource_{ICAOCode}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C998c9b65-51ca-49a6-a49d-95ea15d8035e" priority="normal">
+        <target>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </target>
+        <parameter value="{{project:END_DATASET_NAMESPACE}}" name="value"/>
+    </cell>
+</alignment>
