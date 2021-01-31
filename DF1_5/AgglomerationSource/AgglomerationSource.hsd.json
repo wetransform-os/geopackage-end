@@ -259,7 +259,7 @@
 							}
 						},
 						{
-							"name": "inspireId_version",
+							"name": "inspireId_versionId",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -411,7 +411,7 @@
 						{
 							"name": "zoneType",
 							"constraints": {
-								"cardinality": "0..1",
+								"cardinality": "1..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -429,7 +429,7 @@
 						{
 							"name": "specialisedZoneType",
 							"constraints": {
-								"cardinality": "0..1",
+								"cardinality": "1..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -447,7 +447,7 @@
 						{
 							"name": "environmentalDomain",
 							"constraints": {
-								"cardinality": "0..1",
+								"cardinality": "1..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},

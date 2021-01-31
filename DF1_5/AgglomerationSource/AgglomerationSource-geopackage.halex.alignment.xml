@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C52b9688d-5bf7-4cda-9f73-780bb9544f08" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce7a4106a-30de-4183-9394-88f8a6c6cd10" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="UniqueAggl"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationId_identifier"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb87a6741-30bd-4687-94a0-4997637dfda3" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="Agglomerat"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_localName"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C066c3ca0-00d4-4234-bd8b-350607741dcf" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_localNameLanguage"/>
+            </property>
+        </target>
+        <parameter value="deu" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C94801634-59c4-4074-8a80-1e6b2c86cae1" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="Agglomerat"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_nameEng"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.text.Normalizer;&#xD;
+&#xD;
+def inputName = Agglomerat&#xD;
+&#xD;
+inputName = Normalizer.normalize(inputName, Normalizer.Form.NFD);&#xD;
+inputName = inputName.replaceAll("ß", "ss");&#xD;
+def resultString = inputName.replaceAll("[^\\x00-\\x7F]", "");&#xD;
+&#xD;
+return resultString;
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Ce1c268e9-6748-4dd3-9475-f7e79e392337" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="environmentalDomain"/>
+            </property>
+        </target>
+        <parameter value="noise" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cce7ca6d9-5197-4047-aacd-05e09b6c8e8f" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="geometry"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def sourceCRS = _.geom.find(the_geom).getCRSDefinition()&#xD;
+def geoms = _.geom.findPolygons(the_geom)&#xD;
+&#xD;
+_log.info("original geometry: " + geoms[0])&#xD;
+&#xD;
+// go through posList to remove z ordinate if required&#xD;
+geoms.each {&#xD;
+  value -&gt;&#xD;
+	def coordinateList = value.geometry.getCoordinates()&#xD;
+	coordinateList.each {&#xD;
+	  coordinate -&gt;&#xD;
+	  	if (coordinate.getOrdinate(2) != com.vividsolutions.jts.geom.Coordinate.NULL_ORDINATE) {&#xD;
+			coordinate.setOrdinate(2, com.vividsolutions.jts.geom.Coordinate.NULL_ORDINATE)&#xD;
+		}&#xD;
+	}&#xD;
+}&#xD;
+&#xD;
+_log.info("modified geometry: " + geoms[0])&#xD;
+&#xD;
+return geoms
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C8bc7e92a-9ca4-46ce-ba91-5bb9d1995f34" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cd35b2442-edea-4ba8-98fb-cb287775a813" priority="normal">
+        <source name="var">
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="UnAggID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </target>
+        <parameter value="AgglomerationSource_{UnAggID}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C403db2f5-b776-47c6-876d-acebea134b6b" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </target>
+        <parameter value="{{project:END_DATASET_NAMESPACE}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc726096b-8af4-4b11-8b95-a005e3743e21" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="NumberofIn"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="numberOfInhabitants"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce8f84fe0-eba9-4455-8d88-b21a6201d93b" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="Size"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="size"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C0b5b328f-242e-4b2e-8da0-18068c746309" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="specialisedZoneType"/>
+            </property>
+        </target>
+        <parameter value="ENDAgglomeration" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Ce99165e9-75ef-4737-a0e0-d0715bbc3839" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="zoneType"/>
+            </property>
+        </target>
+        <parameter value="noiseRestrictionZone" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C88b4fafc-87fa-45a9-abf0-f140c13cfeb0" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C3626f302-46af-467a-bac5-2fdf5d646436" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="MajorRoadSource_fid"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cbd686a37-9b5a-4544-92c4-38e2c262453e" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="Cc393ef7f-7316-4157-bcd4-01c54631fb39" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def codelistProperties = [&#xD;
+  ["AgglomerationSource", "environmentalDomain", &#xD;
+  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain"],&#xD;
+  ["AgglomerationSource", "specialisedZoneType", &#xD;
+  "https://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
+  ["AgglomerationSource", "zoneType", &#xD;
+  "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"],&#xD;
+  ["AgglomerationSource", "agglomerationName_localNameLanguage", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"]&#xD;
+]&#xD;
+  &#xD;
+codelistProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName ( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		codelist ( value[2] )&#xD;
+	}&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C05d14c56-752f-496f-9f17-7c78e08fa033" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["AgglomerationSource", "agglomerationId_identifierScheme", null, &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"],&#xD;
+  ["AgglomerationSource", "zoneType", "href", &#xD;
+  "http://inspire.ec.europa.eu/codelist/ZoneTypeCode/noiseRestrictionZone"],&#xD;
+  ["AgglomerationSource", "specialisedZoneType", "href", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode/ENDAgglomeration"],&#xD;
+  ["AgglomerationSource", "environmentalDomain", "href",&#xD;
+  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain"],&#xD;
+  ["AgglomerationSource", "designationPeriod","nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["AgglomerationSource", "competentAuthority",	"nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["AgglomerationSource", "legalBasis", "href", &#xD;
+  "http://data.europa.eu/eli/dir/2002/49/oj"],&#xD;
+  ["AgglomerationSource", "beginLifespanVersion", "nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+]&#xD;
+  &#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName ( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute ( value[2] )&#xD;
+		defaultValue ( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C20a9aab9-5a69-4170-a9f1-af155ddef1f5" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+</alignment>
