@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.0.0.release">
+    <name>Create DF7_10 Geopackage Template for Quiet Areas</name>
+    <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
+    <created>2020-11-16T13:09:02.510+01:00</created>
+    <modified>2021-02-07T10:54:45.808+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF7_10/QuietAreas/QuietAreas-geopackage.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF7_10/QuietAreas/QuietAreas.hsd.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <file name="alignment.xml" location="QuietAreas-geopackage.halex.alignment.xml"/>
+    <file name="styles.sld" location="QuietAreas-geopackage.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/1">{http://inspire.ec.europa.eu/schemas/hh/4.0}location</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/count">2</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}AgglomerationSource/1">geometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}AgglomerationSource/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}QuietArea/1">geometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}QuietArea/count">1</property>
+</hale-project>

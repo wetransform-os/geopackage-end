@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C114b948f-5fde-4a73-b9ad-c8e96ae41d2b" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def codelistProperties = [&#xD;
+  ["QuietArea", "quietAreaDocumentation_citationType", "http://dd.eionet.europa.eu/vocabulary/inspire/CitationTypeValue"],&#xD;
+  ["QuietArea", "protectionFrom", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["QuietArea", "specialisedZoneType", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
+  ["QuietArea", "zoneType", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"]&#xD;
+]&#xD;
+&#xD;
+codelistProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		codelist ( value[2] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["QuietAreaVoidables", "designationPeriod_beginPosition", null, "2022-12-31T23:00:00.000"],&#xD;
+  ["QuietAreaVoidables", "designationPeriod_endPosition", null, "2027-12-30T23:00:00.000"],&#xD;
+  ["QuietAreaVoidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+]&#xD;
+&#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute ( value[2] )&#xD;
+		defaultValue( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C696765c7-9f2f-4626-bd4c-a6eee47e3f41" priority="normal">
+        <target>
+            <class>
+                <type name="QuietArea" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C5fcfe56e-2dec-4e24-a881-e50f3eb54529" priority="normal">
+        <target>
+            <class>
+                <type name="QuietAreaVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+</alignment>
