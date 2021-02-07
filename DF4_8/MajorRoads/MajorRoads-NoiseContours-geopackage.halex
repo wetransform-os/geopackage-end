@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.0.0.release">
+    <name>Create DF4_8 Geopackage Template for Major Roads</name>
+    <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
+    <created>2020-11-16T13:09:02.510+01:00</created>
+    <modified>2021-02-07T09:58:03.551+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/MajorRoads-NoiseContours-geopackage.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/DF4_8-MajorRoads.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <file name="alignment.xml" location="MajorRoads-NoiseContours-geopackage.halex.alignment.xml"/>
+    <file name="styles.sld" location="MajorRoads-NoiseContours-geopackage.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/1">{http://inspire.ec.europa.eu/schemas/hh/4.0}location</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/2">{http://www.opengis.net/gml/3.2/AbstractGeometry}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/hh/4.0}EnvHealthDeterminantNoiseMeasureType/count">2</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}AgglomerationSource/1">geometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}AgglomerationSource/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/count">1</property>
+</hale-project>

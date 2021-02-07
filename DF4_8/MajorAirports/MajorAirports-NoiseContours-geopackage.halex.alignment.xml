@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C114b948f-5fde-4a73-b9ad-c8e96ae41d2b" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def codelistProperties = [&#xD;
+  ["NoiseContours", "source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue"],&#xD;
+  ["NoiseContours", "category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
+  ["NoiseContours", "category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"],&#xD;
+  ["ExposureMajorRoad", "reportingLevel", "http://dd.eionet.europa.eu/vocabulary/noise/ReportingLevelValue"],&#xD;
+  ["ExposureMajorRoad", "exposureValue_exposureType", "http://dd.eionet.europa.eu/vocabulary/noise/ExposureTypeValue"],&#xD;
+  ["ExposureMajorRoad", "exposureValue_noiseLevel", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
+  ["ExposureMajorRoad", "exposureValue_noiseLevel", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"]&#xD;
+]&#xD;
+&#xD;
+codelistProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		codelist ( value[2] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["NoiseContours", "type", null, "http://inspire.ec.europa.eu/codelist/EnvHealthDeterminantTypeValue/noise"],&#xD;
+  ["NoiseContours", "measureTime", "beginPosition", "01.01.2021"],&#xD;
+  ["NoiseContours", "measureTime", "endPosition", "31.12.2021"],&#xD;
+  ["NoiseContoursVoidables", "validFrom", null, "2022-12-31T23:00:00.000"],&#xD;
+  ["NoiseContoursVoidables", "validTo", null, "2027-12-30T23:00:00.000"],&#xD;
+  ["NoiseContoursVoidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+]&#xD;
+&#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute ( value[2] )&#xD;
+		defaultValue( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C1caf77a3-f6a3-4335-a127-623e0424599a" priority="normal">
+        <target>
+            <class>
+                <type name="ESTATUnitReference" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C2dff1437-4681-46c5-b8e0-79de5594eb41" priority="normal">
+        <target>
+            <class>
+                <type name="ExposureMajorAirport" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Caddbf62d-9996-4473-97e4-35263019595f" priority="normal">
+        <target>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C50e80041-9b16-4543-9753-02d1a4e52942" priority="normal">
+        <target>
+            <class>
+                <type name="NoiseContoursVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Cc1d67f09-ec93-4049-a62d-4756b96f7b6f" priority="normal">
+        <target>
+            <class>
+                <type name="NoiseContours_majorAirportsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C60cc3f68-c84e-4288-b54f-ee83e196f730" priority="normal">
+        <target>
+            <class>
+                <type name="NoiseContours_majorAirportsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+</alignment>
