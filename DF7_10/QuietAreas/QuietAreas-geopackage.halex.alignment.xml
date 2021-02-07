@@ -9,7 +9,7 @@
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def codelistProperties = [&#xD;
-  ["QuietArea", "quietAreaDocumentation_citationType", "http://dd.eionet.europa.eu/vocabulary/inspire/CitationTypeValue"],&#xD;
+  ["QuietAreaDocumentation", "citationType", "http://dd.eionet.europa.eu/vocabulary/inspire/CitationTypeValue"],&#xD;
   ["QuietArea", "protectionFrom", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
   ["QuietArea", "specialisedZoneType", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
   ["QuietArea", "zoneType", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"]&#xD;
@@ -56,6 +56,13 @@ dataSetProperties.each {&#xD;
         <target>
             <class>
                 <type name="QuietArea" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="Ca2978d7a-3dd2-49f2-8391-4c0db0e9a64b" priority="normal">
+        <target>
+            <class>
+                <type name="QuietAreaDocumentation" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
             </class>
         </target>
     </cell>
