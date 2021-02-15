@@ -3,7 +3,7 @@
     <name>END DF1_5 MajorAirportSource Sample Data Transformation</name>
     <author>Thorsten Reitz (wetransform) for the European Environmental Agency</author>
     <created>2020-12-28T14:08:47.226+01:00</created>
-    <modified>2021-01-31T21:31:32.891+01:00</modified>
+    <modified>2021-02-15T08:41:32.260+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>

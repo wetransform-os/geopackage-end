@@ -166,28 +166,4 @@
         <parameter value="type" name="sequence"/>
         <parameter value="" name="suffix"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C18c715f6-b5e3-4bf2-9e4a-75c7cffb2c26" priority="normal">
-        <source name="var">
-            <property>
-                <type name="AT_Mair_Source"/>
-                <child name="ICAOCode"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="inspireId_localId"/>
-            </property>
-        </target>
-        <parameter value="MajorAirportSource_{ICAOCode}" name="pattern"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="C998c9b65-51ca-49a6-a49d-95ea15d8035e" priority="normal">
-        <target>
-            <property>
-                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="inspireId_namespace"/>
-            </property>
-        </target>
-        <parameter value="{{project:END_DATASET_NAMESPACE}}" name="value"/>
-    </cell>
 </alignment>
