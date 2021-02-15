@@ -241,7 +241,7 @@ return geoms
         <target>
             <property>
                 <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="MajorRoadSource_fid"/>
+                <child name="AgglomerationSource_fid"/>
             </property>
         </target>
         <parameter value="" name="prefix"/>
@@ -275,7 +275,9 @@ def codelistProperties = [&#xD;
   ["AgglomerationSource", "zoneType", &#xD;
   "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"],&#xD;
   ["AgglomerationSource", "agglomerationName_localNameLanguage", &#xD;
-  "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"]&#xD;
+  "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
+  ["AgglomerationSource", "agglomerationId_identifierScheme", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"]&#xD;
 ]&#xD;
   &#xD;
 codelistProperties.each {&#xD;
@@ -306,7 +308,7 @@ def dataSetProperties = [&#xD;
   ["AgglomerationSource", "specialisedZoneType", "href", &#xD;
   "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode/ENDAgglomeration"],&#xD;
   ["AgglomerationSource", "environmentalDomain", "href",&#xD;
-  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain"],&#xD;
+  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain/noise"],&#xD;
   ["AgglomerationSource", "designationPeriod","nilReason", &#xD;
   "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
   ["AgglomerationSource", "competentAuthority",	"nilReason", &#xD;
