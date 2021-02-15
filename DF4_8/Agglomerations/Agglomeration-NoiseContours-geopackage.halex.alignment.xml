@@ -8,6 +8,19 @@
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def ncLayers = [&#xD;
+  "NoiseContours_roadsInAgglomeration_Lden",&#xD;
+  "NoiseContours_roadsInAgglomeration_Lnight",&#xD;
+  "NoiseContours_railwaysInAgglomeration_Lden",&#xD;
+  "NoiseContours_railwaysInAgglomeration_Lnight",&#xD;
+  "NoiseContours_airportsInAgglomeration_Lden",&#xD;
+  "NoiseContours_airportsInAgglomeration_Lnight",&#xD;
+  "NoiseContours_industryInAgglomeration_Lden",&#xD;
+  "NoiseContours_industryInAgglomeration_Lnight",&#xD;
+  "NoiseContours_allSourcesInAgglomeration_Lden",&#xD;
+  "NoiseContours_allSourcesInAgglomeration_Lnight"&#xD;
+]&#xD;
+&#xD;
 def codelistProperties = [&#xD;
   ["NoiseContours", "source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue"],&#xD;
   ["NoiseContours", "category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
@@ -28,6 +41,17 @@ codelistProperties.each {&#xD;
 }
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C69f2b826-c494-4de4-a782-3187810c4e83" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
         <target>
@@ -57,6 +81,17 @@ dataSetProperties.each {&#xD;
 }
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C341fef8a-b632-473d-b6dc-152a45001153" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.create" id="C1caf77a3-f6a3-4335-a127-623e0424599a" priority="normal">
         <target>

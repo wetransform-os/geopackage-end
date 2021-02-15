@@ -362,7 +362,7 @@
 									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
 									"geometry-metadata": {
 										"@type": "properties",
-										"@value": {"srsText":"GEOGCS[\"ETRS89\", \r\n  DATUM[\"European Terrestrial Reference System 1989\", \r\n    SPHEROID[\"GRS 1980\", 6378137.0, 298.257222101, AUTHORITY[\"EPSG\",\"7019\"]], \r\n    TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \r\n    AUTHORITY[\"EPSG\",\"6258\"]], \r\n  PRIMEM[\"Greenwich\", 0.0, AUTHORITY[\"EPSG\",\"8901\"]], \r\n  UNIT[\"degree\", 0.017453292519943295], \r\n  AXIS[\"Geodetic latitude\", NORTH], \r\n  AXIS[\"Geodetic longitude\", EAST], \r\n  AUTHORITY[\"EPSG\",\"4258\"]]","srs":"4258","authName":"EPSG","dimension":0}
+										"@value": {"srsText":"PROJCS[\"ETRS89 / LAEA Europe\",GEOGCS[\"ETRS89\",DATUM[\"European_Terrestrial_Reference_System_1989\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6258\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4258\"]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",52],PARAMETER[\"longitude_of_center\",10],PARAMETER[\"false_easting\",4321000],PARAMETER[\"false_northing\",3210000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AUTHORITY[\"EPSG\",\"3035\"]]","srs":"3035","authName":"EPSG","dimension":0}
 
 									},
 									"geometry-type": "org.locationtech.jts.geom.LineString",
@@ -524,7 +524,7 @@
 								"name": "TEXT",
 								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
 								"constraints": {
-									"binding": "java.lang.Long",
+									"binding": "java.lang.String",
 									"has-value": true,
 									"mappable": false,
 									"mapping-relevant": false
