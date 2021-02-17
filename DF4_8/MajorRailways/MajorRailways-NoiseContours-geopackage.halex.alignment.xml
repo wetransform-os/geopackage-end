@@ -51,6 +51,17 @@ otherCodelistProperties.each {&#xD;
 </core:text>
         </complexParameter>
     </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C5e2804b4-438b-4c25-a086-45cbaac0c927" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
         <target>
             <class>
@@ -103,6 +114,17 @@ dataSetPropertiesVoidables.each {&#xD;
 
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cc8be8b41-1d8c-4649-a12b-8f4c81b53946" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.create" id="C1caf77a3-f6a3-4335-a127-623e0424599a" priority="normal">
         <target>
