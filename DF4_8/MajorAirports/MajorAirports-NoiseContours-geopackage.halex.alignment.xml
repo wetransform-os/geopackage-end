@@ -8,17 +8,36 @@
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-def codelistProperties = [&#xD;
-  ["NoiseContours", "source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue"],&#xD;
-  ["NoiseContours", "category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
-  ["NoiseContours", "category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"],&#xD;
-  ["ExposureMajorRoad", "reportingLevel", "http://dd.eionet.europa.eu/vocabulary/noise/ReportingLevelValue"],&#xD;
-  ["ExposureMajorRoad", "exposureValue_exposureType", "http://dd.eionet.europa.eu/vocabulary/noise/ExposureTypeValue"],&#xD;
-  ["ExposureMajorRoad", "exposureValue_noiseLevel", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
-  ["ExposureMajorRoad", "exposureValue_noiseLevel", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"]&#xD;
+def ncLayers = [&#xD;
+  "NoiseContours_majorAirportsIncludingAgglomeration_Lden",&#xD;
+  "NoiseContours_majorAirportsIncludingAgglomeration_Lnight"&#xD;
 ]&#xD;
 &#xD;
-codelistProperties.each {&#xD;
+def ncLayersCodelistProperties = [&#xD;
+  ["source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
+  ["category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"],&#xD;
+]&#xD;
+&#xD;
+ncLayers.each {&#xD;
+  valueLayer -&gt;&#xD;
+  	ncLayersCodelistProperties.each {&#xD;
+  	  value -&gt;&#xD;
+		_target {&#xD;
+		    tableName( valueLayer )&#xD;
+			propertyName ( value[0] )&#xD;
+			codelist ( value[1] )&#xD;
+		}&#xD;
+	}&#xD;
+}&#xD;
+&#xD;
+def otherCodelistProperties = [&#xD;
+  ["ExposureMajorAirport", "noiseSource", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["ExposureValue", "exposureType", "http://dd.eionet.europa.eu/vocabulary/noise/ExposureTypeInAgglomerationValue"],&#xD;
+  ["ExposureValue", "noiseLevel", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"]&#xD;
+]&#xD;
+&#xD;
+otherCodelistProperties.each {&#xD;
   value -&gt;&#xD;
 	_target {&#xD;
 	    tableName( value[0] )&#xD;
@@ -29,6 +48,17 @@ codelistProperties.each {&#xD;
 </core:text>
         </complexParameter>
     </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cc74fc596-ed62-4ab6-adf2-e7faacf562d6" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
         <target>
             <class>
@@ -37,16 +67,39 @@ codelistProperties.each {&#xD;
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-def dataSetProperties = [&#xD;
-  ["NoiseContours", "type", null, "http://inspire.ec.europa.eu/codelist/EnvHealthDeterminantTypeValue/noise"],&#xD;
-  ["NoiseContours", "measureTime", "beginPosition", "01.01.2021"],&#xD;
-  ["NoiseContours", "measureTime", "endPosition", "31.12.2021"],&#xD;
-  ["NoiseContoursVoidables", "validFrom", null, "2022-12-31T23:00:00.000"],&#xD;
-  ["NoiseContoursVoidables", "validTo", null, "2027-12-30T23:00:00.000"],&#xD;
-  ["NoiseContoursVoidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+def ncTables = [&#xD;
+  "NoiseContours_majorAirportsIncludingAgglomeration_Lden",&#xD;
+  "NoiseContours_majorAirportsIncludingAgglomeration_Lnight"&#xD;
 ]&#xD;
 &#xD;
-dataSetProperties.each {&#xD;
+def dataSetPropertiesNC = [&#xD;
+  ["href", "href", "http://inspire.ec.europa.eu/codelist/EnvHealthDeterminantTypeValue/noise"],&#xD;
+  ["measureTime_beginPosition", null, "01.01.2021"],&#xD;
+  ["measureTime_endPosition", null, "31.12.2021"]&#xD;
+]&#xD;
+&#xD;
+&#xD;
+ncTables.each {&#xD;
+  valueTable -&gt;&#xD;
+  	dataSetPropertiesNC.each {&#xD;
+  	  value -&gt;&#xD;
+		_target {&#xD;
+		    tableName( valueTable )&#xD;
+			propertyName ( value[0] )&#xD;
+			attribute ( value[1] )&#xD;
+			defaultValue ( value[2] )&#xD;
+		}&#xD;
+	}&#xD;
+}&#xD;
+&#xD;
+&#xD;
+def dataSetPropertiesVoidables = [&#xD;
+  ["Voidables", "validFrom", null, "2022-12-31T23:00:00.000"],&#xD;
+  ["Voidables", "validTo", null, "2027-12-30T23:00:00.000"],&#xD;
+  ["Voidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+]&#xD;
+&#xD;
+dataSetPropertiesVoidables.each {&#xD;
   value -&gt;&#xD;
 	_target {&#xD;
 	    tableName( value[0] )&#xD;
@@ -54,9 +107,21 @@ dataSetProperties.each {&#xD;
 		attribute ( value[2] )&#xD;
 		defaultValue( value[3] )&#xD;
 	}&#xD;
-}
+}&#xD;
+
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Ca289f8b7-1a9e-46a4-8cf6-b3fba31e175d" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.create" id="C1caf77a3-f6a3-4335-a127-623e0424599a" priority="normal">
         <target>
@@ -79,13 +144,6 @@ dataSetProperties.each {&#xD;
             </class>
         </target>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.create" id="C50e80041-9b16-4543-9753-02d1a4e52942" priority="normal">
-        <target>
-            <class>
-                <type name="NoiseContoursVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-            </class>
-        </target>
-    </cell>
     <cell relation="eu.esdihumboldt.hale.align.create" id="Cc1d67f09-ec93-4049-a62d-4756b96f7b6f" priority="normal">
         <target>
             <class>
@@ -97,6 +155,13 @@ dataSetProperties.each {&#xD;
         <target>
             <class>
                 <type name="NoiseContours_majorAirportsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.create" id="C50e80041-9b16-4543-9753-02d1a4e52942" priority="normal">
+        <target>
+            <class>
+                <type name="Voidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
             </class>
         </target>
     </cell>
