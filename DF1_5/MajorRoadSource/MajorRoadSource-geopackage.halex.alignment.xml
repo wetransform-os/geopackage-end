@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
-    <cell relation="eu.esdihumboldt.hale.align.create" id="Cbbe38eee-c196-485d-9a67-2a80bd441223" priority="normal">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="Cbbe38eee-c196-485d-9a67-2a80bd441223" priority="normal">
         <target>
             <class>
                 <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
             </class>
         </target>
         <parameter value="1" name="number"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb082dfcb-0816-448a-9ee7-e999e29e1788" priority="normal">
-        <target>
-            <property>
-                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="codelist"/>
-            </property>
-        </target>
-        <parameter value="http://dd.eionet.europa.eu/vocabulary/common/iso639-3" name="value"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def codelistProperties = [&#xD;
+  ["MajorRoadSource", "roadName_localNameLanguage", "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
+  ["MajorRoadSource", "roadId_identifierScheme", "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"]&#xD;
+]&#xD;
+&#xD;
+codelistProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+		tableName( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		codelist ( value[2] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cd5c4c060-a98e-45cf-be87-9dcee45a9fb3" priority="normal">
         <target>
@@ -27,24 +35,6 @@
         <parameter value="" name="prefix"/>
         <parameter value="type" name="sequence"/>
         <parameter value="" name="suffix"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="C26d18a21-d39b-49f7-860b-8284e205ae8c" priority="normal">
-        <target>
-            <property>
-                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="propertyName"/>
-            </property>
-        </target>
-        <parameter value="roadName_localNameLanguage" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="C3001e5b0-3b6a-4f9b-8719-bc55dc0f6c2c" priority="normal">
-        <target>
-            <property>
-                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="tableName"/>
-            </property>
-        </target>
-        <parameter value="MajorRoadSource" name="value"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C5359efc2-63c8-4ad3-85ba-ba3a384690f4" priority="normal">
         <target>

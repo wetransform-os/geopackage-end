@@ -3,7 +3,7 @@
     <name>END DF1_5 MajorRoadSource Sample Data Transformation</name>
     <author>Thorsten Reitz (wetransform) for the European Environmental Agency</author>
     <created>2020-12-28T17:10:26.792+01:00</created>
-    <modified>2021-01-31T22:11:45.612+01:00</modified>
+    <modified>2021-02-18T21:32:08.003+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
