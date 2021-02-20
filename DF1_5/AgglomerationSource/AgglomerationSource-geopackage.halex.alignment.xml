@@ -83,14 +83,44 @@ return resultString;
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Ce1c268e9-6748-4dd3-9475-f7e79e392337" priority="normal">
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="C05c6d5a7-764e-4abc-bd2a-5d4338135232" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Agg_Areas" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="UnAggID"/>
+            </property>
+        </source>
         <target>
             <property>
                 <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="environmentalDomain"/>
+                <child name="applicableSource"/>
             </property>
         </target>
-        <parameter value="noise" name="value"/>
+        <complexParameter name="lookupTable">
+            <lookup-table xmlns:ns2="http://www.esdi-humboldt.eu/hale/alignment" xmlns="">
+                <entry>
+                    <key value="AT_a_ag0001"/>
+                    <value value="agglomerationAir, agglomerationIndustry, agglomerationRoad,agglomerationRailway,agglomerationMajorRoad,agglomerationMajorRailway,agglomerationMajorAirport"/>
+                </entry>
+                <entry>
+                    <key value="AT_a_ag0002"/>
+                    <value value="agglomerationAir, agglomerationIndustry,agglomerationRoad,agglomerationMajorRoad,agglomerationMajorAirport"/>
+                </entry>
+                <entry>
+                    <key value="AT_a_ag0003"/>
+                    <value value="agglomerationRoad"/>
+                </entry>
+                <entry>
+                    <key value="AT_a_ag0004"/>
+                    <value value="agglomerationRoad,agglomerationRailway,agglomerationMajorRoad"/>
+                </entry>
+                <entry>
+                    <key value="AT_a_ag0005"/>
+                    <value value="agglomerationIndustry,agglomerationRoad,agglomerationMajorRoad"/>
+                </entry>
+            </lookup-table>
+        </complexParameter>
+        <parameter value="null" name="notClassifiedAction"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cce7ca6d9-5197-4047-aacd-05e09b6c8e8f" priority="normal">
         <source name="var">
@@ -205,24 +235,6 @@ return geoms
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="C0b5b328f-242e-4b2e-8da0-18068c746309" priority="normal">
-        <target>
-            <property>
-                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="specialisedZoneType"/>
-            </property>
-        </target>
-        <parameter value="ENDAgglomeration" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Ce99165e9-75ef-4737-a0e0-d0715bbc3839" priority="normal">
-        <target>
-            <property>
-                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="zoneType"/>
-            </property>
-        </target>
-        <parameter value="noiseRestrictionZone" name="value"/>
-    </cell>
     <cell relation="eu.esdihumboldt.hale.align.retype" id="C88b4fafc-87fa-45a9-abf0-f140c13cfeb0" priority="normal">
         <source>
             <class>
@@ -277,7 +289,9 @@ def codelistProperties = [&#xD;
   ["AgglomerationSource", "agglomerationName_localNameLanguage", &#xD;
   "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
   ["AgglomerationSource", "agglomerationId_identifierScheme", &#xD;
-  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"]&#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"],&#xD;
+  ["AgglomerationSource", "applicableSource", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"]&#xD;
 ]&#xD;
   &#xD;
 codelistProperties.each {&#xD;
