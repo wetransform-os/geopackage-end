@@ -325,7 +325,7 @@ def dataSetProperties = [&#xD;
   "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain/noise"],&#xD;
   ["AgglomerationSource", "designationPeriod","nilReason", &#xD;
   "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
-  ["AgglomerationSource", "competentAuthority",	"nilReason", &#xD;
+  ["AgglomerationSource", "competentAuthority", "nilReason", &#xD;
   "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
   ["AgglomerationSource", "legalBasis", "href", &#xD;
   "http://data.europa.eu/eli/dir/2002/49/oj"],&#xD;

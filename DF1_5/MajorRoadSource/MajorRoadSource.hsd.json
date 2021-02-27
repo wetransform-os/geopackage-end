@@ -223,7 +223,7 @@
 					},
 					"declares": [
 						{
-							"name": "inspireId_localId",
+							"name": "roadId_identifier",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
@@ -241,25 +241,7 @@
 							}
 						},
 						{
-							"name": "inspireId_namespace",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "inspireId_versionId",
+							"name": "roadNationalCode",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -331,48 +313,6 @@
 							}
 						},
 						{
-							"name": "annualTrafficFlow",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "INTEGER",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.Long",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "centrelineGeometry",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "LINESTRING",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
-									"geometry-metadata": {
-										"@type": "properties",
-										"@value": {"srsText":"PROJCS[\"ETRS89 / LAEA Europe\",GEOGCS[\"ETRS89\",DATUM[\"European_Terrestrial_Reference_System_1989\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6258\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4258\"]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",52],PARAMETER[\"longitude_of_center\",10],PARAMETER[\"false_easting\",4321000],PARAMETER[\"false_northing\",3210000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AUTHORITY[\"EPSG\",\"3035\"]]","srs":"3035","authName":"EPSG","dimension":0}
-
-									},
-									"geometry-type": "org.locationtech.jts.geom.LineString",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
 							"name": "EuRoadId",
 							"constraints": {
 								"cardinality": "1..1",
@@ -384,6 +324,24 @@
 								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
 								"constraints": {
 									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "annualTrafficFlow",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "INTEGER",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.Long",
 									"has-value": true,
 									"mappable": false,
 									"mapping-relevant": false
@@ -445,7 +403,31 @@
 							}
 						},
 						{
-							"name": "roadId_identifier",
+							"name": "centrelineGeometry",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "LINESTRING",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
+									"geometry-metadata": {
+										"@type": "properties",
+										"@value": {"srsText":"PROJCS[\"ETRS89 / LAEA Europe\",GEOGCS[\"ETRS89\",DATUM[\"European_Terrestrial_Reference_System_1989\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6258\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4258\"]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",52],PARAMETER[\"longitude_of_center\",10],PARAMETER[\"false_easting\",4321000],PARAMETER[\"false_northing\",3210000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AUTHORITY[\"EPSG\",\"3035\"]]","srs":"3035","authName":"EPSG","dimension":0}
+
+									},
+									"geometry-type": "org.locationtech.jts.geom.LineString",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "inspireId_localId",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
@@ -463,7 +445,25 @@
 							}
 						},
 						{
-							"name": "roadNationalCode",
+							"name": "inspireId_namespace",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "inspireId_versionId",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -514,7 +514,7 @@
 					},
 					"declares": [
 						{
-							"name": "beginLifespanVersion",
+							"name": "validFrom",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -550,7 +550,7 @@
 							}
 						},
 						{
-							"name": "validFrom",
+							"name": "beginLifespanVersion",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,

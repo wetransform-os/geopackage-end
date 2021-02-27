@@ -3,7 +3,7 @@
     <name>Agglomeration Source to GeoPackage</name>
     <author>Thorsten Reitz (for EEA)</author>
     <created>2020-02-29T16:51:21.289+01:00</created>
-    <modified>2021-02-20T15:03:55.094+01:00</modified>
+    <modified>2021-02-24T11:55:44.334+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
