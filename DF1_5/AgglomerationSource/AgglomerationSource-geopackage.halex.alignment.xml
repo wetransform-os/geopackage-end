@@ -253,12 +253,21 @@ return geoms
         <target>
             <property>
                 <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="AgglomerationSource_fid"/>
+                <child name="AgglomerationSource_id"/>
             </property>
         </target>
         <parameter value="" name="prefix"/>
         <parameter value="type" name="sequence"/>
         <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C7d1e327e-3d17-49b3-800e-2247cd685445" priority="normal">
+        <target>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="beginLifespanVersion"/>
+            </property>
+        </target>
+        <parameter value="2017-12-31 23:00:00.0" name="value"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Cbd686a37-9b5a-4544-92c4-38e2c262453e" priority="normal">
         <target>
@@ -291,7 +300,11 @@ def codelistProperties = [&#xD;
   ["AgglomerationSource", "agglomerationId_identifierScheme", &#xD;
   "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"],&#xD;
   ["AgglomerationSource", "applicableSource", &#xD;
-  "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"]&#xD;
+  "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["AgglomerationSource", "competentAuthority_role", &#xD;
+  "http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue"],&#xD;
+  ["AgglomerationSource", "legalBasis_level", &#xD;
+  "http://inspire.ec.europa.eu/codelist/LegislationLevelValue"]&#xD;
 ]&#xD;
   &#xD;
 codelistProperties.each {&#xD;
@@ -305,6 +318,17 @@ codelistProperties.each {&#xD;
 
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C28fc3283-23e1-4345-817e-05e3bbd1fb05" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C05d14c56-752f-496f-9f17-7c78e08fa033" priority="normal">
         <target>

@@ -639,7 +639,7 @@
 							}
 						},
 						{
-							"name": "AgglomerationSource_fid",
+							"name": "AgglomerationSource_id",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
