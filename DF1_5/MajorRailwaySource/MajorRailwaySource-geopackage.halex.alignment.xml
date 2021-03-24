@@ -313,7 +313,7 @@ return resultString;
         <target>
             <property>
                 <type name="MajorRailwaySourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="MajorRailwaySource_fid"/>
+                <child name="MajorRailwaySource_id"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
