@@ -263,7 +263,7 @@
 						{
 							"name": "measureTime_endPosition",
 							"constraints": {
-								"cardinality": "1..1",
+								"cardinality": "0..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -553,7 +553,7 @@
 							}
 						},
 						{
-							"name": "PrimaryTable_fid",
+							"name": "PrimaryTable_id",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
