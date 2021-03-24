@@ -3,7 +3,7 @@
     <name>Create DF4_8 Agglomeration Noise Contours Geopackage Template</name>
     <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
     <created>2020-11-16T13:09:02.510+01:00</created>
-    <modified>2021-03-24T10:35:06.176+01:00</modified>
+    <modified>2021-03-24T11:25:52.408+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
