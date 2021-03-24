@@ -263,7 +263,7 @@
 						{
 							"name": "measureTime_endPosition",
 							"constraints": {
-								"cardinality": "1..1",
+								"cardinality": "0..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -553,7 +553,7 @@
 							}
 						},
 						{
-							"name": "PrimaryTable_fid",
+							"name": "PrimaryTable_id",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
@@ -642,6 +642,24 @@
 							"name": "ESTATUnitCode",
 							"constraints": {
 								"cardinality": "1..1",
+								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "railIdIdentifier",
+							"constraints": {
+								"cardinality": "0..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
