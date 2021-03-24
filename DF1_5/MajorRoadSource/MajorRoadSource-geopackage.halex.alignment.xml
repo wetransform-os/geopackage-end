@@ -297,7 +297,7 @@ return resultString;
         <target>
             <property>
                 <type name="MajorRoadSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="MajorRoadSource_fid"/>
+                <child name="MajorRoadSource_id"/>
             </property>
         </target>
         <parameter value="" name="prefix"/>
