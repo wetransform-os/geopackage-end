@@ -10,9 +10,13 @@
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def codelistProperties = [&#xD;
   ["QuietAreaDocumentation", "citationType", "http://dd.eionet.europa.eu/vocabulary/inspire/CitationTypeValue"],&#xD;
+  ["QuietAreaDocumentation", "citationLevel", "http://inspire.ec.europa.eu/codelist/LegislationLevelValue"],&#xD;
+  ["QuietArea", "quietAreaName_localNameLanguage", "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
   ["QuietArea", "protectionFrom", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
   ["QuietArea", "specialisedZoneType", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
-  ["QuietArea", "zoneType", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"]&#xD;
+  ["QuietArea", "zoneType", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"],&#xD;
+  ["QuietArea", "competentAuthority_role", "http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue"],&#xD;
+  ["QuietArea", "legalBasis_level", "http://inspire.ec.europa.eu/codelist/LegislationLevelValue"]&#xD;
 ]&#xD;
 &#xD;
 codelistProperties.each {&#xD;
@@ -26,6 +30,17 @@ codelistProperties.each {&#xD;
 </core:text>
         </complexParameter>
     </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C03d0282a-c006-4456-a682-b9d13a104e92" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C40ac0951-ab0c-49e8-b53e-1300fc5cdd82" priority="normal">
         <target>
             <class>
@@ -35,9 +50,11 @@ codelistProperties.each {&#xD;
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def dataSetProperties = [&#xD;
-  ["QuietAreaVoidables", "designationPeriod_beginPosition", null, "2022-12-31T23:00:00.000"],&#xD;
-  ["QuietAreaVoidables", "designationPeriod_endPosition", null, "2027-12-30T23:00:00.000"],&#xD;
-  ["QuietAreaVoidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+  ["QuietArea", "competentAuthority", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["QuietArea", "designationPeriod", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["QuietArea", "legalBasis_link", null, "http://data.europa.eu/eli/dir/2002/49/oj"],&#xD;
+  ["QuietArea", "legalBasis_level", null, "https://inspire.ec.europa.eu/codelist/LegislationLevelValue/european"],&#xD;
+  ["QuietArea", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
 ]&#xD;
 &#xD;
 dataSetProperties.each {&#xD;
@@ -51,6 +68,17 @@ dataSetProperties.each {&#xD;
 }
 </core:text>
         </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C828cf54a-7b93-4ac5-8e57-7e177d44fa92" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.create" id="C696765c7-9f2f-4626-bd4c-a6eee47e3f41" priority="normal">
         <target>

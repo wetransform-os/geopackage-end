@@ -228,46 +228,10 @@
 					},
 					"declares": [
 						{
-							"name": "inspireId_localId",
+							"name": "quietAreaId_identifier",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "inspireId_namespace",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "inspireId_versionId",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
 								"xsd_attribute": false
 							},
 							"propertyType": {
@@ -336,70 +300,28 @@
 							}
 						},
 						{
-							"name": "geometry",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "POLYGON",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
-									"geometry-metadata": {
-										"@type": "properties",
-										"@value": {"srsText":"PROJCS[\"ETRS89 / LAEA Europe\",GEOGCS[\"ETRS89\",DATUM[\"European_Terrestrial_Reference_System_1989\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6258\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4258\"]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",52],PARAMETER[\"longitude_of_center\",10],PARAMETER[\"false_easting\",4321000],PARAMETER[\"false_northing\",3210000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AUTHORITY[\"EPSG\",\"3035\"]]","srs":"3035","authName":"EPSG","dimension":0}
-
-									},
-									"geometry-type": "org.locationtech.jts.geom.Polygon",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "quietAreaId_identifier",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "agglomerationId_identifier",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
 							"name": "quietAreaType",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "agglomerationIdIdentifier",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": true,
 								"xsd_attribute": false
 							},
 							"propertyType": {
@@ -434,25 +356,7 @@
 						{
 							"name": "protectionFromOtherSource",
 							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "actionPlanIdentifier",
-							"constraints": {
-								"cardinality": "0..1",
+								"cardinality": "0..n",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -486,7 +390,85 @@
 							}
 						},
 						{
-							"name": "zoneType",
+							"name": "actionPlanIdIdentifier",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "geometry",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "POLYGON",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
+									"geometry-metadata": {
+										"@type": "properties",
+										"@value": {"srsText":"PROJCS[\"ETRS89 / LAEA Europe\",GEOGCS[\"ETRS89\",DATUM[\"European_Terrestrial_Reference_System_1989\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[\"EPSG\",\"6258\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4258\"]],PROJECTION[\"Lambert_Azimuthal_Equal_Area\"],PARAMETER[\"latitude_of_center\",52],PARAMETER[\"longitude_of_center\",10],PARAMETER[\"false_easting\",4321000],PARAMETER[\"false_northing\",3210000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AUTHORITY[\"EPSG\",\"3035\"]]","srs":"3035","authName":"EPSG","dimension":0}
+
+									},
+									"geometry-type": "org.locationtech.jts.geom.Polygon",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "inspireId_localId",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "inspireId_namespace",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "inspireId_versionId",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -505,24 +487,6 @@
 						},
 						{
 							"name": "specialisedZoneType",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "environmentalDomain",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -572,6 +536,42 @@
 						"primary-key": [{"@type":"qualified-name","@value":"id"}]
 					},
 					"declares": [ 
+						{
+							"name": "designationPeriod_beginPosition",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "DATETIME",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.sql.Timestamp",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "designationPeriod_endPosition",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "DATETIME",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.sql.Timestamp",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
 						{
 							"name": "competentAuthority_contact",
 							"constraints": {
@@ -717,43 +717,7 @@
 							}
 						},
 						{
-							"name": "designationPeriod_beginPosition",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "DATETIME",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.sql.Timestamp",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "designationPeriod_endPosition",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "DATETIME",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.sql.Timestamp",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "MajorRoadSource_fid",
+							"name": "QuietAreas_fid",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
@@ -894,7 +858,7 @@
 							}
 						},
 						{
-							"name": "QuietArea_fid",
+							"name": "QuietAreaId",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
