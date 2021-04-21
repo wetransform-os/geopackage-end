@@ -693,9 +693,9 @@
 							}
 						},
 						{
-							"name": "referenceLink",
+							"name": "receiverPointsInDwelling",
 							"constraints": {
-								"cardinality": "1..1",
+								"cardinality": "0..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -711,9 +711,9 @@
 							}
 						},
 						{
-							"name": "receiverPointsInDwelling",
+							"name": "referenceLink",
 							"constraints": {
-								"cardinality": "0..1",
+								"cardinality": "1..1",
 								"nillable": true,
 								"xsd_attribute": false
 							},
@@ -765,6 +765,24 @@
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "railIdIdentifier",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
 								"xsd_attribute": false
 							},
 							"propertyType": {
@@ -891,24 +909,6 @@
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "INTEGER",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.Long",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "ExposureMajorRailways_fid",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
 								"xsd_attribute": false
 							},
 							"propertyType": {
