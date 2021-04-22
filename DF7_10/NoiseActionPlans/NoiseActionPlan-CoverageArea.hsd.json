@@ -223,6 +223,24 @@
 					},
 					"declares": [
 						{
+							"name": "actionPlanIdIdentifier",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": true,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
 							"name": "inspireId_localId",
 							"constraints": {
 								"cardinality": "1..1",
@@ -277,60 +295,6 @@
 							}
 						},
 						{
-							"name": "name_localName",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "name_localNameLanguage",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "name_nameEng",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
 							"name": "geometry",
 							"constraints": {
 								"cardinality": "1..1",
@@ -348,42 +312,6 @@
 
 									},
 									"geometry-type": "org.locationtech.jts.geom.Polygon",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "thematicId_identifier",
-							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
-									"has-value": true,
-									"mappable": false,
-									"mapping-relevant": false
-								}
-							}
-						},
-						{
-							"name": "actionPlanIdIdentifier",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
-							},
-							"propertyType": {
-								"name": "TEXT",
-								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
-								"constraints": {
-									"binding": "java.lang.String",
 									"has-value": true,
 									"mappable": false,
 									"mapping-relevant": false
@@ -409,7 +337,7 @@
 							}
 						},
 						{
-							"name": "specialisedZoneType",
+							"name": "environmentalDomain",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
@@ -427,7 +355,25 @@
 							}
 						},
 						{
-							"name": "environmentalDomain",
+							"name": "thematicIdIdentifier",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
+							},
+							"propertyType": {
+								"name": "TEXT",
+								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true,
+									"mappable": false,
+									"mapping-relevant": false
+								}
+							}
+						},
+						{
+							"name": "specialisedZoneType",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": true,
