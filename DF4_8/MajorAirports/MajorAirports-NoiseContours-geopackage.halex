@@ -3,7 +3,7 @@
     <name>Create DF4_8 Geopackage Template for Major Airports</name>
     <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
     <created>2020-11-16T13:09:02.510+01:00</created>
-    <modified>2021-04-21T12:04:51.728+02:00</modified>
+    <modified>2021-04-23T11:47:20.601+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>

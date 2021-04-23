@@ -14,7 +14,7 @@ def ncLayers = [&#xD;
 ]&#xD;
 &#xD;
 def ncLayersCodelistProperties = [&#xD;
-  ["source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["source", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue"],&#xD;
   ["category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorRangeValue"],&#xD;
   ["category", "http://dd.eionet.europa.eu/vocabulary/noise/NoiseIndicatorValue"],&#xD;
 ]&#xD;
