@@ -3,7 +3,7 @@
     <name>Create DF7_10 Geopackage Template for Quiet Areas</name>
     <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
     <created>2020-11-16T13:09:02.510+01:00</created>
-    <modified>2021-03-31T09:54:26.062+02:00</modified>
+    <modified>2021-04-23T09:56:28.828+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
