@@ -410,7 +410,7 @@
 								"xsd_attribute": false
 							},
 							"propertyType": {
-								"name": "POLYGON",
+								"name": "MULTIPOLYGON",
 								"namespace": "http://www.esdi-humboldt.eu/hale/gpkg",
 								"constraints": {
 									"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",

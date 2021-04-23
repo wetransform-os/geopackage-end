@@ -100,23 +100,23 @@ return resultString;
             <lookup-table xmlns:ns2="http://www.esdi-humboldt.eu/hale/alignment" xmlns="">
                 <entry>
                     <key value="AT_a_ag0001"/>
-                    <value value="agglomerationAir, agglomerationIndustry, agglomerationRoad,agglomerationRailway,agglomerationMajorRoad,agglomerationMajorRailway,agglomerationMajorAirport"/>
-                </entry>
-                <entry>
-                    <key value="AT_a_ag0002"/>
-                    <value value="agglomerationAir, agglomerationIndustry,agglomerationRoad,agglomerationMajorRoad,agglomerationMajorAirport"/>
+                    <value value="agglomerationAir;agglomerationIndustry;agglomerationRoad,agglomerationRailway,agglomerationMajorRoad;agglomerationMajorRailway;agglomerationMajorAirport"/>
                 </entry>
                 <entry>
                     <key value="AT_a_ag0003"/>
                     <value value="agglomerationRoad"/>
                 </entry>
                 <entry>
-                    <key value="AT_a_ag0004"/>
-                    <value value="agglomerationRoad,agglomerationRailway,agglomerationMajorRoad"/>
+                    <key value="AT_a_ag0002"/>
+                    <value value="agglomerationAir;agglomerationIndustry;agglomerationRoad;agglomerationMajorRoad;agglomerationMajorAirport"/>
                 </entry>
                 <entry>
                     <key value="AT_a_ag0005"/>
-                    <value value="agglomerationIndustry,agglomerationRoad,agglomerationMajorRoad"/>
+                    <value value="agglomerationIndustry;agglomerationRoad;agglomerationMajorRoad"/>
+                </entry>
+                <entry>
+                    <key value="AT_a_ag0004"/>
+                    <value value="agglomerationRoad;agglomerationRailway;agglomerationMajorRoad"/>
                 </entry>
             </lookup-table>
         </complexParameter>
