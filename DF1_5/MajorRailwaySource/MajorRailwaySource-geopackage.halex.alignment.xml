@@ -9,8 +9,8 @@
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def codelistProperties = [&#xD;
-  ["MajorRailwaySource", "roadName_localNameLanguage", "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
-  ["MajorRailwaySource", "roadId_identifierScheme", "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"]&#xD;
+  ["MajorRailwaySource", "railName_localNameLanguage", "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
+  ["MajorRailwaySource", "railId_identifierScheme", "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"]&#xD;
 ]&#xD;
 &#xD;
 codelistProperties.each {&#xD;
