@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<hale-project version="4.0.0.release">
+<hale-project version="4.1.0.SNAPSHOT">
     <name>Create DF7_10 Geopackage Template for Noise Action Plan Coverage Areas</name>
     <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
     <created>2020-11-16T13:09:02.510+01:00</created>
-    <modified>2021-02-07T11:40:21.489+01:00</modified>
+    <modified>2021-05-25T14:51:13.221+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>

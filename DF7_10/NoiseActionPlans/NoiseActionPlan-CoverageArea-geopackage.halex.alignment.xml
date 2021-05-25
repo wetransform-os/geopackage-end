@@ -9,9 +9,11 @@
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def codelistProperties = [&#xD;
-  ["NoiseActionPlanCoverageArea", "specialisedZoneType", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
   ["NoiseActionPlanCoverageArea", "zoneType", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"],&#xD;
   ["NoiseActionPlanCoverageArea", "environmentalDomain", "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain"],&#xD;
+  ["NoiseActionPlanCoverageArea", "specialisedZoneType", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
+  ["NoiseActionPlanCoverageArea", "competentAuthority_role", "http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue"],&#xD;
+  ["NoiseActionPlanCoverageArea", "legalBasis_level", "http://inspire.ec.europa.eu/codelist/LegislationLevelValue"]&#xD;
 ]&#xD;
 &#xD;
 codelistProperties.each {&#xD;
@@ -34,9 +36,14 @@ codelistProperties.each {&#xD;
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def dataSetProperties = [&#xD;
-  ["NoiseActionPlanCoverageAreaVoidables", "designationPeriod_beginPosition", null, "2022-12-31T23:00:00.000"],&#xD;
-  ["NoiseActionPlanCoverageAreaVoidables", "designationPeriod_endPosition", null, "2027-12-30T23:00:00.000"],&#xD;
-  ["NoiseActionPlanCoverageAreaVoidables", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+  ["NoiseActionPlanCoverageArea", "designationPeriod", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["NoiseActionPlanCoverageArea", "beginLifespanVersion", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["NoiseActionPlanCoverageArea", "zoneType", "href", "http://inspire.ec.europa.eu/codelist/ZoneTypeCode/noiseRestrictionZone"],&#xD;
+  ["NoiseActionPlanCoverageArea", "specialisedZoneType", "href", "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode/noiseActionPlanArea"],&#xD;
+  ["NoiseActionPlanCoverageArea", "environmentalDomain", "href", "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain/noise"],&#xD;
+  ["NoiseActionPlanCoverageArea", "competentAuthority", "nilReason", "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["NoiseActionPlanCoverageArea", "legalBasis_link", "href", "http://data.europa.eu/eli/dir/2002/49/oj"],&#xD;
+  ["NoiseActionPlanCoverageArea", "legalBasis_level", "href", "http://inspire.ec.europa.eu/codelist/LegislationLevelValue/european"]&#xD;
 ]&#xD;
 &#xD;
 dataSetProperties.each {&#xD;
