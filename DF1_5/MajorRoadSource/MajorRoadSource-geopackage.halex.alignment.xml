@@ -49,7 +49,7 @@ def dataSetProperties = [&#xD;
   ["MajorRoadSource", "validFrom", "nilReason", _project.vars.DP_NILREASON],&#xD;
   ["MajorRoadSource", "beginLifespanVersion", "nilReason", _project.vars.DP_NILREASON],&#xD;
   ["MajorRoadSource", "ficticious", null, false],&#xD;
-  ["MajorRoadSource", "roadId_identifierScheme", null, &#xD;
+  ["MajorRoadSource", "roadId_identifierScheme", "href", &#xD;
   "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"]&#xD;
 ]&#xD;
   &#xD;
