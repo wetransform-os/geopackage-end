@@ -49,7 +49,7 @@ def dataSetProperties = [&#xD;
   ["MajorRailwaySource", "validFrom", "nilReason", _project.vars.DP_NILREASON],&#xD;
   ["MajorRailwaySource", "beginLifespanVersion", "nilReason", _project.vars.DP_NILREASON],&#xD;
   ["MajorRailwaySource", "ficticious", null, false],&#xD;
-  ["MajorRailwaySource", "railId_identifierScheme", null, "https://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"]&#xD;
+  ["MajorRailwaySource", "railId_identifierScheme", "href", "https://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"]&#xD;
 ]&#xD;
   &#xD;
 dataSetProperties.each {&#xD;
