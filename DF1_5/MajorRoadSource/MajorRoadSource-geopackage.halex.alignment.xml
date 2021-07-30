@@ -107,7 +107,7 @@ dataSetProperties.each {&#xD;
         <target>
             <property>
                 <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
-                <child name="EuRoadId"/>
+                <child name="EURoadId"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>

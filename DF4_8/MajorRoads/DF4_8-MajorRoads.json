@@ -56,7 +56,7 @@
 						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": true,
-						"primary-key": [{"@type":"qualified-name","@value":"fid"}]
+						"primary-key": [{"@type":"qualified-name","@value":"id"}]
 					},
 					"declares": [
 						{

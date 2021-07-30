@@ -313,7 +313,7 @@
 							}
 						},
 						{
-							"name": "EuRoadId",
+							"name": "EURoadId",
 							"constraints": {
 								"cardinality": "1..1",
 								"nillable": false,
