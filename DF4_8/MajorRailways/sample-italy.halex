@@ -3,7 +3,7 @@
     <name>END DF4_8 Major Railways Complete Sample - Italy</name>
     <author>Thorsten Reitz (for the EEA)</author>
     <created>2021-08-24T11:00:22.738+02:00</created>
-    <modified>2021-08-24T17:22:49.356+02:00</modified>
+    <modified>2021-08-27T15:25:27.751+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1596,8 +1596,28 @@
         <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
         <setting name="typename">ExposureValue</setting>
     </resource>
+    <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">8383e145-3605-4801-a418-6234e805d625</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Italy/NoiseSourceTypeValue.xml</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
+    </resource>
     <file name="alignment.xml" location="sample-italy.halex.alignment.xml"/>
     <file name="styles.sld" location="sample-italy.halex.styles.sld"/>
+    <complex-property name="codelists">
+        <associations>
+            <codeList identifier="Noise source type value" namespace="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+                <entity>
+                    <type name="NoiseContours_majorRailwaysIncludingAgglomeration_Lnight" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_majorRailwaysIncludingAgglomeration_Lden" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+            </codeList>
+        </associations>
+    </complex-property>
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRailwaysIncludingAgglomeration_Lden/1">location</property>
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRailwaysIncludingAgglomeration_Lden/count">1</property>
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRailwaysIncludingAgglomeration_Lnight/1">location</property>

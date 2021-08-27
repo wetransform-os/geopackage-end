@@ -187,6 +187,15 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc35b176b-25b2-46c3-a11b-6f2c5c9c1b6c" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRailwaysIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="source"/>
+            </property>
+        </target>
+        <parameter value="majorRailwaysIncludingAgglomeration" name="value"/>
+    </cell>
     <cell relation="eu.esdihumboldt.hale.align.retype" id="C3bd22f4e-8c47-4724-80e9-18f27c96de32" priority="normal">
         <source>
             <class>
@@ -278,5 +287,14 @@
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb3c51d3f-7be0-4fe1-a0db-60ec8cbd8632" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRailwaysIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="source"/>
+            </property>
+        </target>
+        <parameter value="majorRailwaysIncludingAgglomeration" name="value"/>
     </cell>
 </alignment>
