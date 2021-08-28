@@ -1,0 +1,3579 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.1.0.SNAPSHOT">
+    <name>DF4_8 Agglomerations Sample Austria</name>
+    <author>Thorsten Reitz, wetransform (on behalf of the EEA)</author>
+    <created>2021-08-27T15:53:11.682+02:00</created>
+    <modified>2021-08-27T16:46:04.767+02:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/Agglomerations/Agglomeration-NoiseContours-sample.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.geopackage.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">2ec85698-de92-44c0-bf59-5a80d37cb59a</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/Agglomerations/Agglomerations-StrategicNoiseMaps.gpkg</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.geopackage</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/gpkg">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ESTATUnitReference</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ExposureAgglomeration</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ExposureValueInAgglomeration</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_airportsInAgglomeration_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_airportsInAgglomeration_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="7">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_allSourcesInAgglomeration_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="8">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_allSourcesInAgglomeration_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="9">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_industryInAgglomeration_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="10">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_industryInAgglomeration_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="11">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_railwaysInAgglomeration_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="12">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_railwaysInAgglomeration_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="13">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_roadsInAgglomeration_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="14">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_roadsInAgglomeration_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="15">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">Voidables</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>codelist</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>attribute</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>defaultValue</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ESTATUnitReference</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ExposureAgglomeration</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>agglomerationIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseSource</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>computationAndMeasurementMethod</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>sourceCoverageCriteria</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>receiverPointsInDwelling</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>referenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">ExposureValueInAgglomeration</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>agglomerationIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseSource</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposureType</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseLevel</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedPeople</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedHospitals</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedSchools</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATUnitCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ICAOCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>descriptionAllSources</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_airportsInAgglomeration_Lden</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_airportsInAgglomeration_Lnight</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="7">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_allSourcesInAgglomeration_Lden</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="8">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_allSourcesInAgglomeration_Lnight</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="9">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_industryInAgglomeration_Lden</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="10">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_industryInAgglomeration_Lnight</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="11">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_railwaysInAgglomeration_Lden</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="12">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_railwaysInAgglomeration_Lnight</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="13">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_roadsInAgglomeration_Lden</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="14">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">NoiseContours_roadsInAgglomeration_Lnight</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>measureTime_beginPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>measureTime_endPosition</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>category</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>source</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>location</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">POLYGON</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Polygon"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="15">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">Voidables</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>beginLifespanVersion</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>validFrom</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>validTo</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>PrimaryTable_id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">970986c3-5187-4304-953c-bf1eaf3a2fdb</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_a_Aggair.gdb/a0000000a.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="C:/wetransform/Box Sync/staff/Projects/European Environmental Agency/2020-03 EEA END/DF4_8/Sample Agglomerations Austria/AT_a_Aggair.gdb/a0000000a.gdbtable">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>AT_Aggair_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name>AT_Aggair_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name>Integer</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name>Real</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name>String</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>AT_Aggair_Lden</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ICAO</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name>AT_Aggair_Lnight</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ICAO</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name>Integer</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="geometry-metadata">
+                            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:property name="srsText">
+    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;,GEOGCS[&quot;ETRS89&quot;,DATUM[&quot;European_Terrestrial_Reference_System_1989&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]],PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;],PARAMETER[&quot;latitude_of_center&quot;,52],PARAMETER[&quot;longitude_of_center&quot;,10],PARAMETER[&quot;false_easting&quot;,4321000],PARAMETER[&quot;false_northing&quot;,3210000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+</core:property>
+<core:property name="srs">
+    <core:value value="3035"/>
+</core:property>
+<core:property name="authName">
+    <core:value value="EPSG"/>
+</core:property>
+<core:property name="dimension">
+    <core:value value="0"/>
+</core:property>
+                            </core:properties>
+                        </hsd:constraint>
+                        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.MultiPolygon"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name>Real</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Float"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name>String</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">6a34f3b3-3032-4fea-ab0c-0b6e3e454799</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggindustry.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="C:/wetransform/Box Sync/staff/Projects/European Environmental Agency/2020-03 EEA END/DF4_8/Sample Agglomerations Austria/AT_Aggindustry.gdb/a0000000b.gdbtable">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>AT_a_Aggind_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name>AT_a_Aggind_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name>Integer</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name>Real</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name>String</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>AT_a_Aggind_Lden</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>UnAggID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name>AT_a_Aggind_Lnight</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>UnAggID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name>Integer</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="geometry-metadata">
+                            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:property name="srsText">
+    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;,GEOGCS[&quot;ETRS89&quot;,DATUM[&quot;European_Terrestrial_Reference_System_1989&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]],PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;],PARAMETER[&quot;latitude_of_center&quot;,52],PARAMETER[&quot;longitude_of_center&quot;,10],PARAMETER[&quot;false_easting&quot;,4321000],PARAMETER[&quot;false_northing&quot;,3210000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+</core:property>
+<core:property name="srs">
+    <core:value value="3035"/>
+</core:property>
+<core:property name="authName">
+    <core:value value="EPSG"/>
+</core:property>
+<core:property name="dimension">
+    <core:value value="0"/>
+</core:property>
+                            </core:properties>
+                        </hsd:constraint>
+                        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.MultiPolygon"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name>Real</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Float"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name>String</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">4769b33e-de9f-45c7-a450-a490ad85a29b</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggrails.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="C:/wetransform/Box Sync/staff/Projects/European Environmental Agency/2020-03 EEA END/DF4_8/Sample Agglomerations Austria/AT_Aggrails.gdb/a0000000b.gdbtable">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>AT_a_Aggrail_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name>AT_a_Aggrail_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name>Integer</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name>Real</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name>String</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>AT_a_Aggrail_Lden</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name>AT_a_Aggrail_Lnight</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name>Integer</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="geometry-metadata">
+                            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:property name="dimension">
+    <core:value value="0"/>
+</core:property>
+                            </core:properties>
+                        </hsd:constraint>
+                        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.MultiPolygon"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name>Real</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Float"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name>String</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">ab099cbe-2b41-4a6a-8418-fb165727c400</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggroads.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="C:/wetransform/Box Sync/staff/Projects/European Environmental Agency/2020-03 EEA END/DF4_8/Sample Agglomerations Austria/AT_Aggroads.gdb/a0000000b.gdbtable">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>AT_a_Aggroad_Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name>AT_a_Aggroad_Lnight</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name>Integer</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name>Real</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name>String</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>AT_a_Aggroad_Lden</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name>AT_a_Aggroad_Lnight</hsd:name>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_LOW</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>DB_HIGH</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Length</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Shape_Area</hsd:name>
+<hsd:constraint type="fgdb_relation-info">
+    <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+        <core:property name="relation">
+            <core:value value="false"/>
+        </core:property>
+    </core:properties>
+</hsd:constraint>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name>Integer</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name>Multi Polygon</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="geometry-metadata">
+                            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:property name="srsText">
+    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;,GEOGCS[&quot;ETRS89&quot;,DATUM[&quot;European_Terrestrial_Reference_System_1989&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]],PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;],PARAMETER[&quot;latitude_of_center&quot;,52],PARAMETER[&quot;longitude_of_center&quot;,10],PARAMETER[&quot;false_easting&quot;,4321000],PARAMETER[&quot;false_northing&quot;,3210000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+</core:property>
+<core:property name="srs">
+    <core:value value="3035"/>
+</core:property>
+<core:property name="authName">
+    <core:value value="EPSG"/>
+</core:property>
+<core:property name="dimension">
+    <core:value value="0"/>
+</core:property>
+                            </core:properties>
+                        </hsd:constraint>
+                        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.MultiPolygon"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name>OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name>Real</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Float"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name>String</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">10e776c1-82fe-4c2a-ace7-afcedd0d14d4</setting>
+        <setting name="sheetIndex">0</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ESTATUnitReference</setting>
+        <setting name="properties">ESTATNUTSReferenceTitle,ESTATNUTSReferenceLink,ESTATLAUReferenceTitle,ESTATLAUReferenceLink</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ESTATUnitReference</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ESTATUnitReference</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">e380ce9b-6ca9-4a6f-b97a-04a260ec1fbb</setting>
+        <setting name="sheetIndex">1</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureAgglomeration</setting>
+        <setting name="properties">agglomerationIdIdentifier,noiseSource,computationandMeasurementMethod,sourceCoverageCriteria,receiverPointsInDwelling,referenceLink</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ExposureAgglomeration</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ExposureAgglomeration</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>agglomerationIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseSource</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>computationandMeasurementMethod</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>sourceCoverageCriteria</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>receiverPointsInDwelling</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>referenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">3864f23b-0745-47fc-87af-13ac34949e09</setting>
+        <setting name="sheetIndex">2</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureValueInAgglomeration</setting>
+        <setting name="properties">agglomerationIdIdentifier,noiseSource,exposureType,noiseLevel,exposedPeople,exposedHospitals,exposedSchools,ESTATUnitCode,ICAOCode,descriptionAllSources</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ExposureValueInAgglomeration</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ExposureValueInAgglomeration</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>agglomerationIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseSource</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposureType</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseLevel</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedPeople</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedHospitals</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedSchools</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATUnitCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ICAOCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>descriptionAllSources</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">f0b59a1c-d90d-4b96-aeea-7ea74255799b</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_a_Aggair.gdb/a0000000a.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">4e8c50e6-be68-42af-89b3-0353417a6d9a</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggindustry.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">3dc07f3a-4dd5-4af0-9f21-ceff536c1b03</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggrails.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.gdal.fgdb.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">fd319999-d640-4242-942f-5448f1da1cbd</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/AT_Aggroads.gdb/a0000000b.gdbtable</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.gdal.geodatabase</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">8e8bd623-4b16-46da-ab86-fc796af4ad57</setting>
+        <setting name="sheetIndex">0</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ESTATUnitReference</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">ec9ad6c1-8f77-4919-94af-e47778777380</setting>
+        <setting name="sheetIndex">1</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureAgglomeration</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">59948893-d0fa-4dfd-b36a-562cfec7c331</setting>
+        <setting name="sheetIndex">2</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Agglomerations%20Austria/Agglomerations_AT_DF4_8_SampleData_20210826.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureValueInAgglomeration</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">2f593c22-c925-47da-99ef-2f10b086af0e</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Italy/NoiseSourceTypeValue.xml</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.lookup.import" provider-id="eu.esdihumboldt.hale.io.xls.reader.lookup">
+        <setting name="charset">UTF-8</setting>
+        <setting name="ignoreEmptyStrings">false</setting>
+        <setting name="resourceId">bfefd334-75ee-448e-afae-bf031d69a76e</setting>
+        <setting name="keyColumn">0</setting>
+        <setting name="name">Lden DB_LOW to Category Lookup Table</setting>
+        <setting name="valueColumn">1</setting>
+        <setting name="description">Lden DB_LOW to Category Lookup Table</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Italy/Category-Lden-classification.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.lookup.import" provider-id="eu.esdihumboldt.hale.io.xls.reader.lookup">
+        <setting name="charset">UTF-8</setting>
+        <setting name="ignoreEmptyStrings">false</setting>
+        <setting name="resourceId">42356e85-0981-41d2-8a94-81ad40615002</setting>
+        <setting name="keyColumn">0</setting>
+        <setting name="name">Lnight DB_LOW to Category Lookup Table</setting>
+        <setting name="valueColumn">1</setting>
+        <setting name="description">Lnight DB_LOW to Category Lookup Table</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Italy/Category-Lnight-classification.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+    </resource>
+    <file name="alignment.xml" location="Agglomeration-NoiseContours-sample.halex.alignment.xml"/>
+    <file name="styles.sld" location="Agglomeration-NoiseContours-sample.halex.styles.sld"/>
+    <complex-property name="codelists">
+        <associations>
+            <codeList identifier="Noise source type value" namespace="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+                <entity>
+                    <type name="NoiseContours_industryInAgglomeration_Lden" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_roadsInAgglomeration_Lden" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_airportsInAgglomeration_Lden" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_railwaysInAgglomeration_Lden" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_railwaysInAgglomeration_Lnight" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_airportsInAgglomeration_Lnight" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_roadsInAgglomeration_Lnight" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+                <entity>
+                    <type name="NoiseContours_industryInAgglomeration_Lnight" namespace="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                    <property name="source" namespace=""/>
+                </entity>
+            </codeList>
+        </associations>
+    </complex-property>
+    <property name="defaultGeometry:AT_Aggair_Lden/1">Shape</property>
+    <property name="defaultGeometry:AT_Aggair_Lden/count">1</property>
+    <property name="defaultGeometry:AT_Aggair_Lnight/1">Shape</property>
+    <property name="defaultGeometry:AT_Aggair_Lnight/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggind_Lden/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggind_Lden/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggind_Lnight/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggind_Lnight/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggrail_Lden/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggrail_Lden/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggrail_Lnight/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggrail_Lnight/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggroad_Lden/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggroad_Lden/count">1</property>
+    <property name="defaultGeometry:AT_a_Aggroad_Lnight/1">Shape</property>
+    <property name="defaultGeometry:AT_a_Aggroad_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lnight/count">1</property>
+</hale-project>
