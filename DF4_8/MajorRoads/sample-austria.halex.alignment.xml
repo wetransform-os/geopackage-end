@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cf46a2fb6-2aec-442b-b779-6594dbafa6a7" priority="normal">
+        <source>
+            <class>
+                <type name="ESTATUnitReference"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ESTATUnitReference" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="true" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C3fbd6f63-0638-4bff-8094-1884444dee73" priority="normal">
+        <target>
+            <property>
+                <type name="ESTATUnitReference" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ccc6d454f-d531-48bd-b43d-bc49a7ab9a1d" priority="normal">
+        <source>
+            <class>
+                <type name="ExposureMajorRoad"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="true" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C132a6dfd-977a-42c9-8dbb-255907602e7e" priority="normal">
+        <target>
+            <property>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C137e5be4-82ef-4d60-8d0c-9539f83e22e3" priority="normal">
+        <source>
+            <class>
+                <type name="ExposureValue"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="true" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Ca1f5f424-4acf-4996-90a3-0428e3fac24e" priority="normal">
+        <target>
+            <property>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cf35debda-fcf5-413a-a8b2-807cf25d3a81" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Mroad_Lden" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="C4c72ef4a-a684-4cd0-aa21-98a44e00859f" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad_Lden" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="DB_LOW"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="category"/>
+            </property>
+        </target>
+        <parameter value="cab11cde-23d8-4c8e-be92-253e0f060821" name="lookupTableID"/>
+        <parameter value="null" name="notClassifiedAction"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="Ccd3334e3-8462-4d48-b85c-d17e8dcf3870" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C93625299-2611-4f60-b13d-808a24dd1310" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad_Lden" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="location"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C1b623936-0f3d-46b3-a28a-01b2282341ed" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="source"/>
+            </property>
+        </target>
+        <parameter value="majorRoadsIncludingAgglomeration" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C9d3de333-8c49-4ab2-bebb-0364f26f76eb" priority="normal">
+        <source>
+            <class>
+                <type name="AT_a_Mroad_Lnight" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="C66986312-a243-43d7-a325-cc23df9120b0" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad_Lnight" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="DB_LOW"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="category"/>
+            </property>
+        </target>
+        <parameter value="fcf3d85a-7813-49a1-ab47-f8e3ad125310" name="lookupTableID"/>
+        <parameter value="null" name="notClassifiedAction"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C5ca195e9-c881-4944-924c-fb0f50de70d3" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6d9e56d9-e661-4813-8c45-ef6f02c461b7" priority="normal">
+        <source>
+            <property>
+                <type name="AT_a_Mroad_Lnight" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="location"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C80131ab0-e419-467e-b19a-0d9a5865d262" priority="normal">
+        <target>
+            <property>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="source"/>
+            </property>
+        </target>
+        <parameter value="majorRoadsIncludingAgglomeration" name="value"/>
+    </cell>
+</alignment>
