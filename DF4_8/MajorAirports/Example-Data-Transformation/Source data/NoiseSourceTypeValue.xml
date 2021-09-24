@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codelist xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://inspire.ec.europa.eu/draft-schemas/registry/0.3/codelist.xsd" id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+<status id="http://inspire.ec.europa.eu/registry/status/submitted">
+<label xml:lang="en">Submitted</label></status>
+<extensibility id="http://inspire.ec.europa.eu/registry/extensibility/none">
+<label xml:lang="en">None</label></extensibility>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<containeditems>
+<value id="airportsInAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/airportsInAgglomeration</uri>
+<label xml:lang="en">Aircraft noise inside agglomeration</label>
+<definition xml:lang="en">Related to air traffic inside the boundary of the agglomeration, including major airports and other airports. 
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="allSourcesInAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/allSourcesInAgglomeration</uri>
+<label xml:lang="en">Noise from all sources inside agglomeration</label>
+<definition xml:lang="en">Related to all END noise sources inside the boundary of the agglomeration (roads, railways, airports, industries).
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="industryInAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/industryInAgglomeration</uri>
+<label xml:lang="en">Industrial noise inside agglomeration</label>
+<definition xml:lang="en">Related to industrial sites inside the boundary of the agglomeration. 
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="majorAirportsIncludingAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/majorAirportsIncludingAgglomeration</uri>
+<label xml:lang="en">Major airports including agglomerations</label>
+<definition xml:lang="en">Related to major airports including agglomerations (inside and outside the boundary of the agglomerations).
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="majorRailwaysIncludingAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/majorRailwaysIncludingAgglomeration</uri>
+<label xml:lang="en">Major railways including agglomerations</label>
+<definition xml:lang="en">Related to major railways including agglomerations (inside and outside the boundary of the agglomerations).
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="majorRoadsIncludingAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/majorRoadsIncludingAgglomeration</uri>
+<label xml:lang="en">Major roads including agglomerations</label>
+<definition xml:lang="en">Related to major roads including agglomerations (inside and outside the boundary of the agglomerations).
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="railwaysInAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/railwaysInAgglomeration</uri>
+<label xml:lang="en">Railway noise inside agglomeration</label>
+<definition xml:lang="en">Related to railway traffic inside the boundary of the agglomeration, including major railways and any other rail infrastructure (including light rail). 
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+<value id="roadsInAgglomeration">
+<uri>http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue/roadsInAgglomeration</uri>
+<label xml:lang="en">Road noise inside agglomeration</label>
+<definition xml:lang="en">Related to road traffic inside the boundary of the agglomeration, including major roads and other roads. 
+Applicable to data flows: Strategic Noise Map - Noise Contour (DF4_8)</definition>
+<status id="http://inspire.ec.europa.eu/registry/status/valid">
+<label xml:lang="en">Valid</label>
+</status>
+<register id="http://dd.eionet.europa.eu/vocabularies">
+<label xml:lang="en">Data Dictionary Vocabularies</label>
+<registry id="http://dd.eionet.europa.eu">
+<label xml:lang="en">Eionet Data Dictionary</label>
+</registry>
+</register>
+<codelist id="http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceTypeValue">
+<label xml:lang="en">Noise source type value</label>
+</codelist>
+</value>
+</containeditems>
+</codelist>

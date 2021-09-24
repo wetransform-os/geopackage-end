@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_BgzwYBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_BgzwYRuOEeyvIYlxqn4MGQ" bindingContexts="_Bg0XvRuOEeyvIYlxqn4MGQ">
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
+  <tags>activeSchemeId:eu.esdihumboldt.hale.ui.application.bindings</tags>
+  <tags>ModelMigrationProcessor.001</tags>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_BgzwYRuOEeyvIYlxqn4MGQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_BgzwYhuOEeyvIYlxqn4MGQ" x="256" y="13" width="1280" height="1024">
+    <persistedState key="coolBarVisible" value="true"/>
+    <persistedState key="perspectiveBarVisible" value="true"/>
+    <persistedState key="isRestored" value="true"/>
+    <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
+    <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
+    <persistedState key="aggregateWorkingSetId"/>
+    <tags>topLevel</tags>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwYhuOEeyvIYlxqn4MGQ" selectedElement="_BgzwYxuOEeyvIYlxqn4MGQ" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_BgzwYxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_BgzwfRuOEeyvIYlxqn4MGQ">
+        <children xsi:type="advanced:Perspective" xmi:id="_BgzwZBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.application.perspective.data" label="Data">
+          <tags>persp.actionSet:org.eclipse.ui.cheatsheets.actionSet</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.schemas</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.mapping.alignment</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.data.source</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.data.transformed</tags>
+          <tags>persp.viewSC:org.eclipse.pde.runtime.LogView</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.resources</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.styledmap</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwZRuOEeyvIYlxqn4MGQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwZhuOEeyvIYlxqn4MGQ" containerData="5000">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwZxuOEeyvIYlxqn4MGQ" containerData="5000" horizontal="true">
+                <children xsi:type="basic:PartStack" xmi:id="_BgzwaBuOEeyvIYlxqn4MGQ" elementId="topLeft" containerData="5000">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_BgzwaRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment" ref="_Bgzw-huOEeyvIYlxqn4MGQ" closeable="true">
+                    <tags>View</tags>
+                    <tags>categoryTag:hale studio</tags>
+                  </children>
+                </children>
+                <children xsi:type="basic:PartStack" xmi:id="_BgzwahuOEeyvIYlxqn4MGQ" elementId="topRight" containerData="5000">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_BgzwaxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.source" ref="_BgzxBRuOEeyvIYlxqn4MGQ" closeable="true">
+                    <tags>View</tags>
+                    <tags>categoryTag:hale studio</tags>
+                  </children>
+                </children>
+              </children>
+              <children xsi:type="advanced:Placeholder" xmi:id="_BgzwbBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="5000" ref="_Bgzw9huOEeyvIYlxqn4MGQ"/>
+            </children>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwbRuOEeyvIYlxqn4MGQ" containerData="5000" horizontal="true">
+              <children xsi:type="basic:PartStack" xmi:id="_BgzwbhuOEeyvIYlxqn4MGQ" elementId="bottomLeft" containerData="5000">
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwbxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_Bgzw-BuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:General</tags>
+                </children>
+              </children>
+              <children xsi:type="basic:PartStack" xmi:id="_BgzwcBuOEeyvIYlxqn4MGQ" elementId="bottomRight" containerData="5000">
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwcRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.transformed" ref="_Bgzw-RuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+              </children>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="advanced:Perspective" xmi:id="_BgzwchuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap" label="Map">
+          <tags>persp.actionSet:org.eclipse.ui.cheatsheets.actionSet</tags>
+          <tags>persp.viewSC:org.eclipse.pde.runtime.LogView</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.resources</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.styledmap</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwcxuOEeyvIYlxqn4MGQ">
+            <children xsi:type="basic:PartStack" xmi:id="_BgzwdBuOEeyvIYlxqn4MGQ" elementId="top" containerData="7000">
+              <children xsi:type="advanced:Placeholder" xmi:id="_BgzwdRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap" ref="_BgzxCRuOEeyvIYlxqn4MGQ" closeable="true">
+                <tags>View</tags>
+                <tags>categoryTag:hale studio</tags>
+              </children>
+            </children>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwdhuOEeyvIYlxqn4MGQ" containerData="3000">
+              <children xsi:type="advanced:Placeholder" xmi:id="_BgzwdxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="7000" ref="_Bgzw9huOEeyvIYlxqn4MGQ"/>
+              <children xsi:type="basic:PartSashContainer" xmi:id="_BgzweBuOEeyvIYlxqn4MGQ" containerData="3000" horizontal="true">
+                <children xsi:type="basic:PartStack" xmi:id="_BgzweRuOEeyvIYlxqn4MGQ" elementId="bottomLeft" containerData="5000">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_BgzwehuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.source" ref="_BgzxBRuOEeyvIYlxqn4MGQ" closeable="true">
+                    <tags>View</tags>
+                    <tags>categoryTag:hale studio</tags>
+                  </children>
+                </children>
+                <children xsi:type="basic:PartStack" xmi:id="_BgzwexuOEeyvIYlxqn4MGQ" elementId="bottomRight" containerData="5000">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_BgzwfBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.transformed" ref="_Bgzw-RuOEeyvIYlxqn4MGQ" closeable="true">
+                    <tags>View</tags>
+                    <tags>categoryTag:hale studio</tags>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="advanced:Perspective" xmi:id="_BgzwfRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.application.perspective.default" selectedElement="_BgzwfhuOEeyvIYlxqn4MGQ" label="Default" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.application/icons/mapping.gif">
+          <tags>persp.actionSet:org.eclipse.ui.cheatsheets.actionSet</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.schemas</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.mapping.alignment</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.data.source</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.data.transformed</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.report.ReportList</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.typehierarchy</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.functions</tags>
+          <tags>persp.viewSC:org.eclipse.pde.runtime.LogView</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.resources</tags>
+          <tags>persp.viewSC:eu.esdihumboldt.hale.ui.views.styledmap</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwfhuOEeyvIYlxqn4MGQ" selectedElement="_BgzwhhuOEeyvIYlxqn4MGQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwfxuOEeyvIYlxqn4MGQ" containerData="7000" selectedElement="_BgzwgBuOEeyvIYlxqn4MGQ" horizontal="true">
+              <children xsi:type="basic:PartStack" xmi:id="_BgzwgBuOEeyvIYlxqn4MGQ" elementId="topLeft" containerData="6000" selectedElement="_BgzwgRuOEeyvIYlxqn4MGQ">
+                <tags>noFocus</tags>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwgRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schemas" ref="_BgzxKRuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+              </children>
+              <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwghuOEeyvIYlxqn4MGQ" containerData="4000" horizontal="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwgxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="4000" ref="_Bgzw9huOEeyvIYlxqn4MGQ"/>
+                <children xsi:type="basic:PartStack" xmi:id="_BgzwhBuOEeyvIYlxqn4MGQ" elementId="topRight" containerData="6000" selectedElement="_BgzwhRuOEeyvIYlxqn4MGQ">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_BgzwhRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment" ref="_Bgzw-huOEeyvIYlxqn4MGQ" closeable="true">
+                    <tags>View</tags>
+                    <tags>categoryTag:hale studio</tags>
+                  </children>
+                </children>
+              </children>
+            </children>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_BgzwhhuOEeyvIYlxqn4MGQ" containerData="3000" selectedElement="_BgzwhxuOEeyvIYlxqn4MGQ" horizontal="true">
+              <children xsi:type="basic:PartStack" xmi:id="_BgzwhxuOEeyvIYlxqn4MGQ" elementId="bottom" containerData="7000" selectedElement="_BgzwiBuOEeyvIYlxqn4MGQ">
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwiBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.pde.runtime.LogView" ref="_BgzxChuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:General</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwiRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_Bgzw-BuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:General</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwihuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.tasks" ref="_BgzxHxuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+              </children>
+              <children xsi:type="basic:PartStack" xmi:id="_BgzwixuOEeyvIYlxqn4MGQ" elementId="bottomRight" containerData="3000" selectedElement="_BgzwjhuOEeyvIYlxqn4MGQ">
+                <tags>active</tags>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwjBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.typehierarchy" ref="_BgzxIBuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwjRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.functions" ref="_BgzxIxuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_BgzwjhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.report.ReportList" ref="_BgzxJBuOEeyvIYlxqn4MGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:hale studio</tags>
+                </children>
+              </children>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_BgzwjxuOEeyvIYlxqn4MGQ" elementId="stickyFolderRight" toBeRendered="false" containerData="2500">
+        <children xsi:type="advanced:Placeholder" xmi:id="_BgzwkBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.HelpView" toBeRendered="false" ref="_BgzxBhuOEeyvIYlxqn4MGQ" closeable="true">
+          <tags>View</tags>
+          <tags>categoryTag:Help</tags>
+        </children>
+        <children xsi:type="advanced:Placeholder" xmi:id="_BgzwkRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.internal.introview" toBeRendered="false" ref="_BgzxBxuOEeyvIYlxqn4MGQ" closeable="true">
+          <tags>View</tags>
+          <tags>categoryTag:General</tags>
+        </children>
+        <children xsi:type="advanced:Placeholder" xmi:id="_BgzwkhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" toBeRendered="false" ref="_BgzxCBuOEeyvIYlxqn4MGQ" closeable="true">
+          <tags>View</tags>
+          <tags>categoryTag:Help</tags>
+        </children>
+      </children>
+    </children>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_Bgzw9huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.editorss">
+      <children xsi:type="basic:PartStack" xmi:id="_Bgzw9xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+      </children>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Bgzw-BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Bgzw-RuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.transformed" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Transformed Data" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.data/icons/table.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.data.TransformedDataView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.data"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Bgzw-huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Alignment" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.mapping/icons/alignment.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.mapping.AlignmentView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.mapping"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+      <menus xmi:id="_Bgzw-xuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_Bgzw_huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxBRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.source" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Source Data" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.data/icons/table.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.data.SourceDataView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.data"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxBhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.HelpView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.help.ui.internal.views.HelpView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.help.ui"/>
+      <tags>View</tags>
+      <tags>categoryTag:Help</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxBxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.internal.introview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.ViewIntroAdapterPart"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui"/>
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxCBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Cheat Sheets" iconURI="platform:/plugin/org.eclipse.ui.cheatsheets/icons/view16/cheatsheet_view.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.cheatsheets.views.CheatSheetView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.cheatsheets"/>
+      <tags>View</tags>
+      <tags>categoryTag:Help</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxCRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Map" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.styledmap/icons/world.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.styledmap.StyledMapView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.styledmap"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxChuOEeyvIYlxqn4MGQ" elementId="org.eclipse.pde.runtime.LogView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Error Log" iconURI="platform:/plugin/org.eclipse.ui.views.log/icons/eview16/error_log.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.log.LogView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views.log"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view activate=&quot;true&quot; allSessions=&quot;true&quot; column2=&quot;300&quot; column3=&quot;150&quot; column4=&quot;150&quot; error=&quot;true&quot; groupBy=&quot;0&quot; info=&quot;true&quot; limit=&quot;50&quot; maxLogTailSize=&quot;1&quot; ok=&quot;true&quot; orderType=&quot;2&quot; orderValue=&quot;-1&quot; show_filter_text=&quot;true&quot; useLimit=&quot;true&quot; warning=&quot;true&quot;/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+      <menus xmi:id="_BgzxCxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.pde.runtime.LogView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_BgzxFhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.pde.runtime.LogView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxHxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.tasks" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Tasks" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.tasks/icons/tasks.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.tasks.TaskTreeView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.tasks"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxIBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.typehierarchy" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Type hierarchy" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.typehierarchy/icons/class_hi.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.typehierarchy.TypeHierarchyView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.typehierarchy"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+      <menus xmi:id="_BgzxIRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.typehierarchy">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_BgzxIhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.typehierarchy" visible="false"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxIxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.functions" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Functions" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.functions/icons/function.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.functions.FunctionsView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.functions"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxJBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.report.ReportList" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Report List" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.report/icons/ft_stylelist.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.report.ReportList"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.report"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
+      <menus xmi:id="_BgzxJRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.report.ReportList">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_BgzxJxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.report.ReportList"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_BgzxKRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schemas" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Schema Explorer" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.schemas/icons/schema.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.schemas.SchemasView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.schemas"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:hale studio</tags>
+      <menus xmi:id="_BgzxKhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schemas">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_BgzxLRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schemas"/>
+    </sharedElements>
+    <trimBars xmi:id="_BgzxLxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.ui.workbench">
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxMBuOEeyvIYlxqn4MGQ" elementId="group.file" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_BgzxMRuOEeyvIYlxqn4MGQ" elementId="group.file" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxMhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.workbench.file">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxShuOEeyvIYlxqn4MGQ" elementId="group.nav" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_BgzxSxuOEeyvIYlxqn4MGQ" elementId="group.nav" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxTBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.workbench.navigate">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxWBuOEeyvIYlxqn4MGQ" elementId="group.editor" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_BgzxWRuOEeyvIYlxqn4MGQ" elementId="group.editor" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxWhuOEeyvIYlxqn4MGQ" elementId="group.help" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_BgzxWxuOEeyvIYlxqn4MGQ" elementId="group.help" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxXBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.workbench.help">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_BgzxYBuOEeyvIYlxqn4MGQ" elementId="additions" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_BgzxYRuOEeyvIYlxqn4MGQ" elementId="additions" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_BgzxYhuOEeyvIYlxqn4MGQ" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>stretch</tags>
+        <tags>SHOW_RESTORE_MENU</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_BgzxYxuOEeyvIYlxqn4MGQ" elementId="PerspectiveSwitcher" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.e4.ui.workbench.addons.perspectiveswitcher.PerspectiveSwitcher">
+        <tags>Draggable</tags>
+        <tags>HIDEABLE</tags>
+        <tags>SHOW_RESTORE_MENU</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_BgzxZBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.trim.status" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_BgzxZRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.StatusLine" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_Bg0XcBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.HeapStatus" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_Bg0XcRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.ProgressBar" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_Bg0XeBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Left"/>
+    <trimBars xmi:id="_Bg0XeRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right"/>
+  </children>
+  <bindingTables xmi:id="_Bg0XehuOEeyvIYlxqn4MGQ" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_Bg0XvRuOEeyvIYlxqn4MGQ">
+    <bindings xmi:id="_Bg0XexuOEeyvIYlxqn4MGQ" keySequence="CTRL+X" command="_Bg0ZIxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XfBuOEeyvIYlxqn4MGQ" keySequence="CTRL+Y" command="_Bg0ZPhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XfRuOEeyvIYlxqn4MGQ" keySequence="CTRL+Z" command="_Bg0ZGRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XfhuOEeyvIYlxqn4MGQ" keySequence="CTRL+F10" command="_Bg0ZYhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XfxuOEeyvIYlxqn4MGQ" keySequence="CTRL+INSERT" command="_Bg0Y1RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XgBuOEeyvIYlxqn4MGQ" keySequence="CTRL+PAGE_UP" command="_Bg0ZZxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XgRuOEeyvIYlxqn4MGQ" keySequence="CTRL+PAGE_DOWN" command="_Bg0YvxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XghuOEeyvIYlxqn4MGQ" keySequence="ALT+PAGE_UP" command="_Bg0ZVBuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XgxuOEeyvIYlxqn4MGQ" keySequence="ALT+PAGE_DOWN" command="_Bg0ZERuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XhBuOEeyvIYlxqn4MGQ" keySequence="SHIFT+INSERT" command="_Bg0ZJRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XhRuOEeyvIYlxqn4MGQ" keySequence="CTRL+SPACE" command="_Bg0Y8BuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XhhuOEeyvIYlxqn4MGQ" keySequence="SHIFT+DEL" command="_Bg0ZIxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XhxuOEeyvIYlxqn4MGQ" keySequence="CTRL+V" command="_Bg0ZJRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XiBuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+SPACE" command="_Bg0Y2BuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XiRuOEeyvIYlxqn4MGQ" keySequence="CTRL+A" command="_Bg0Y_RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XihuOEeyvIYlxqn4MGQ" keySequence="CTRL+C" command="_Bg0Y1RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+  </bindingTables>
+  <bindingTables xmi:id="_Bg0XixuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.window" bindingContext="_Bg0XvhuOEeyvIYlxqn4MGQ">
+    <bindings xmi:id="_Bg0XjBuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+F7" command="_Bg0Y9RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XjRuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+F8" command="_Bg0Y3huOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XjhuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+F4" command="_Bg0ZIBuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XjxuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+F6" command="_Bg0Y0RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XkBuOEeyvIYlxqn4MGQ" keySequence="CTRL+_" command="_Bg0Y3xuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_Bg0XkRuOEeyvIYlxqn4MGQ" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="true"/>
+    </bindings>
+    <bindings xmi:id="_Bg0XkhuOEeyvIYlxqn4MGQ" keySequence="CTRL+F7" command="_Bg0Y1huOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XkxuOEeyvIYlxqn4MGQ" keySequence="CTRL+F8" command="_Bg0ZdBuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XlBuOEeyvIYlxqn4MGQ" keySequence="CTRL+F4" command="_Bg0ZShuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XlRuOEeyvIYlxqn4MGQ" keySequence="CTRL+F6" command="_Bg0Y3RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XlhuOEeyvIYlxqn4MGQ" keySequence="ALT+SHIFT+F7" command="_Bg0ZJxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XlxuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+Z" command="_Bg0YzhuOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XmBuOEeyvIYlxqn4MGQ" keySequence="CTRL+{" command="_Bg0Y3xuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_Bg0XmRuOEeyvIYlxqn4MGQ" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="false"/>
+    </bindings>
+    <bindings xmi:id="_Bg0XmhuOEeyvIYlxqn4MGQ" keySequence="ALT+-" command="_Bg0Y8xuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XmxuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+R" command="_Bg0ZZRuOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XnBuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+S" command="_Bg0Y0huOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XnRuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+S" command="_Bg0YxxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XnhuOEeyvIYlxqn4MGQ" keySequence="ALT+ARROW_LEFT" command="_Bg0ZZhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XnxuOEeyvIYlxqn4MGQ" keySequence="ALT+ARROW_RIGHT" command="_Bg0ZRRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XoBuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+W" command="_Bg0ZIBuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XoRuOEeyvIYlxqn4MGQ" keySequence="ALT+SHIFT+Q H" command="_Bg0Y-RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_Bg0XohuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.cheatsheets.views.CheatSheetView"/>
+    </bindings>
+    <bindings xmi:id="_Bg0XoxuOEeyvIYlxqn4MGQ" keySequence="CTRL+," command="_Bg0ZLRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XpBuOEeyvIYlxqn4MGQ" keySequence="CTRL+-" command="_Bg0Y0BuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XpRuOEeyvIYlxqn4MGQ" keySequence="ALT+SHIFT+Q L" command="_Bg0Y-RuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_Bg0XphuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.pde.runtime.LogView"/>
+    </bindings>
+    <bindings xmi:id="_Bg0XpxuOEeyvIYlxqn4MGQ" keySequence="CTRL+." command="_Bg0ZKRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XqBuOEeyvIYlxqn4MGQ" keySequence="ALT+F7" command="_Bg0ZJhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XqRuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+E" command="_Bg0ZDxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XqhuOEeyvIYlxqn4MGQ" keySequence="ALT+CR" command="_Bg0YyRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XqxuOEeyvIYlxqn4MGQ" keySequence="CTRL+P" command="_Bg0ZPxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XrBuOEeyvIYlxqn4MGQ" keySequence="CTRL+S" command="_Bg0ZFBuOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XrRuOEeyvIYlxqn4MGQ" keySequence="CTRL+S" command="_Bg0YyxuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XrhuOEeyvIYlxqn4MGQ" keySequence="F12" command="_Bg0Y8huOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XrxuOEeyvIYlxqn4MGQ" keySequence="CTRL+W" command="_Bg0ZShuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XsBuOEeyvIYlxqn4MGQ" keySequence="F1" command="_Bg0ZEBuOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XsRuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+NUMPAD_MULTIPLY" command="_Bg0YxhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XshuOEeyvIYlxqn4MGQ" keySequence="F2" command="_Bg0ZMhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XsxuOEeyvIYlxqn4MGQ" keySequence="CTRL+M" command="_Bg0Y5xuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XtBuOEeyvIYlxqn4MGQ" keySequence="CTRL+N" command="_Bg0ZQhuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XtRuOEeyvIYlxqn4MGQ" keySequence="F5" command="_Bg0ZchuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XthuOEeyvIYlxqn4MGQ" keySequence="CTRL+SHIFT+NUMPAD_DIVIDE" command="_Bg0Y4xuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XtxuOEeyvIYlxqn4MGQ" keySequence="CTRL+E" command="_Bg0ZdhuOEeyvIYlxqn4MGQ"/>
+    <bindings xmi:id="_Bg0XuBuOEeyvIYlxqn4MGQ" keySequence="CTRL+E" command="_Bg0ZDRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XuRuOEeyvIYlxqn4MGQ" keySequence="CTRL+F" command="_Bg0Y1BuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XuhuOEeyvIYlxqn4MGQ" keySequence="CTRL+=" command="_Bg0ZVRuOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_Bg0XuxuOEeyvIYlxqn4MGQ" keySequence="DEL" command="_Bg0Y4huOEeyvIYlxqn4MGQ">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+  </bindingTables>
+  <bindingTables xmi:id="_Bg0XvBuOEeyvIYlxqn4MGQ" bindingContext="_Bg0XxBuOEeyvIYlxqn4MGQ"/>
+  <rootContext xmi:id="_Bg0XvRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
+    <children xmi:id="_Bg0XvhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
+      <children xmi:id="_Bg0XvxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
+      <children xmi:id="_Bg0XwBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.textEditorScope" name="Editing Text" description="Editing Text Context"/>
+    </children>
+    <children xmi:id="_Bg0XwRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs" description="A dialog is open"/>
+  </rootContext>
+  <rootContext xmi:id="_Bg0XwhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.workbenchMenu" name="Workbench Menu" description="When no Workbench windows are active"/>
+  <rootContext xmi:id="_Bg0XwxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.contexts.actionSet" name="Action Set" description="Parent context for action sets"/>
+  <rootContext xmi:id="_Bg0XxBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.actionSet" name="Auto::org.eclipse.ui.cheatsheets.actionSet"/>
+  <descriptors xmi:id="_Bg0XxRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
+    <tags>Editor</tags>
+    <tags>removeOnHide</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XxhuOEeyvIYlxqn4MGQ" elementId="de.fhg.igd.mapviewer.view.MapView" label="Map" iconURI="platform:/plugin/de.fhg.igd.mapviewer/images/world.gif" tooltip="" allowMultiple="true" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="de.fhg.igd.mapviewer.view.MapView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="de.fhg.igd.mapviewer"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XxxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.ProgressView" label="Progress View" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.application/icons/pview.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.ExtensionFactory"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.application"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XyBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.source" label="Source Data" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.data/icons/table.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.data.SourceDataView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.data"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XyRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.data.transformed" label="Transformed Data" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.data/icons/table.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.data.TransformedDataView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.data"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XyhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.functions" label="Functions" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.functions/icons/function.png" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.functions.FunctionsView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.functions"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XyxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.alignment" label="Alignment" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.mapping/icons/alignment.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.mapping.AlignmentView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.mapping"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XzBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping" label="Mapping" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.mapping/icons/mapping.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.mapping.MappingView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.mapping"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XzRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.report.ReportList" label="Report List" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.report/icons/ft_stylelist.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.report.ReportList"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.report"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XzhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.resources" label="Project" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.resources/icons/project.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.resources.ResourcesView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.resources"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0XzxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schemas" label="Schema Explorer" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.schemas/icons/schema.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.schemas.SchemasView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.schemas"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X0BuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schema.source" label="Source Schema" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.schemas/icons/schema.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.schemas.SourceSchemaView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.schemas"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X0RuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.schema.target" label="Target Schema" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.schemas/icons/schema.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.schemas.TargetSchemaView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.schemas"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X0huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap" label="Map" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.styledmap/icons/world.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.styledmap.StyledMapView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.styledmap"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X0xuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.tasks" label="Tasks" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.tasks/icons/tasks.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.tasks.TaskTreeView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.tasks"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X1BuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.transformation" label="Transformation" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.transformation/icons/transformation.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.transformation.TransformationView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.transformation"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X1RuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.typehierarchy" label="Type hierarchy" iconURI="platform:/plugin/eu.esdihumboldt.hale.ui.views.typehierarchy/icons/class_hi.gif" tooltip="" category="hale studio" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="eu.esdihumboldt.hale.ui.views.typehierarchy.TypeHierarchyView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="eu.esdihumboldt.hale.ui.views.typehierarchy"/>
+    <tags>View</tags>
+    <tags>categoryTag:hale studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X1huOEeyvIYlxqn4MGQ" elementId="org.eclipse.gef.ui.palette_view" label="Palette" iconURI="platform:/plugin/org.eclipse.gef/icons/palette_view.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.gef.ui.views.palette.PaletteView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.gef"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X1xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.HelpView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.png" tooltip="" category="Help" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.help.ui.internal.views.HelpView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.help.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:Help</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X2BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.internal.introview" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.ViewIntroAdapterPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X2RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="Cheat Sheets" iconURI="platform:/plugin/org.eclipse.ui.cheatsheets/icons/view16/cheatsheet_view.png" tooltip="" category="Help" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.cheatsheets.views.CheatSheetView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.cheatsheets"/>
+    <tags>View</tags>
+    <tags>categoryTag:Help</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X2huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.PropertySheet" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X2xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.ContentOutline" label="Outline" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.contentoutline.ContentOutline"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Bg0X3BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.pde.runtime.LogView" label="Error Log" iconURI="platform:/plugin/org.eclipse.ui.views.log/icons/eview16/error_log.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.log.LogView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views.log"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <commands xmi:id="_Bg0YvRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.schema.clear_target" commandName="Clear target schemas" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YvhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.pinEditor" commandName="Pin Editor" description="Pin the current editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YvxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.nextTab" commandName="Next Tab" description="Switch to the next tab" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YwBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.quickAccess" commandName="Find Actions" description="Quickly access UI elements" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YwRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.groovy.toggle_restriction" commandName="Groovy restriction" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YwhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instance.toggle_transformation" commandName="Live transformation" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YwxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instance.clear" commandName="Clean source data" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YxBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap.zoomToAll" commandName="Zoom to instances" description="Zoom to all instances available in the map" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YxRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instance.toggle_sampling" commandName="Instance sampling" description="En/disable usage of a sample data set based on the imported source data" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YxhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.expandAll" commandName="Expand All" description="Expand the current tree" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YxxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.saveAll" commandName="Save All" description="Save all current contents" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YyBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.showKeyAssist" commandName="Show Key Assist" description="Show the key assist dialog" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YyRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.properties" commandName="Properties" description="Display the properties of the selected item" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YyhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.closeOthers" commandName="Close Others" description="Close all editors except the one that is active" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YyxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.save" commandName="Save" description="Save the current contents" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YzBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.preferences" commandName="Preferences" description="Open the preferences dialog" category="_Bg0ZjhuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0YzRuOEeyvIYlxqn4MGQ" elementId="preferencePageId" name="Preference Page"/>
+  </commands>
+  <commands xmi:id="_Bg0YzhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap.zoomToSelection" commandName="Zoom to selection" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0YzxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.align.clean" commandName="Clean alignment" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y0BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.gef.zoom_out" commandName="Zoom Out" description="Zoom Out" category="_Bg0ZixuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y0RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.previousEditor" commandName="Previous Editor" description="Switch to the previous editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y0huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.style.typestyle" commandName="Change style" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y0xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.activeContextInfo" commandName="Show activeContext Info" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y1BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.findReplace" commandName="Find and Replace" description="Find and replace text" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y1RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.copy" commandName="Copy" description="Copy the selection to the clipboard" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y1huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.nextView" commandName="Next View" description="Switch to the next view" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y1xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.tipsAndTricksAction" commandName="Tips and Tricks" description="Open the tips and tricks help page" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y2BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.text.contentAssist.contextInformation" commandName="Context Information" description="Show Context Information" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y2RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.fullscreenmode" commandName="Toggle Full Screen" description="Toggles the window between full screen and normal" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y2huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.properties.NewPropertySheetCommand" commandName="Properties" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y2xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="Installation Details" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y3BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.saveAs" commandName="Save As" description="Save the current contents to another location" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y3RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.nextEditor" commandName="Next Editor" description="Switch to the next editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y3huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.previousPerspective" commandName="Previous Perspective" description="Switch to the previous perspective" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y3xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.splitEditor" commandName="Toggle Split Editor" description="Split or join the currently active editor." category="_Bg0ZjhuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0Y4BuOEeyvIYlxqn4MGQ" elementId="Splitter.isHorizontal" name="Orientation" optional="false"/>
+  </commands>
+  <commands xmi:id="_Bg0Y4RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.helpContents" commandName="Help Contents" description="Open the help contents" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y4huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.delete" commandName="Delete" description="Delete the selection" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y4xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.collapseAll" commandName="Collapse All" description="Collapse the current tree" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y5BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.goInto" commandName="Go Into" description="Navigate into the selected item" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y5RuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.schema.mappable_target" commandName="Edit mapping relevant target types" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y5huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.util.command.exit" commandName="exit" description="Exit hale studio" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y5xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.maximizePart" commandName="Maximize Active View or Editor" description="Toggles maximize/restore state of active view or editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y6BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.lockToolBar" commandName="Toggle Lock Toolbars" description="Toggle the Lock on the Toolbars" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y6RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.gef.ui.palette_view" commandName="Palette" category="_Bg0ZiBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y6huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.exit" commandName="Exit" description="Exit the application" category="_Bg0ZjRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0Y6xuOEeyvIYlxqn4MGQ" elementId="mayPrompt" name="may prompt"/>
+  </commands>
+  <commands xmi:id="_Bg0Y7BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.newEditor" commandName="Clone Editor" description="Open another editor on the active editor's input" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y7RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.minimizePart" commandName="Minimize Active View or Editor" description="Minimizes the active view or editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y7huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.project.open" commandName="Open project" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y7xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.addBookmark" commandName="Add Bookmark" description="Add a bookmark" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y8BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.text.contentAssist.proposals" commandName="Content Assist" description="Content Assist" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y8RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.up" commandName="Up" description="Navigate up one level" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y8huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.activateEditor" commandName="Activate Editor" description="Activate the editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y8xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.showSystemMenu" commandName="Show System Menu" description="Show the system menu" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y9BuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.mapping.open" commandName="Show mapping" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y9RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.previousView" commandName="Previous View" description="Switch to the previous view" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y9huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.project.new" commandName="New project" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y9xuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.align.add_relation" commandName="Add relation" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y-BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.revert" commandName="Revert" description="Revert to the last saved state" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y-RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView" commandName="Show View" description="Shows a particular view" category="_Bg0ZiBuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0Y-huOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView.viewId" name="View"/>
+    <parameters xmi:id="_Bg0Y-xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView.secondaryId" name="Secondary Id"/>
+    <parameters xmi:id="_Bg0Y_BuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.views.showView.makeFast" name="As FastView"/>
+  </commands>
+  <commands xmi:id="_Bg0Y_RuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.selectAll" commandName="Select All" description="Select all" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y_huOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.function.custom.create" commandName="Define custom function" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0Y_xuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.ignoreMissingPlaceholders" commandName="Do not warn of missing documentation" description="Sets the help preferences to no longer report a warning about the current set of missing documents." category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZABuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.savePerspective" commandName="Save Perspective As" description="Save the current perspective" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZARuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.move" commandName="Move..." description="Move the selected item" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZAhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.transform.projectdata" commandName="Transform project data" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZAxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.hidetrimbars" commandName="Toggle visibility of the window toolbars" description="Toggle the visibility of the toolbars of the current window" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZBBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instance.reload_data" commandName="Reload source data" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZBRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.import" commandName="Import" description="Import" category="_Bg0ZjRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZBhuOEeyvIYlxqn4MGQ" elementId="importWizardId" name="Import Wizard"/>
+  </commands>
+  <commands xmi:id="_Bg0ZBxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.perspectives.showPerspective" commandName="Show Perspective" description="Show a particular perspective" category="_Bg0ZiRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZCBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="Parameter"/>
+    <parameters xmi:id="_Bg0ZCRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.perspectives.showPerspective.newWindow" name="In New Window"/>
+  </commands>
+  <commands xmi:id="_Bg0ZChuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.align.migrate.source" commandName="Replace sources" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZCxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.style.spectrum" commandName="Generate styles color scheme" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZDBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.linkWithEditor" commandName="Toggle Link with Editor" description="Toggles linking of a view's selection with the active editor's selection" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZDRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.openEditorDropDown" commandName="Quick Switch Editor" description="Open the editor drop down list" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZDhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.addnamedcontext" commandName="Add instance context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZDxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.switchToEditor" commandName="Switch to Editor" description="Switch to an editor" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZEBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.dynamicHelp" commandName="Show Contextual Help" description="Open the contextual help" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZERuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.nextSubTab" commandName="Next Sub-Tab" description="Switch to the next sub-tab" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZEhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.purgeconditioncontext" commandName="Purge condition context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZExuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.properties.open" commandName="Properties" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZFBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.project.save" commandName="Save project" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZFRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.resetPerspective" commandName="Reset Perspective" description="Reset the current perspective to its default state" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZFhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.editconditioncontext" commandName="Edit condition context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZFxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.io.export" commandName="Export" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZGBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.schema.clear_source" commandName="Clear source schemas" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZGRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.undo" commandName="Undo" description="Undo the last operation" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZGhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.togglestatusbar" commandName="Toggle Statusbar" description="Toggle the visibility of the bottom status bar" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZGxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.openCheatSheet" commandName="Open Cheat Sheet" description="Open a Cheat Sheet." category="_Bg0ZkRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZHBuOEeyvIYlxqn4MGQ" elementId="cheatSheetId" name="Identifier"/>
+  </commands>
+  <commands xmi:id="_Bg0ZHRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.closePart" commandName="Close Part" description="Close the active workbench part" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZHhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.installationDialog" commandName="Installation Information" description="Open the installation dialog" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZHxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.back" commandName="Back" description="Navigate back" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZIBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.closeAll" commandName="Close All" description="Close all editors" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZIRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.project.update" commandName="Update project" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZIhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="Check for Updates" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZIxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.cut" commandName="Cut" description="Cut the selection to the clipboard" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZJBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.io.haleconnect.ui.logout" commandName="Logout and clear credentials" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZJRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.paste" commandName="Paste" description="Paste from the clipboard" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZJhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.part.nextPage" commandName="Next Page" description="Switch to the next page" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZJxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.part.previousPage" commandName="Previous Page" description="Switch to the previous page" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZKBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instancevalidation.status.toggle_validation" commandName="Validate transformed instances automatically" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZKRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.next" commandName="Next" description="Navigate to the next item" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZKhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.applications.commands.manual" commandName="Show Manual" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZKxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.closePerspective" commandName="Close Perspective" description="Close the current perspective" category="_Bg0ZjhuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZLBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.closePerspective.perspectiveId" name="Perspective Id"/>
+  </commands>
+  <commands xmi:id="_Bg0ZLRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.previous" commandName="Previous" description="Navigate to the previous item" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZLhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.cheatsheets.openCheatSheetURL" commandName="Open Cheat Sheet from URL" description="Open a Cheat Sheet from file at a specified URL." category="_Bg0ZkRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZLxuOEeyvIYlxqn4MGQ" elementId="cheatSheetId" name="Identifier" optional="false"/>
+    <parameters xmi:id="_Bg0ZMBuOEeyvIYlxqn4MGQ" elementId="name" name="Name" optional="false"/>
+    <parameters xmi:id="_Bg0ZMRuOEeyvIYlxqn4MGQ" elementId="url" name="URL" optional="false"/>
+  </commands>
+  <commands xmi:id="_Bg0ZMhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.rename" commandName="Rename" description="Rename the selected item" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZMxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.browser.openBundleResource" commandName="Open Resource in Browser" description="Opens a bundle resource in the default web browser." category="_Bg0ZjhuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZNBuOEeyvIYlxqn4MGQ" elementId="plugin" name="Plugin"/>
+    <parameters xmi:id="_Bg0ZNRuOEeyvIYlxqn4MGQ" elementId="path" name="Path"/>
+  </commands>
+  <commands xmi:id="_Bg0ZNhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.schema.make_unmappable" commandName="Exclude type from mapping" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZNxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.project.export" commandName="Save project as" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZOBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.views.styledmap.layoutdropdown" commandName="Go to map / change map layout" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZORuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.io.xsd.ui.configureAnyType" commandName="Configure type content" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZOhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.export" commandName="Export" description="Export" category="_Bg0ZjRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZOxuOEeyvIYlxqn4MGQ" elementId="exportWizardId" name="Export Wizard"/>
+  </commands>
+  <commands xmi:id="_Bg0ZPBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.aboutAction" commandName="About" description="Open the about dialog" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZPRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.closeAllSaved" commandName="Close All Saved" description="Close all saved editors" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZPhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.edit.redo" commandName="Redo" description="Redo the last operation" category="_Bg0ZjBuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZPxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.print" commandName="Print" description="Print" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZQBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.removecontext" commandName="Remove instance context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZQRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.closeTray" commandName="Close User Assistance Tray" description="Close the user assistance tray containing context help information and cheat sheets." category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZQhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.newWizard" commandName="New" description="Open the New item wizard" category="_Bg0ZjRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZQxuOEeyvIYlxqn4MGQ" elementId="newWizardId" name="New Wizard"/>
+  </commands>
+  <commands xmi:id="_Bg0ZRBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.newWindow" commandName="New Window" description="Open another window" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZRRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.forwardHistory" commandName="Forward History" description="Move forward in the editor navigation history" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZRhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.spy" commandName="Show Contributing Plug-in" description="Shows contribution information for the currently selected element" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZRxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.io.haleconnect.ui.share" commandName="Share..." category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZSBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.io.import" commandName="Import" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZSRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.helpSearch" commandName="Help Search" description="Open the help search" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZShuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.close" commandName="Close" description="Close the active editor" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZSxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.addxpathcontext" commandName="Add XPath context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZTBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.equinox.p2.ui.sdk.install" commandName="Install New Software..." category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZTRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.restartWorkbench" commandName="Restart" description="Restart the workbench" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZThuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.customizePerspective" commandName="Customize Perspective" description="Customize the current perspective" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZTxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.values.update_occuring" commandName="Update occurring values" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZUBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.toggleShowKeys" commandName="Toggle Show Key Bindings" description="Shows key binding when command is invoked" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZURuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning users" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZUhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.addcqlcontext" commandName="Add CQL context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZUxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.geometry.setAsDefault" commandName="Set as default geometry" description="Set as default geometry property" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZVBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.previousSubTab" commandName="Previous Sub-Tab" description="Switch to the previous sub-tab" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZVRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.gef.zoom_in" commandName="Zoom In" description="Zoom In" category="_Bg0ZixuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZVhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.hideShowEditors" commandName="Toggle Shared Area Visibility" description="Toggles the visibility of the shared area" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZVxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.showIn" commandName="Show In" category="_Bg0ZihuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZWBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.showIn.targetId" name="Show In Target Id" optional="false"/>
+  </commands>
+  <commands xmi:id="_Bg0ZWRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.align.migrate.target" commandName="Replace targets" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZWhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.help.displayHelp" commandName="Display Help" description="Display a Help topic" category="_Bg0ZkRuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZWxuOEeyvIYlxqn4MGQ" elementId="href" name="Help topic href"/>
+  </commands>
+  <commands xmi:id="_Bg0ZXBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.dialogs.openInputDialog" commandName="Open Input Dialog" description="Open an Input Dialog" category="_Bg0ZkBuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZXRuOEeyvIYlxqn4MGQ" elementId="title" name="Title"/>
+    <parameters xmi:id="_Bg0ZXhuOEeyvIYlxqn4MGQ" elementId="message" name="Message"/>
+    <parameters xmi:id="_Bg0ZXxuOEeyvIYlxqn4MGQ" elementId="initialValue" name="Initial Value"/>
+    <parameters xmi:id="_Bg0ZYBuOEeyvIYlxqn4MGQ" elementId="cancelReturns" name="Return Value on Cancel"/>
+  </commands>
+  <commands xmi:id="_Bg0ZYRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.help.ui.indexcommand" commandName="Index" description="Show Keyword Index" category="_Bg0ZkRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZYhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.showViewMenu" commandName="Show View Menu" description="Show the view menu" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZYxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.showContextMenu" commandName="Show Context Menu" description="Show the context menu" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZZBuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.transformation" commandName="Transform external data" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZZRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.style.randomcolor" commandName="Assign random color" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZZhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.backwardHistory" commandName="Backward History" description="Move backward in the editor navigation history" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZZxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.previousTab" commandName="Previous Tab" description="Switch to the previous tab" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZaBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.dialogs.openMessageDialog" commandName="Open Message Dialog" description="Open a Message Dialog" category="_Bg0ZkBuOEeyvIYlxqn4MGQ">
+    <parameters xmi:id="_Bg0ZaRuOEeyvIYlxqn4MGQ" elementId="title" name="Title"/>
+    <parameters xmi:id="_Bg0ZahuOEeyvIYlxqn4MGQ" elementId="message" name="Message"/>
+    <parameters xmi:id="_Bg0ZaxuOEeyvIYlxqn4MGQ" elementId="imageType" name="Image Type Constant" typeId="org.eclipse.ui.dialogs.Integer"/>
+    <parameters xmi:id="_Bg0ZbBuOEeyvIYlxqn4MGQ" elementId="defaultIndex" name="Default Button Index" typeId="org.eclipse.ui.dialogs.Integer"/>
+    <parameters xmi:id="_Bg0ZbRuOEeyvIYlxqn4MGQ" elementId="buttonLabel0" name="First Button Label"/>
+    <parameters xmi:id="_Bg0ZbhuOEeyvIYlxqn4MGQ" elementId="buttonLabel1" name="Second Button Label"/>
+    <parameters xmi:id="_Bg0ZbxuOEeyvIYlxqn4MGQ" elementId="buttonLabel2" name="Third Button Label"/>
+    <parameters xmi:id="_Bg0ZcBuOEeyvIYlxqn4MGQ" elementId="buttonLabel3" name="Fourth Button Label"/>
+    <parameters xmi:id="_Bg0ZcRuOEeyvIYlxqn4MGQ" elementId="cancelReturns" name="Return Value on Cancel"/>
+  </commands>
+  <commands xmi:id="_Bg0ZchuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.file.refresh" commandName="Refresh" description="Refresh the selected items" category="_Bg0ZjRuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZcxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.navigate.forward" commandName="Forward" description="Navigate forward" category="_Bg0ZihuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZdBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.nextPerspective" commandName="Next Perspective" description="Switch to the next perspective" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZdRuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.schema.mappable_source" commandName="Edit mapping relevant source types" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZdhuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.edit.modify" commandName="Edit" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZdxuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.entity.addindexcontext" commandName="Add index context" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZeBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.window.closeAllPerspectives" commandName="Close All Perspectives" description="Close all open perspectives" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZeRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="Toggle Main Toolbar Visibility" description="Toggles the visibility of the window toolbar" category="_Bg0ZjhuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZehuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.io.haleconnect.ui.login" commandName="Login to hale connect" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZexuOEeyvIYlxqn4MGQ" elementId="eu.esdihumboldt.hale.ui.instance.sampling.pref" commandName="Configure instance sampling" description="Configure sample data selection" category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <commands xmi:id="_Bg0ZfBuOEeyvIYlxqn4MGQ" elementId="AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction" commandName="Cheat Sheets..." category="_Bg0ZjxuOEeyvIYlxqn4MGQ"/>
+  <addons xmi:id="_Bg0ZfRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_Bg0ZfhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_Bg0ZfxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_Bg0ZgBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_Bg0ZgRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_Bg0ZghuOEeyvIYlxqn4MGQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_Bg0ZgxuOEeyvIYlxqn4MGQ" elementId="Cleanup Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon"/>
+  <addons xmi:id="_Bg0ZhBuOEeyvIYlxqn4MGQ" elementId="DnD Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.dndaddon.DnDAddon"/>
+  <addons xmi:id="_Bg0ZhRuOEeyvIYlxqn4MGQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
+  <addons xmi:id="_Bg0ZhhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_Bg0ZhxuOEeyvIYlxqn4MGQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
+  <categories xmi:id="_Bg0ZiBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
+  <categories xmi:id="_Bg0ZiRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.perspectives" name="Perspectives" description="Commands for opening perspectives"/>
+  <categories xmi:id="_Bg0ZihuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.navigate" name="Navigate"/>
+  <categories xmi:id="_Bg0ZixuOEeyvIYlxqn4MGQ" elementId="org.eclipse.gef.category.view" name="View" description="View"/>
+  <categories xmi:id="_Bg0ZjBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.edit" name="Edit"/>
+  <categories xmi:id="_Bg0ZjRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.file" name="File"/>
+  <categories xmi:id="_Bg0ZjhuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.window" name="Window"/>
+  <categories xmi:id="_Bg0ZjxuOEeyvIYlxqn4MGQ" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
+  <categories xmi:id="_Bg0ZkBuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.dialogs" name="Dialogs" description="Commands for opening dialogs"/>
+  <categories xmi:id="_Bg0ZkRuOEeyvIYlxqn4MGQ" elementId="org.eclipse.ui.category.help" name="Help"/>
+</application:Application>
