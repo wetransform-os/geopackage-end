@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.1.0.release">
+    <name>Create DF4_8 Agglomeration Noise Contours Geopackage Template (Linestring variant)</name>
+    <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
+    <created>2021-11-24T16:01:37.683+01:00</created>
+    <modified>2021-11-24T20:04:17.939+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/Agglomerations/Agglomeration-NoiseContours-geopackage-linestring.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">db6a64b8-c0f9-4149-8c61-4598f8ca7685</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/Agglomerations/DF4_8-Agglomerations_LineString.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">fc812e53-bba1-4927-9623-2aca96943226</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/Agglomerations/DF4_8-Agglomerations_LineString.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <file name="alignment.xml" location="Agglomeration-NoiseContours-geopackage-linestring.halex.alignment.xml"/>
+    <file name="styles.sld" location="Agglomeration-NoiseContours-geopackage-linestring.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_airportsInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_allSourcesInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_industryInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_railwaysInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_roadsInAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}geodm_id_testdaten_bahnstrecken/1">geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}geodm_id_testdaten_bahnstrecken/count">1</property>
+</hale-project>

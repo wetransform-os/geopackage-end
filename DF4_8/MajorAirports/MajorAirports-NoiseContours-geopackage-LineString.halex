@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.1.0.release">
+    <name>Create DF4_8 Geopackage Template for Major Airports (LineString)</name>
+    <author>Thorsten Reitz (on behalf of the European Environmental Agency)</author>
+    <created>2021-11-24T20:30:53.927+01:00</created>
+    <modified>2021-11-24T20:33:03.764+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorAirports/MajorAirports-NoiseContours-geopackage-LineString.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">f8148984-147e-4a78-9cf1-f19774f02e7b</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorAirports/DF4_8-MajorAirports_LineString.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">5224b1f8-6542-4544-9f55-118640a26b1b</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorAirports/DF4_8-MajorAirports_LineString.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <file name="alignment.xml" location="MajorAirports-NoiseContours-geopackage-LineString.halex.alignment.xml"/>
+    <file name="styles.sld" location="MajorAirports-NoiseContours-geopackage-LineString.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorAirportsIncludingAgglomeration_Lnight/count">1</property>
+</hale-project>

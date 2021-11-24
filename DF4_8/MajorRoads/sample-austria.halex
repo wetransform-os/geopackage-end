@@ -3,7 +3,7 @@
     <name>AT Roads Sample Data to END DF4_8 Major Roads Geopackage</name>
     <author>Thorsten Reitz, wetransform (on behalf of the EEA)</author>
     <created>2021-09-15T11:33:04.879+02:00</created>
-    <modified>2021-09-15T13:02:39.666+02:00</modified>
+    <modified>2021-09-30T14:49:55.676+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
