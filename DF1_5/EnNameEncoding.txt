@@ -1,0 +1,14 @@
+import java.text.Normalizer;
+
+def inputName = Agglomerat;
+
+inputName = inputName.replaceAll("ß", "ss");
+inputName = inputName.replaceAll("ä", "ae");
+inputName = inputName.replaceAll("ö", "oe");
+inputName = inputName.replaceAll("ü", "ue");
+
+inputName = Normalizer.normalize(inputName, Normalizer.Form.NFD);
+
+def resultString = inputName.replaceAll("[^\\x00-\\x7F]", "");
+
+return resultString;
