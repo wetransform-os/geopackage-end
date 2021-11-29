@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.1.0.SNAPSHOT">
+    <name>ES Roads Sample Data to END DF4_8 Major Roads Geopackage (LineString)</name>
+    <author>Thorsten Reitz, wetransform (on behalf of the EEA)</author>
+    <created>2021-09-15T11:33:04.879+02:00</created>
+    <modified>2021-11-29T06:56:58.751+01:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-spain-linestring.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="source">DF4_8-MajorRoads_LineString.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.lookup.import" provider-id="eu.esdihumboldt.hale.io.xls.reader.lookup">
+        <setting name="charset">UTF-8</setting>
+        <setting name="ignoreEmptyStrings">false</setting>
+        <setting name="resourceId">cab11cde-23d8-4c8e-be92-253e0f060821</setting>
+        <setting name="keyColumn">0</setting>
+        <setting name="name">Lden DB_LOW to category Classification</setting>
+        <setting name="valueColumn">1</setting>
+        <setting name="description">Lden DB_LOW to category Classification</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/Category-Lden-classification.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.lookup.import" provider-id="eu.esdihumboldt.hale.io.xls.reader.lookup">
+        <setting name="charset">UTF-8</setting>
+        <setting name="ignoreEmptyStrings">false</setting>
+        <setting name="resourceId">fcf3d85a-7813-49a1-ab47-f8e3ad125310</setting>
+        <setting name="keyColumn">0</setting>
+        <setting name="name">Lnight DB_LOW to category Classification</setting>
+        <setting name="valueColumn">1</setting>
+        <setting name="description">Lnight DB_LOW to category Classification</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/Category-Lnight-classification.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">1982b93d-b9c8-4cd9-927b-d4116b16732a</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/NoiseSourceTypeValue.xml</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">850cf066-ebb8-4688-9293-6267e6dfd9ac</setting>
+        <setting name="sheetIndex">0</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/MRoad_AT_SalzburgArea_final_20210830.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ESTATUnitReference</setting>
+        <setting name="properties">ESTATNUTSReferenceTitle,ESTATNUTSReferenceLink,ESTATLAUReferenceTitle,ESTATLAUReferenceLink</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ESTATUnitReference</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ESTATUnitReference</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATNUTSReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceTitle</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATLAUReferenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">c74ffb08-146c-4b6c-93e4-a4c5b23d846e</setting>
+        <setting name="sheetIndex">1</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/MRoad_AT_SalzburgArea_final_20210830.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureMajorRoad</setting>
+        <setting name="properties">reportingLevel,ESTATUnitCode,roadIdIdentifier,computationAndMeasurementMethod,receiverPointsInDwelling,referenceLink</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ExposureMajorRoad</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ExposureMajorRoad</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>reportingLevel</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ESTATUnitCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>computationAndMeasurementMethod</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>receiverPointsInDwelling</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>referenceLink</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">075c45df-761e-43b7-82f3-38c67b6f1c3d</setting>
+        <setting name="sheetIndex">2</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Double,java.lang.Integer,java.lang.Integer,java.lang.String</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-03%20EEA%20END/DF4_8/Sample%20Roads%20Austria/MRoad_AT_SalzburgArea_final_20210830.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureValue</setting>
+        <setting name="properties">ESTATUnitCode,roadIdIdentifier,exposureType,noiseLevel,exposedPeople,exposedArea,exposedDwellings,exposedHospitals,exposedSchools</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/xls">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>ExposureValue</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>ExposureValue</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>ESTATUnitCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadIdIdentifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposureType</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noiseLevel</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedPeople</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedArea</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Double</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Double"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedDwellings</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedHospitals</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.Integer</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>exposedSchools</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">c42f08e0-01df-43d7-a3f9-2edfd2a151e0</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/ES_Castello_DF4_8_sample_line/ES_a_Mroad_Lden_2017_upd2018_sel.shp</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Codigo_UME</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">CTRYID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ES_a_Mroad_Lden_2017_upd2018_sel</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Lden</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">OBJECTID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RepEntUnCD</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="7">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">SHAPE_Leng</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="8">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">UnRoadID</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>2</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Codigo_UME</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">CTRYID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ES_a_Mroad_Lden_2017_upd2018_sel</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>the_geom</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Codigo_UME</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="0"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Lden</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="1"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>UnRoadID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="8"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>SHAPE_Leng</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="7"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filename</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filenameType</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Lden</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">OBJECTID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RepEntUnCD</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="7">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">SHAPE_Leng</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                    <hsd:type index="8">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">UnRoadID</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">342db180-98b4-41db-a586-236b833e7c0d</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/ES_Castello_DF4_8_sample_line/ES_a_Mroad_Lnight_2017_upd2018_sel.shp</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ES_a_Mroad_Lnight_2017_upd2018_sel</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Ln</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ES_a_Mroad_Lnight_2017_upd2018_sel</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>the_geom</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>OBJECTID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">OBJECTID</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Integer"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Codigo_UME</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Codigo_UME</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>Ln</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType index="1"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>CTRYID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">CTRYID</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RepEntUnCD</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RepEntUnCD</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>UnRoadID</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">UnRoadID</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>SHAPE_Leng</hsd:name>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">SHAPE_Leng</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Double"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filename</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filenameType</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Ln</hsd:name>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="matchShortPropertyNames">false</setting>
+        <setting name="resourceId">949f567b-8086-46dc-9df5-eba2b680dab4</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/ES_Castello_DF4_8_sample_line/ES_a_Mroad_Lnight_2017_upd2018_sel.shp</setting>
+        <setting name="autoDetectSchemaTypes">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lnight_2017_upd2018_sel</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="matchShortPropertyNames">false</setting>
+        <setting name="resourceId">40cc5abf-1b83-40df-8624-b55e91debee4</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/ES_Castello_DF4_8_sample_line/ES_a_Mroad_Lden_2017_upd2018_sel.shp</setting>
+        <setting name="autoDetectSchemaTypes">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lden_2017_upd2018_sel</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">be250044-b688-4047-88a9-45a48c289a11</setting>
+        <setting name="sheetIndex">0</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/MRoad_ES_CastelloArea_final_20211112.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ESTATUnitReference</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">9385a754-9f2e-4714-bca1-8da8c3975733</setting>
+        <setting name="sheetIndex">1</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/MRoad_ES_CastelloArea_final_20211112.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureMajorRoad</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">47aff750-b8c1-4c2c-a087-8bd89e06b1ac</setting>
+        <setting name="sheetIndex">2</setting>
+        <setting name="skip">true</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/sample-data-linestrings/MRoad_ES_CastelloArea_final_20211112.xlsx</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xls.xlsx</setting>
+        <setting name="typename">ExposureValue</setting>
+    </resource>
+    <file name="alignment.xml" location="sample-spain-linestring.halex.alignment.xml"/>
+    <file name="styles.sld" location="sample-spain-linestring.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lden/1">the_geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lnight/1">the_geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lnight/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lden_2017_upd2018_sel/1">the_geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lden_2017_upd2018_sel/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lnight_2017_upd2018_sel/1">the_geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lnight_2017_upd2018_sel/count">1</property>
+    <property name="instances.sampling.enabled">true</property>
+    <property name="resource-40cc5abf-1b83-40df-8624-b55e91debee4:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lden_2017_upd2018_sel/the_geom">code:EPSG:25830</property>
+    <property name="resource-8e9e18d1-ba13-482a-8098-1654b40a4a14:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lnight/the_geom">wkt:PROJCS["ETRS_1989_LAEA", &#xD;
+  GEOGCS["GCS_ETRS_1989", &#xD;
+    DATUM["D_ETRS_1989", &#xD;
+      SPHEROID["GRS_1980", 6378137.0, 298.257222101]], &#xD;
+    PRIMEM["Greenwich", 0.0], &#xD;
+    UNIT["degree", 0.017453292519943295], &#xD;
+    AXIS["Longitude", EAST], &#xD;
+    AXIS["Latitude", NORTH]], &#xD;
+  PROJECTION["Lambert_Azimuthal_Equal_Area"], &#xD;
+  PARAMETER["latitude_of_center", 51.99999999999999], &#xD;
+  PARAMETER["longitude_of_center", 10.0], &#xD;
+  PARAMETER["false_easting", 4321000.0], &#xD;
+  PARAMETER["false_northing", 3210000.0], &#xD;
+  UNIT["m", 1.0], &#xD;
+  AXIS["x", EAST], &#xD;
+  AXIS["y", NORTH]]</property>
+    <property name="resource-8f64245d-ca42-44c4-ae9a-9d6a9f659ef8:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lden/the_geom">wkt:PROJCS["ETRS_1989_LAEA", &#xD;
+  GEOGCS["GCS_ETRS_1989", &#xD;
+    DATUM["D_ETRS_1989", &#xD;
+      SPHEROID["GRS_1980", 6378137.0, 298.257222101]], &#xD;
+    PRIMEM["Greenwich", 0.0], &#xD;
+    UNIT["degree", 0.017453292519943295], &#xD;
+    AXIS["Longitude", EAST], &#xD;
+    AXIS["Latitude", NORTH]], &#xD;
+  PROJECTION["Lambert_Azimuthal_Equal_Area"], &#xD;
+  PARAMETER["latitude_of_center", 51.99999999999999], &#xD;
+  PARAMETER["longitude_of_center", 10.0], &#xD;
+  PARAMETER["false_easting", 4321000.0], &#xD;
+  PARAMETER["false_northing", 3210000.0], &#xD;
+  UNIT["m", 1.0], &#xD;
+  AXIS["x", EAST], &#xD;
+  AXIS["y", NORTH]]</property>
+    <property name="resource-949f567b-8086-46dc-9df5-eba2b680dab4:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lnight_2017_upd2018_sel/the_geom">code:EPSG:25830</property>
+    <property name="resource-c5867d37-c8fc-4fcf-bf59-ef1092a39e8d:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}AT_a_Mroad_Lden/the_geom">code:EPSG:25830</property>
+    <property name="resource-fff4969e-9995-428c-9cc0-182dfbf4831b:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}ES_a_Mroad_Lnight_2017_upd2018_sel/the_geom">code:EPSG:25830</property>
+</hale-project>
