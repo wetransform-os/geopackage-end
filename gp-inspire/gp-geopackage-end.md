@@ -49,10 +49,10 @@ This Directive applies to noise to which humans are exposed, particularly in bui
 
 The END contains reporting provisions which require Member States (MS) to communicate information to the European Commission (EC) concerning the preparation and publication of strategic noise maps and noise management action plans for:
 
-− All roads, railways, airports, and industrial sites within agglomerations with more than 100.000 inhabitants
-− major roads (more than 3 million vehicles a year)
-− major railways (more than 30.000 trains a year)
-− major airports (more than 50.000 movements a year, including small aircrafts and helicopters).
+- All roads, railways, airports, and industrial sites within agglomerations with more than 100.000 inhabitants
+- major roads (more than 3 million vehicles a year)
+- major railways (more than 30.000 trains a year)
+- major airports (more than 50.000 movements a year, including small aircrafts and helicopters).
 
 The END reporting mechanism contains three data flows containing spatial information. These data flows have been developed to completely fulfil the requirements of the European Noise Directive. For each data flow, a data model has been developed that re-uses concepts and types from the matching INSPIRE data specifications. In each model related to spatial information, there is at least one spatial type that inherits from different INSPIRE feature types. For each of these models, a streamlined view has been developed, which is essentially a simplified INSPIRE model. The streamlined models are transformed to a GeoPackage logical schema, using different model transformation rules. 
 
@@ -87,16 +87,16 @@ The good practice was developed with a focus on maximal interoperability. We thu
 
 The following concrete implementations of the good practice are known:
 
-- EEA: EIONET/ReportNet ingests and validates END GeoPackages using FME Server
-- RIVM (NL): Uses the geopackage templates directly to collect data from 99 reporting agencies and then aggregates them into 4 big geopackages, using hale connect
-- UBA (DE): Uses a translated version of the geopackage schema as a template to collect data and then delivers aggregate GeoPackages, based on hale studio
+- EEA: EIONET/ReportNet ingests and validates END GeoPackages using [FME Server](https://www.safe.com/fme/fme-server/)
+- RIVM (NL): Uses the geopackage templates directly to collect data from 99 reporting agencies and then aggregates them into 4 big geopackages, using [hale connect](https://www.wetransform.to/products/haleconnect/)
+- UBA (DE): Uses a translated version of the geopackage schema as a template to collect data and then delivers aggregate GeoPackages, based on [hale studio](https://github.com/halestudio/hale/)
 - UBA (AT): ??
 
-In addition, the GeoPackage templates are available as presets in hale studio since the release of version 4.1.0. There are also example hale studio transformation projects to generate compliant geopackages available in this repository.
+In addition, the GeoPackage templates are available as presets in hale studio since the [release of version 4.1.0](https://github.com/halestudio/hale/releases/tag/4.1.0). There are also example hale studio transformation projects to generate compliant geopackages available [in this repository](https://github.com/wetransform-os/geopackage-end).
 
 ### Support and Governance 
 
-This best practice will be maintained by the European Environmental Agency, with technical support from wetransform GmbH and Epsilon Italia. A contract is in place to ensure sufficient resources for support and governance.
+This best practice will be maintained by the [European Environmental Agency](https://www.eea.europa.eu/), with technical support from [wetransform GmbH](https://www.wetransform.to/) and [Epsilon Italia](https://www.epsilon-italia.it/). A contract is in place to ensure sufficient resources for support and governance.
 
 ## Limitations
 
