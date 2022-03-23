@@ -2,9 +2,9 @@
 
 ## Description of the Good Practice
 
-This good practice describes a mechanism to deliver GeoPackage-encoded reporting data for the European Noise Directive in such a way that all requirements of the INSPIRE Implementing Rules for the relevant themes are met.
+This good practice describes a mechanism to deliver reporting data for the European Noise Directive in such a way that all requirements of the INSPIRE Implementing Rules for the relevant themes are met. For this purpose a conceptual model was developed that re-uses INSPIRE data specifications heavily. For this conceptual model, two encodings were developed - one using the default encoding, GML, and one using the GeoPackage encoding, which is optimised for usability in common GIS software.
 
-The good practice includes a total of ten GeoPackage logical data models derived from a set of extended and simplified conceptual models:
+This specific good practice defines a total of ten GeoPackage logical data models derived from a set of simplified conceptual models:
 
 - DF1_5 Noise Sources:
     - Major Roads (extends INSPIRE Transport Networks Road `RoadLink`)
@@ -22,15 +22,23 @@ The good practice includes a total of ten GeoPackage logical data models derived
 
 ## INSPIRE component(s)
 
-This GP describes how data that falls under several INSPIRE data specifications (Area management, Human Health and Safety, Transport Networks) can be encoded in GeoPackage in such a way that the abstract requirements from these specifications are met.
+This GP describes how data that falls under several INSPIRE data specifications (Area management, Human Health and Safety, Transport Networks) can be encoded in GeoPackage in such a way that the abstract requirements from these specifications are met. The GP relies on INSPIRE codelists, extended codelists and on codelists specifically defined for END reporting.
 
 *Note: This document does not describe a formal mechanism to publish data sets as a network service. The default option would be to use a Predefined Download service implemented via OpenSearch/ATOM Feed. Upcoming alternatives, such as STAC or direct file linking from metadata, would also work.*
 
 ## References
 
 - [GeoPackage Encoding Rule for Environmental Noise Directive Reporting Data](https://www.eionet.europa.eu/reportnet/docs/noise/guidelines/geopackage-encoding-rule-end.pdf/view), v. 1.0 (2021-07-30)
-- [Environmental Noise Directive - Data model documentation](https://www.eionet.europa.eu/reportnet/docs/noise/data-model-documentation/data_model_24062021.pdf/view), v. 3.0 (2021-06-24)  
+- [END GeoPackage Templates on EIONET](https://www.eionet.europa.eu/reportnet/docs/noise/templates), v. 1.0 (2021-07-30)
+- [Environmental Noise Directive - Data model documentation](https://www.eionet.europa.eu/reportnet/docs/noise/data-model-documentation/data_model_24062021.pdf/view), v. 3.0 (2021-06-24) 
 - [GeoPackage Encoding Standard](https://www.geopackage.org/spec/), v. 1.3.0
+- *END DF1_5 Noise Sources:* GML Application Schemas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df15/END-MajorAirport.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df15/END-Agglomerations.xsd)
+- *END DF4_8 Strategic Noise Maps:* GML Application Schema for [Noise Exposure](https://www.epsilon-italia.it/public/HumanHealth-IRChangeProposal.xsd) based on Human Health and Safety, and the [XML Schema for tabular data] (https://www.epsilon-italia.it/public/end/end_df48/END-Noise_Exposure.xsd)
+- *END DF7_10 Strategic Noise Maps:* GML Application Schema for CoverageAreas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaAgglomerations.xsd)
+- *END DF7_10 Strategic Noise Maps:* XML Schema for Noise action plans description for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-Agglomerations.xsd)
+- END Additional Tabular Data XML schemas for [Competent Authorities](https://www.epsilon-italia.it/public/end/end_df2/END-CompetentAuthority.xsd), [Noise Limit Values](https://www.epsilon-italia.it/public/end/end_df3/END-LimitValue.xsd) and [Noise Control programmes](https://www.epsilon-italia.it/public/end/end_df69/END-NoiseControlProgramme.xsd)
+- [END Common schemas](https://www.epsilon-italia.it/public/end/END-base.xsd)
+- [END Codelists](https://dd.eionet.europa.eu/vocabularies), folder "Noise"
 - INSPIRE Transport Networks Data Specification, v. 4.0 
 - INSPIRE Area management / restriction / regulation zones & reporting units, v. 4.0 
 - INSPIRE Human Health and Safety Data Specification, v. 4.0 
@@ -38,8 +46,10 @@ This GP describes how data that falls under several INSPIRE data specifications 
 ## Other references
 
 Supporting materials are available:
+
 - [Video tutorials](https://www.eionet.europa.eu/reportnet/docs/noise/videos) and other help
 - [Presentation at the INSPIRE conference 2021](https://inspire.ec.europa.eu/conference2021/livestream/4)
+- [GeoPackage spatial data samples and templates](https://github.com/wetransform-os/geopackage-end) developed with ETL tool hale studio and published on Github
 
 ## Relevance & expected benefits
 
@@ -90,7 +100,6 @@ The following concrete implementations of the good practice are known:
 - EEA: EIONET/ReportNet ingests and validates END GeoPackages using [FME Server](https://www.safe.com/fme/fme-server/)
 - RIVM (NL): Uses the geopackage templates directly to collect data from 99 reporting agencies and then aggregates them into 4 big geopackages, using [hale connect](https://www.wetransform.to/products/haleconnect/)
 - UBA (DE): Uses a translated version of the geopackage schema as a template to collect data and then delivers aggregate GeoPackages, based on [hale studio](https://github.com/halestudio/hale/)
-- UBA (AT): ??
 
 In addition, the GeoPackage templates are available as presets in hale studio since the [release of version 4.1.0](https://github.com/halestudio/hale/releases/tag/4.1.0). There are also example hale studio transformation projects to generate compliant geopackages available [in this repository](https://github.com/wetransform-os/geopackage-end).
 
