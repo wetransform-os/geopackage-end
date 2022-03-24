@@ -1,5 +1,7 @@
 # INSPIRE Good Practice: INSPIRE-compliant Encoding of END Reporting Data using GeoPackages
 
+Authors: Thorsten Reitz (wetransform), Darja Lihtenegger (EEA), Stefania Morrone (Epsion Italia)
+
 ## Description of the Good Practice
 
 This good practice describes a mechanism to deliver reporting data for the European Noise Directive in such a way that all requirements of the INSPIRE Implementing Rules for the relevant themes are met. For this purpose a conceptual model was developed that re-uses INSPIRE data specifications heavily. For this conceptual model, two encodings were developed - one using the default encoding, GML, and one using the GeoPackage encoding, which is optimised for usability in common GIS software.
@@ -32,13 +34,6 @@ This GP describes how data that falls under several INSPIRE data specifications 
 - [END GeoPackage Templates on EIONET](https://www.eionet.europa.eu/reportnet/docs/noise/templates), v. 1.0 (2021-07-30)
 - [Environmental Noise Directive - Data model documentation](https://www.eionet.europa.eu/reportnet/docs/noise/data-model-documentation/data_model_24062021.pdf/view), v. 3.0 (2021-06-24) 
 - [GeoPackage Encoding Standard](https://www.geopackage.org/spec/), v. 1.3.0
-- *END DF1_5 Noise Sources:* GML Application Schemas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df15/END-MajorAirport.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df15/END-Agglomerations.xsd)
-- *END DF4_8 Strategic Noise Maps:* GML Application Schema for [Noise Exposure](https://www.epsilon-italia.it/public/HumanHealth-IRChangeProposal.xsd) based on Human Health and Safety, and the [XML Schema for tabular data](https://www.epsilon-italia.it/public/end/end_df48/END-Noise_Exposure.xsd)
-- *END DF7_10 Strategic Noise Maps:* GML Application Schema for CoverageAreas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaAgglomerations.xsd)
-- *END DF7_10 Strategic Noise Maps:* XML Schema for Noise action plans description for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-Agglomerations.xsd)
-- END Additional Tabular Data XML schemas for [Competent Authorities](https://www.epsilon-italia.it/public/end/end_df2/END-CompetentAuthority.xsd), [Noise Limit Values](https://www.epsilon-italia.it/public/end/end_df3/END-LimitValue.xsd) and [Noise Control programmes](https://www.epsilon-italia.it/public/end/end_df69/END-NoiseControlProgramme.xsd)
-- [END Common schemas](https://www.epsilon-italia.it/public/end/END-base.xsd)
-- [END Codelists](https://dd.eionet.europa.eu/vocabularies), folder "Noise"
 - INSPIRE Transport Networks Data Specification, v. 4.0 
 - INSPIRE Area management / restriction / regulation zones & reporting units, v. 4.0 
 - INSPIRE Human Health and Safety Data Specification, v. 4.0 
@@ -50,6 +45,15 @@ Supporting materials are available:
 - [Video tutorials](https://www.eionet.europa.eu/reportnet/docs/noise/videos) and other help
 - [Presentation at the INSPIRE conference 2021](https://inspire.ec.europa.eu/conference2021/livestream/4)
 - [GeoPackage spatial data samples and templates](https://github.com/wetransform-os/geopackage-end) developed with ETL tool hale studio and published on Github
+
+During the work, a set of GML Application schemas was also created for reference and to support INSPIRE validation:
+
+- *END DF1_5 Noise Sources:* GML Application Schemas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df15/END-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df15/END-MajorAirport.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df15/END-Agglomerations.xsd)
+- *END DF4_8 Strategic Noise Maps:* GML Application Schema for [Noise Exposure](https://www.epsilon-italia.it/public/HumanHealth-IRChangeProposal.xsd) based on Human Health and Safety, and the [XML Schema for tabular data](https://www.epsilon-italia.it/public/end/end_df48/END-Noise_Exposure.xsd)
+- *END DF7_10 Strategic Noise Maps:* GML Application Schema for CoverageAreas for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaMajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-CoverageAreaAgglomerations.xsd)
+- *END DF7_10 Strategic Noise Maps:* XML Schema for Noise action plans description for [Major Roads](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRoads.xsd), [Major Railways](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorRailways.xsd), [Major Airports](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-MajorAirports.xsd) and [Agglomerations](https://www.epsilon-italia.it/public/end/end_df710/END-NAP-Agglomerations.xsd)
+- [END Common schemas](https://www.epsilon-italia.it/public/end/END-base.xsd)
+- [END Codelists](https://dd.eionet.europa.eu/vocabularies), folder "Noise"
 
 ## Relevance & expected benefits
 
