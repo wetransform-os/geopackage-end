@@ -1,6 +1,6 @@
 # INSPIRE Good Practice: INSPIRE-compliant Encoding of END Reporting Data using GeoPackages
 
-Authors: Thorsten Reitz (wetransform), Darja Lihtenegger (EEA), Stefania Morrone (Epsion Italia)
+Authors: Thorsten Reitz (wetransform), Darja Lihtenegger (EEA), Stefania Morrone (Epsilon Italia)
 
 ## Description of the Good Practice
 

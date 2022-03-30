@@ -1,6 +1,6 @@
 # INSPIRE Good Practice: Encoding of INSPIRE Data using GeoPackages
 
-Authors: Thorsten Reitz (wetransform), Darja Lihtenegger (EEA), Stefania Morrone (Epsion Italia)
+Authors: Thorsten Reitz (wetransform), Darja Lihtenegger (EEA), Stefania Morrone (Epsilon Italia)
 
 ## Description of the Good Practice
 
