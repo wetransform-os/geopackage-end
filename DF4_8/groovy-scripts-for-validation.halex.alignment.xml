@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cf630f120-7e3f-41f9-914b-8e41f171a4af" priority="highest">
+        <source>
+            <class>
+                <type name="ESTATUnitReference" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ESTATUnitReference" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// check if pairs of title and Link are present&#xD;
+if (_source.p.ESTATLAUReferenceTitle.value()) {&#xD;
+	if (!_source.p.ESTATLAUReferenceLink.value()) {&#xD;
+		_log.error("EEAENDERROR_3: ESTATLAUReferenceTitle is present, but ESTATLAUReferenceLink is Empty")&#xD;
+	}&#xD;
+}&#xD;
+&#xD;
+if (_source.p.ESTATNUTSReferenceTitle.value()) {&#xD;
+	if (!_source.p.ESTATNUTSReferenceLink.value()) {&#xD;
+		_log.error("EEAENDERROR_4: ESTATNUTSReferenceTitle is present, but ESTATNUTSReferenceLink is Empty")&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C8b9d92d2-54e0-4eae-b544-1161cde3f489" priority="highest">
+        <source>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def c = _.context.collector()&#xD;
+&#xD;
+// initalise collectors with an empty set&#xD;
+if (!c.reportingLevelPresentValues.values()) {&#xD;
+	c.reportingLevelPresentValues &lt;&lt; ([] as Set)&#xD;
+}&#xD;
+if (!c.estatUnitCodes.values()) {&#xD;
+	c.estatUnitCodes &lt;&lt; ([] as Set)&#xD;
+}&#xD;
+&#xD;
+c.estatUnitCodes.values()[0] &lt;&lt; _source.p.ESTATUnitCode.value()&#xD;
+&#xD;
+c.reportingLevelPresentValues.values()[0] &lt;&lt; _source.p.reportingLevel.value()&#xD;
+&#xD;
+if (c.reportingLevelPresentValues.values()[0].size() &gt; 1) {&#xD;
+	_log.error("EEAENDERROR_7: There may only be one reporting level.")&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cc5339dc7-dda2-4674-8832-c56e5153a884" priority="lowest">
+        <source>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg">
+                    <condition lang="ECQL">reportingLevel = 'LAU'</condition>
+                </type>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def c = _.context.collector()&#xD;
+&#xD;
+if (!c.estatUnitRef) {&#xD;
+	_log.error("EEAENDERROR_1: LAU is selected, but ESTATUNITReference table is Empty")&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C77c40034-bc85-46fb-b88d-bbc143c3862b" priority="normal">
+        <source>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg">
+                    <condition lang="ECQL">reportingLevel = 'NUTS'</condition>
+                </type>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureMajorRoad" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def c = _.context.collector()&#xD;
+&#xD;
+if (!c.estatUnitRef) {&#xD;
+	_log.error("EEAENDERROR_2: NUTS is selected, but ESTATUnitReference table is Empty")&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cd4cbe860-405d-4bb9-bb72-904e3632e3e7" priority="normal">
+        <source>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// check if the present ESTATUnitCode is also present in ExposureMajorRoad&#xD;
+&#xD;
+def c = _.context.collector()&#xD;
+def thisESTATUnitCode = _source.p.ESTATUnitCode.value()&#xD;
+def collectedEstatCodes = c.noiseContoursPresentValues.values()[0]&#xD;
+&#xD;
+if (collectedEstatCodes) {&#xD;
+	if (!(collectedEstatCodes.contains(thisESTATUnitCode))) {&#xD;
+		_log.error("EEAENDERROR_9: All ESTATUnitCode entries from ExposureValue" +&#xD;
+				" must have a corresponding value in ExposureMajorRoad, but " + &#xD;
+				thisESTATUnitCode + " is missing.")&#xD;
+	}&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Ca32236f1-2f3e-43ac-b378-cb1e68166344" priority="normal">
+        <source>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg">
+                    <condition lang="ECQL">exposureType = "mostExposedFacadeIncludingAgglomeration"</condition>
+                </type>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def expArea = _source.p.exposedArea.value()&#xD;
+def expDwellings = _source.p.exposedDwellings.value()&#xD;
+&#xD;
+if (!expArea) {&#xD;
+  _log.error("EEAENDERROR_8: When exposureType is mostExposedFacadeIncludingAgglomeration, exposedArea must be set.")&#xD;
+}&#xD;
+&#xD;
+if (!expDwellings) {&#xD;
+  _log.error("EEAENDERROR_8: When exposureType is mostExposedFacadeIncludingAgglomeration, exposedDwellings must be set.")&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C29d6f0e7-33aa-4749-b381-4e0392d82a0e" priority="normal">
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// get collector&#xD;
+def c = _.context.collector()&#xD;
+&#xD;
+// test if mandatory values are present&#xD;
+def setMandatory = ["Lden55", "Lden5559"]&#xD;
+&#xD;
+def setPresentValues = c.noiseContoursPresentValues_Lden.values()[0];&#xD;
+&#xD;
+setPresentValues.each {&#xD;
+	value -&gt;&#xD;
+		_log.info("Present values in the data set: " + value.toString())&#xD;
+}&#xD;
+&#xD;
+setMandatory.each {&#xD;
+	mandatoryValue -&gt;&#xD;
+	if (setPresentValues) {&#xD;
+		if (!(setPresentValues.contains(mandatoryValue))) {&#xD;
+			_log.error("EEAENDERROR_6: Mandatory value " + mandatoryValue +" is not provided in NoiseContours.")&#xD;
+		}&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C9c1d8b0a-dfae-42a2-85a3-5b2e590287e8" priority="normal">
+        <source>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// test the geometry for type, self-intersections and other degenerations&#xD;
+def thesePolygons = _.geom.findPolygons(_source.p.location.value())&#xD;
+def id = _source.p.id.value()&#xD;
+&#xD;
+if (thesePolygons &amp;&amp; thesePolygons.size() &gt; 0) {&#xD;
+	thesePolygons.each {&#xD;
+		thisPoly -&gt;&#xD;
+			if (!thisPoly.getGeometry().isValid()) {&#xD;
+				_log.error("EEAENDERROR_11: The Geometry of object " + _id&#xD;
+	 				+ " &lt;i&gt; is degenerate.")&#xD;
+			}&#xD;
+	}&#xD;
+	&#xD;
+}&#xD;
+else {&#xD;
+	_log.error("EEAENDERROR_14: The object with id " + id&#xD;
+	 	+ " does not contain a geometry of type Polygon or MultiPolygon.")&#xD;
+}&#xD;
+&#xD;
+// test if this geometry overlaps with other geometries &#xD;
+// (performed as intersect on string representation test for performance reasons)&#xD;
+def candidates = null&#xD;
+thesePolygons.each {&#xD;
+	thisPoly -&gt;&#xD;
+		candidates = _.geom.spatialIndexQuery(spatialIndex: _spatialIndex, geometry: thisPoly)&#xD;
+		candidates.each {&#xD;
+			candidate -&gt;&#xD;
+				// detailed test&#xD;
+				def thisCandidate = candidate.p.location.value()&#xD;
+				if (thisCandidate) {&#xD;
+					def thisPolyAsLine = thisPoly.getGeometry().getGeometryN(0).getBoundary();&#xD;
+					def thisCandidateAsLine = thisCandidate.getGeometry().getGeometryN(0).getBoundary();&#xD;
+					if (thisPolyAsLine.crosses(thisCandidateAsLine)) {&#xD;
+						_log.error("EEAENDERROR_12: The objects " + id + " and " + candidate.p.id.value() &#xD;
+						+ " have overlapping noise contour polygons.")&#xD;
+					}&#xD;
+				}&#xD;
+		}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Caa109d4e-82b9-4939-9a57-d775b1a322c2" priority="highest">
+        <source>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lden" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// collect present values in the data&#xD;
+def c = _.context.collector()&#xD;
+if (!c.noiseContoursPresentValues_Lden.values()) {&#xD;
+  // initalise with an empty set&#xD;
+  c.noiseContoursPresentValues_Lden &lt;&lt; ([] as Set)&#xD;
+}&#xD;
+&#xD;
+c.noiseContoursPresentValues_Lden.values()[0] &lt;&lt; _source.p.category.value()&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C9a049a01-0271-4fad-b37c-13e013dc9068" priority="normal">
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// get collector&#xD;
+def c = _.context.collector()&#xD;
+&#xD;
+// test if mandatory values are present&#xD;
+def setMandatory = ["Lden55", "Lden5559"]&#xD;
+&#xD;
+def setPresentValues = c.noiseContoursPresentValues_Lnight.values()[0];&#xD;
+&#xD;
+setPresentValues.each {&#xD;
+	value -&gt;&#xD;
+		_log.info(value.toString())&#xD;
+}&#xD;
+&#xD;
+&#xD;
+setMandatory.each {&#xD;
+	mandatoryValue -&gt;&#xD;
+	if (setPresentValues) {&#xD;
+		if (!(setPresentValues.contains(mandatoryValue))) {&#xD;
+			_log.error("EEAENDERROR_6: Mandatory value " + mandatoryValue +" is not provided in NoiseContours.")&#xD;
+		}&#xD;
+	}&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C111287c1-81aa-4b64-a00d-cca4161a404f" priority="highest">
+        <source>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="NoiseContours_majorRoadsIncludingAgglomeration_Lnight" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// collect present values in the data&#xD;
+def c = _.context.collector()&#xD;
+if (!c.noiseContoursPresentValues_Lnight.values()) {&#xD;
+  // initalise with an empty set&#xD;
+  c.noiseContoursPresentValues_Lnight &lt;&lt; ([] as Set)&#xD;
+}&#xD;
+&#xD;
+c.noiseContoursPresentValues_Lnight.values()[0] &lt;&lt; _source.p.category.value()
+</core:text>
+        </complexParameter>
+    </cell>
+</alignment>

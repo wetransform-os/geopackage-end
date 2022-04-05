@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.2.0.SNAPSHOT">
+    <name>END Groovy Scripts for Validation</name>
+    <author>Thorsten Reitz</author>
+    <created>2022-03-31T14:50:53.016+02:00</created>
+    <modified>2022-04-05T21:35:32.775+02:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF4_8/groovy-scripts-for-validation.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">0e99c7b1-d648-400b-a0ae-f3c47d71b9dd</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/2021-14%20RIVM/Data/Data%20Flow%202%20-%20Exposure%20and%20Contours/epsg28992schemas/DF4_8-MajorRoads_withChecks.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.common.schema.persist.hsd.json.read">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">6a9f0727-5fe4-486e-b81a-591540bc6eaf</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/2021-14%20RIVM/Data/Data%20Flow%202%20-%20Exposure%20and%20Contours/epsg28992schemas/DF4_8-MajorRoads_withChecks.json</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.common.schema.hsd.json</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.geopackage.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">3f3cde0c-d83d-4d06-9748-f81b8febce3b</setting>
+        <setting name="source">file:/C:/wetransform/dev/geopackage-end/DF4_8/MajorRoads/MajorRoads-StrategicNoiseMaps_Sample500_AT.gpkg</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.geopackage</setting>
+    </resource>
+    <file name="alignment.xml" location="groovy-scripts-for-validation.halex.alignment.xml"/>
+    <file name="styles.sld" location="groovy-scripts-for-validation.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/1">location</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/count">1</property>
+</hale-project>
