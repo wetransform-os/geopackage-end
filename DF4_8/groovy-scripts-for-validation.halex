@@ -3,7 +3,7 @@
     <name>END Groovy Scripts for Validation</name>
     <author>Thorsten Reitz</author>
     <created>2022-03-31T14:50:53.016+02:00</created>
-    <modified>2022-04-05T21:35:32.775+02:00</modified>
+    <modified>2022-04-12T16:09:12.596+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -34,4 +34,11 @@
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lden/count">1</property>
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/1">location</property>
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}NoiseContours_majorRoadsIncludingAgglomeration_Lnight/count">1</property>
+    <complex-property name="variables">
+        <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+            <core:property name="ENVIRONMENT">
+                <core:value value="production"/>
+            </core:property>
+        </core:properties>
+    </complex-property>
 </hale-project>
