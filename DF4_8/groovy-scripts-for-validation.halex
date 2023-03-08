@@ -3,7 +3,7 @@
     <name>END Groovy Scripts for Validation</name>
     <author>Thorsten Reitz</author>
     <created>2022-03-31T14:50:53.016+02:00</created>
-    <modified>2022-04-12T16:09:12.596+02:00</modified>
+    <modified>2022-04-13T21:51:46.304+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>

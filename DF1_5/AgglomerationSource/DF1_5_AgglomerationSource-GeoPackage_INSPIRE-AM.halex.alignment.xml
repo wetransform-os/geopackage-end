@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C1571c758-c38b-4d58-a0c0-cf4bd6938fea" priority="normal">
+        <source name="types">
+            <class>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+            </class>
+        </target>
+        <complexParameter name="join">
+            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
+                <class>
+                    <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                </class>
+                <class>
+                    <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                </class>
+                <jp:condition>
+                    <property>
+                        <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                        <child name="id"/>
+                    </property>
+                    <property>
+                        <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                        <child name="AgglomerationSource_id"/>
+                    </property>
+                </jp:condition>
+            </jp:join-parameter>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C006759c8-6b80-48e7-889e-67b1ce6cac7d" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="beginLifespanVersion"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="beginLifespanVersion" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1a802c1e-37d8-4dc6-bb3c-bc06d5fda8df" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="competentAuthority_contact"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="competentAuthority" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="contact" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="Contact" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="contactInstructions" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C396692a0-4e60-4758-9501-ff5e877bef4a" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="competentAuthority_indivName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="competentAuthority" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="individualName" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8c61af22-f29a-4926-8ffb-fdc1be25ea48" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="competentAuthority_orgName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="competentAuthority" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="organisationName" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdc3471e8-2279-49b5-8a88-7f355a80998f" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="competentAuthority_posName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="competentAuthority" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="positionName" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbefe49cf-44e1-47c6-b393-2c9098d22e26" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="competentAuthority_role"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="competentAuthority" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="role" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C65d4835a-d8d5-4bd0-879b-a4a8bf4d8db7" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="designationPeriod_beginPosition"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="designationPeriod" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="TimePeriod" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="choice_1" ns="http://www.opengis.net/gml/3.2/TimePeriodType"/>
+                <child name="beginPosition" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb4416fe6-4bb5-430d-8db6-d867e195ec3f" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="designationPeriod_endPosition"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="designationPeriod" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="TimePeriod" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="choice_2" ns="http://www.opengis.net/gml/3.2/TimePeriodType"/>
+                <child name="endPosition" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C9936c9de-4baa-427d-8377-499939fe04ef" priority="normal">
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="environmentalDomain" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/EnvironmentalDomain/noise" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C03bf711d-2db7-471a-9b78-8efd1de8f408" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="geometry"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cc763d334-6055-4065-9860-849b2b18e449" priority="lowest">
+        <source name="var">
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="ManagementRestrictionOrRegulationZone_END_AgglomerationSource_{id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7dc7d42d-34e7-4806-8fb8-81b885bdaddd" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C7160303f-040d-4c2c-ba07-f35018698dfa" priority="lowest">
+        <source name="var">
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="ManagementRestrictionOrRegulationZone_END_AgglomerationSource_{id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd27d96d8-3b98-43ad-a336-19ee05bef7f6" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C404d5ae8-035c-4401-9a8b-aa23caa8c687" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7b12a037-a55d-4a58-ab28-a27041915db7" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_versionId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="versionId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8eaabfad-005c-4af9-b329-b95534d35272" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="legalBasis_level"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="legalBasis" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="LegislationCitation" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="level" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cffe2364b-cdbb-42a5-96c6-dc21e8c6a504" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSourceVoidables" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="legalBasis_link"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="legalBasis" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="LegislationCitation" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="link" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C668b4a46-926c-4fd5-9f17-2945e6fceee2" priority="normal">
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="legalBasis" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://data.europa.eu/eli/dir/2002/49/oj" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="C57aa284b-70d9-423b-85e0-e2d693009eba" priority="normal">
+        <source name="anchor">
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_nameEng">
+                    <condition lang="ECQL">value is not null</condition>
+                </child>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/am/4.0">
+                    <context>0</context>
+                </child>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="language" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="en" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca64e445b-f5a1-4543-a82e-f04a1c8e9d57" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_nameEng">
+                    <condition lang="ECQL">value is not null</condition>
+                </child>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/am/4.0">
+                    <context>0</context>
+                </child>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2552fa5f-aeeb-4a85-8f00-da874631b4ef" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_localNameLanguage"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="language" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C63179a7a-9321-49cf-bbb8-0c9998217b02" priority="normal">
+        <source>
+            <property>
+                <type name="AgglomerationSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="agglomerationName_localName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C35df82b2-8f2c-4d45-8a0b-1f06cfedd3bc" priority="normal">
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="specialisedZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode/ENDAgglomeration" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C87d411e9-37bf-413e-ba1a-abaed891a1d6" priority="normal">
+        <target>
+            <property>
+                <type name="ManagementRestrictionOrRegulationZoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="zoneType" ns="http://inspire.ec.europa.eu/schemas/am/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/ZoneTypeCode/noiseRestrictionZone" name="value"/>
+    </cell>
+</alignment>

@@ -108,6 +108,32 @@ if (!c.estatUnitRef) {&#xD;
 </core:text>
         </complexParameter>
     </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C4b7e43c0-49b5-4892-aec0-ddee69c0f3b2" priority="highest">
+        <source>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ExposureValue" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// collect values for MostExposedFacadeIncludingAgglomerations if present&#xD;
+def c = _.context.collector()&#xD;
+def collectedMEFIAValues = c.collectedMEFIAValues.values()&#xD;
+&#xD;
+def exposureType = _source.p.exposureType.value()&#xD;
+&#xD;
+if (exposureType.equals("MostExposedFacadeIncludingAgglomerations")) {&#xD;
+	collectedMEFIAValues &lt;&lt; _source.p.noiseLevel.value()&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cd4cbe860-405d-4bb9-bb72-904e3632e3e7" priority="normal">
         <source>
             <class>
@@ -122,7 +148,6 @@ if (!c.estatUnitRef) {&#xD;
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 // check if the present ESTATUnitCode is also present in ExposureMajorRoad&#xD;
-&#xD;
 def c = _.context.collector()&#xD;
 def thisESTATUnitCode = _source.p.ESTATUnitCode.value()&#xD;
 def collectedEstatCodes = c.noiseContoursPresentValues.values()[0]&#xD;
@@ -134,7 +159,20 @@ if (collectedEstatCodes) {&#xD;
 				thisESTATUnitCode + " is missing.")&#xD;
 	}&#xD;
 }&#xD;
-
+&#xD;
+// check if Lden55, lden65 and Lden75 are provided for MostExposedFacadeIncludingAgglomerations&#xD;
+def collectedMEFIAValues = c.collectedMEFIAValues.values()&#xD;
+def requiredValues = ["Lden55", "Lden65", "Lden75"]&#xD;
+&#xD;
+if (collectedMEFIAValues) {&#xD;
+	requiredValues.each {&#xD;
+		thisValue -&gt;&#xD;
+			if (!(collectedMEFIAValues.contains(thisValue))) {&#xD;
+				_log.error("EEAENDERROR_13: Mandatory value " + thisValue +&#xD;
+						" is not provided in ExposureValue table for MostExposedFacadeIncludingAgglomerations")&#xD;
+			}&#xD;
+	}&#xD;
+}
 </core:text>
         </complexParameter>
     </cell>
@@ -182,16 +220,16 @@ def setMandatory = ["Lden55", "Lden5559"]&#xD;
 &#xD;
 def setPresentValues = c.noiseContoursPresentValues_Lden.values()[0];&#xD;
 &#xD;
-setPresentValues.each {&#xD;
-	value -&gt;&#xD;
-		_log.info("Present values in the data set: " + value.toString())&#xD;
-}&#xD;
-&#xD;
 setMandatory.each {&#xD;
 	mandatoryValue -&gt;&#xD;
 	if (setPresentValues) {&#xD;
 		if (!(setPresentValues.contains(mandatoryValue))) {&#xD;
-			_log.error("EEAENDERROR_6: Mandatory value " + mandatoryValue +" is not provided in NoiseContours.")&#xD;
+			if (_project.vars.ENVIRONMENT.equals("production")) {&#xD;
+				_log.error("EEAENDERROR_6: Mandatory value " + mandatoryValue + " is not provided in NoiseContours.")&#xD;
+			} &#xD;
+			else {&#xD;
+				_log.warn("EEAENDERROR_6: Mandatory value " + mandatoryValue + " is not provided in NoiseContours.")&#xD;
+			}&#xD;
 		}&#xD;
 	}&#xD;
 }
@@ -244,7 +282,7 @@ thesePolygons.each {&#xD;
 					def thisPolyAsLine = thisPoly.getGeometry().getGeometryN(0).getBoundary();&#xD;
 					def thisCandidateAsLine = thisCandidate.getGeometry().getGeometryN(0).getBoundary();&#xD;
 					if (thisPolyAsLine.crosses(thisCandidateAsLine)) {&#xD;
-						_log.error("EEAENDERROR_12: The objects " + id + " and " + candidate.p.id.value() &#xD;
+						_log.warn("EEAENDERROR_12: The objects " + id + " and " + candidate.p.id.value() &#xD;
 						+ " have overlapping noise contour polygons.")&#xD;
 					}&#xD;
 				}&#xD;
