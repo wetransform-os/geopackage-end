@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C11832964-dbc5-42de-94cb-646b1f7bd7ea" priority="normal">
+        <source>
+            <class>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Ccf3c749c-bd88-4c94-b6b7-e6278a3d4adf" priority="normal">
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="designatorIATA" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="nilReason"/>
+            </property>
+        </target>
+        <parameter value="unknown" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C56a37864-8837-4e33-adf6-cfaf8c8de79d" priority="normal">
+        <source>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="airportName_localNameLanguage"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="geographicalName" ns="http://inspire.ec.europa.eu/schemas/tn/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="language" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccb6ade5d-0d99-45d2-a491-bc1266f5d152" priority="normal">
+        <source>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="airportName_localName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="geographicalName" ns="http://inspire.ec.europa.eu/schemas/tn/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb06a1df2-012c-4b12-af92-4de81cbe135a" priority="normal">
+        <source>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="geometry"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Point" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ca76e659a-f06a-4f72-a88e-b2b8b573e003" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="AerodromeNode_ENDDF1_5_{id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ca95bb2e8-8dc4-46ab-9c61-26627022df41" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="AerodromeNode_ENDDF1_5_{id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb3b9f6c5-0ca8-429c-8c31-0264d85a910f" priority="normal">
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="{{project:INSPIRE_DATASETNAMESPACE}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C543df1b5-bcec-4109-932c-268fb25b9eb8" priority="normal">
+        <source>
+            <property>
+                <type name="MajorAirportSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="ICAOCode"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="locationIndicatorICAO" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C1fa610f9-1c42-4f96-9c49-4bd9c4a57868" priority="normal">
+        <target>
+            <property>
+                <type name="AerodromeNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+                <child name="significantPoint" ns="http://inspire.ec.europa.eu/schemas/tn-a/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="value"/>
+    </cell>
+</alignment>

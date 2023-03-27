@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C581efbfc-ad42-4adb-934d-af62135543c6" priority="higher">
+        <source>
+            <class>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// This function collects the first and last points of each&#xD;
+// link and stores them in a map, where the points serve as&#xD;
+// keys, while the IDs of the links serve as values.&#xD;
+&#xD;
+// get collector&#xD;
+def c = _.context.collector()&#xD;
+def pointsIdsMap = c.nodes&#xD;
+&#xD;
+// get geometry and extract first and last point&#xD;
+def thisGeometry = _.geom.find(_source.p.centrelineGeometry.first())&#xD;
+def thisCoordinates = thisGeometry.geometry.getCoordinates()&#xD;
+def first = thisCoordinates[0]&#xD;
+def last = thisCoordinates[thisCoordinates.length - 1]&#xD;
+&#xD;
+// add ID of this MajorRoadSource object to map value list&#xD;
+def thisId =  _source.p.id.value()&#xD;
+&#xD;
+pointsIdsMap[first].start &lt;&lt; thisId&#xD;
+pointsIdsMap[last].stop &lt;&lt; thisId
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ccf44a991-9c50-4d29-a94b-dd3d335d7d20" priority="normal">
+        <source>
+            <class>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C374f6fae-50e5-4363-9f8e-b41e91ad9178" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="centrelineGeometry"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="centrelineGeometry" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C8b4807c1-7f17-45cc-94f2-08d984f91511" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="endNode" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// get the collector with the references from Links to Nodes&#xD;
+&#xD;
+def c = _.context.collector()&#xD;
+def linksIdsMap = c.links&#xD;
+def thisLinkID = id&#xD;
+linksIdsMap[thisLinkID].eachCollector {&#xD;
+  key, child -&gt;&#xD;
+    if (key == "start") {&#xD;
+      child.each{&#xD;
+        thisId -&gt;&#xD;
+          _target {&#xD;
+            href ("#" + thisId)&#xD;
+          }&#xD;
+      }&#xD;
+    }&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C79f12d8d-beae-482b-bef4-c268b219548f" priority="normal">
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="fictitious" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C297aaaea-c378-4bed-8349-c15e9e3e811f" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadName_localNameLanguage"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="geographicalName" ns="http://inspire.ec.europa.eu/schemas/tn/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="language" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbb99237d-94e7-45b6-9d35-75f35f3293bf" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="roadName_localName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="geographicalName" ns="http://inspire.ec.europa.eu/schemas/tn/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cf781c683-4a02-4d8b-8af3-ccfa3dc051b8" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="RoadLink.{id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C88cf824d-243b-41b2-88e7-0f147cce4619" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="identifier" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="{{project:INSPIRE_DATASET_NAMESPACE}}{inspireId_namespace}/{inspireId_localId}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb77ee83f-04f5-4afe-bc01-6a01ec518a9e" priority="normal">
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="identifier" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="codeSpace"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/ids" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccb51947b-f126-44ac-a279-40ca31957940" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_localId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C841beeb0-dfbd-4d1e-995d-158f7678c658" priority="normal">
+        <source name="var">
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_namespace"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="{{project:INSPIRE_DATASET_NAMESPACE}}{inspireId_namespace}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C68a7556d-71b3-45aa-b986-e2c968bd2c6c" priority="normal">
+        <source>
+            <property>
+                <type name="MajorRoadSource" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="inspireId_versionId"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="RoadLinkType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/net/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="versionId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C749d4a29-e9fb-4a49-aeaf-8c5fdf170832" priority="normal">
+        <target>
+            <class>
+                <type name="RoadNodeType" ns="http://inspire.ec.europa.eu/schemas/tn-ro/4.0"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// This function creates a WaterwayNode with references (Node -&gt; Links) for&#xD;
+// each collected coordinate object, and stores information to create&#xD;
+// inverse references (Link -&gt; Node)&#xD;
+&#xD;
+// get collector&#xD;
+def c = _.context.collector()&#xD;
+def pointsIdsMap = c.nodes&#xD;
+def linksIdsMap = c.links&#xD;
+&#xD;
+pointsIdsMap.eachCollector{&#xD;
+  key, child -&gt;&#xD;
+    // define ID&#xD;
+    def thisInspireId = "RoadNode." + UUID.nameUUIDFromBytes(key.toString().getBytes())&#xD;
+    def pointGeometry = _.geom.with(geometry: "POINT(" + key.x + " " + key.y + ")", crs: "EPSG:3035")&#xD;
+&#xD;
+    _target {&#xD;
+      geometry {&#xD;
+        Point (pointGeometry)&#xD;
+      }&#xD;
+      child.start.each{&#xD;
+        thisId -&gt;&#xD;
+          // Store Link ID with mapping to Node ID&#xD;
+          linksIdsMap[thisId].start &lt;&lt; thisInspireId&#xD;
+&#xD;
+          // assign the spokeStart property&#xD;
+          spokeStart {&#xD;
+            href("#RoadLink." + thisId)&#xD;
+          }&#xD;
+      }&#xD;
+      child.stop.each{&#xD;
+        thisId -&gt;&#xD;
+          // Store Link ID with mapping to Node ID&#xD;
+          linksIdsMap[thisId].stop &lt;&lt; thisInspireId&#xD;
+&#xD;
+          // assign the spokeEnd property&#xD;
+          spokeEnd {&#xD;
+            href("#RoadLink." + thisId)&#xD;
+          }&#xD;
+      }&#xD;
+      id (thisInspireId)&#xD;
+      inspireId {&#xD;
+        Identifier {&#xD;
+          localId( thisInspireId )&#xD;
+          namespace ( _project.vars.INSPIRE_DATASET_NAMESPACE )&#xD;
+        }&#xD;
+      }&#xD;
+    }&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+</alignment>

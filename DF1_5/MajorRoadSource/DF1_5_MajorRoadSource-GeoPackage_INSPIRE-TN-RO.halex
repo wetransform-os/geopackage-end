@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="4.2.0.SNAPSHOT">
+    <name>END DF1_5 Major Roads GeoPackage to INSPIRE AM for Validation</name>
+    <author>Thorsten Reitz</author>
+    <created>2023-03-27T09:44:18.031+02:00</created>
+    <modified>2023-03-27T10:40:34.829+02:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/geopackage-end/DF1_5/MajorRoadSource/DF1_5_MajorRoadSource-GeoPackage_INSPIRE-TN-RO.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="onlyElementsMappable">true</setting>
+        <setting name="resourceId">11ae0acc-1b27-4a86-838f-e4e1c78dd391</setting>
+        <setting name="source">https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.geopackage.schema.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">2afe346d-7fad-438a-a91b-4210eb5a9600</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-07%20EEA%20FW2020-2024/Data/MajorRoadSource_samples.gpkg</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.geopackage</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/gpkg">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRoadSource</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRoadSourceVoidables</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0 1 2 3</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">CodelistProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>codelist</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DatasetDefaultProperties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tableName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>propertyName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>attribute</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>defaultValue</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRoadSource</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>centrelineGeometry</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">LINESTRING</hsd:name>
+        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-metadata">
+            <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+                <core:property name="srsText">
+                    <core:value value="PROJCS[&quot;ETRS89 / LAEA Europe&quot;, &#xD;&#xA;  GEOGCS[&quot;ETRS89&quot;, &#xD;&#xA;    DATUM[&quot;European Terrestrial Reference System 1989&quot;, &#xD;&#xA;      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], &#xD;&#xA;      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &#xD;&#xA;      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], &#xD;&#xA;    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xD;&#xA;    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xD;&#xA;    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xD;&#xA;    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xD;&#xA;    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], &#xD;&#xA;  PROJECTION[&quot;Lambert_Azimuthal_Equal_Area&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9820&quot;]], &#xD;&#xA;  PARAMETER[&quot;latitude_of_center&quot;, 51.99999999999999], &#xD;&#xA;  PARAMETER[&quot;longitude_of_center&quot;, 10.0], &#xD;&#xA;  PARAMETER[&quot;false_easting&quot;, 4321000.0], &#xD;&#xA;  PARAMETER[&quot;false_northing&quot;, 3210000.0], &#xD;&#xA;  UNIT[&quot;m&quot;, 1.0], &#xD;&#xA;  AXIS[&quot;Northing&quot;, NORTH], &#xD;&#xA;  AXIS[&quot;Easting&quot;, EAST], &#xD;&#xA;  AUTHORITY[&quot;EPSG&quot;,&quot;3035&quot;]]"/>
+                </core:property>
+                <core:property name="srs">
+                    <core:value value="3035"/>
+                </core:property>
+                <core:property name="authName">
+                    <core:value value="EPSG"/>
+                </core:property>
+                <core:property name="dimension">
+                    <core:value value="0"/>
+                </core:property>
+            </core:properties>
+        </hsd:constraint>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.LineString"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadId_identifier</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadNationalCode</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadName_localName</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadName_localNameLanguage</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>roadName_nameEng</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>annualTrafficFlow</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>length</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>linkToReferenceDataset</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>linkToReferenceObject</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inspireId_localId</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inspireId_namespace</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inspireId_versionId</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>EURoadId</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">TEXT</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">MajorRoadSourceVoidables</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="primary-key">
+                            <core:list xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+<core:entry>
+    <core:name>id</core:name>
+</core:entry>
+                            </core:list>
+                        </hsd:constraint>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>validFrom</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>inNetwork</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>beginLifespanVersion</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">DATETIME</hsd:name>
+        <hsd:constraint type="binding" value="java.time.Instant"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>MajorRoadSource_id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>id</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="false"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/gpkg">INTEGER</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.Long"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.geopackage.instance.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">a986c848-7148-4727-9263-73f5de590762</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/European%20Environmental%20Agency/2020-07%20EEA%20FW2020-2024/Data/MajorRoadSource_samples.gpkg</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.geopackage</setting>
+    </resource>
+    <file name="alignment.xml" location="DF1_5_MajorRoadSource-GeoPackage_INSPIRE-TN-RO.halex.alignment.xml"/>
+    <file name="styles.sld" location="DF1_5_MajorRoadSource-GeoPackage_INSPIRE-TN-RO.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}ERoadType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}ERoadType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}ERoadType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FormOfWayType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FormOfWayType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FormOfWayType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FunctionalRoadClassType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FunctionalRoadClassType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}FunctionalRoadClassType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}NumberOfLanesType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}NumberOfLanesType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}NumberOfLanesType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadAreaType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadAreaType/2">{http://www.opengis.net/gml/3.2/AbstractSurface}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadAreaType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkSequenceType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkSequenceType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkSequenceType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}centrelineGeometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkType/2">{http://www.opengis.net/gml/3.2/AbstractCurve}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadLinkType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNameType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNameType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNameType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNodeType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNodeType/2">{http://www.opengis.net/gml/3.2}Point</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadNodeType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceAreaType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceAreaType/2">{http://www.opengis.net/gml/3.2/AbstractSurface}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceAreaType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceTypeType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceTypeType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadServiceTypeType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadSurfaceCategoryType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadSurfaceCategoryType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadSurfaceCategoryType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadWidthType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadWidthType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}RoadWidthType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}SpeedLimitType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}SpeedLimitType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}SpeedLimitType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}VehicleTrafficAreaType/1">{http://inspire.ec.europa.eu/schemas/net/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}VehicleTrafficAreaType/2">{http://www.opengis.net/gml/3.2/AbstractSurface}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/tn-ro/4.0}VehicleTrafficAreaType/count">2</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Glacial_and_Periglacial_Structures_L/1">geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Glacial_and_Periglacial_Structures_L/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Instabilities_PLG/1">geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Instabilities_PLG/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Karstic_Structures_PLG/1">geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Karstic_Structures_PLG/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Karstic_Structures_PT/1">geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}Karstic_Structures_PT/count">1</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorRoadSource/1">centrelineGeometry</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/gpkg}MajorRoadSource/count">1</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}CurvePropertyType/1">{http://www.opengis.net/gml/3.2/AbstractCurve}choice</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}CurvePropertyType/count">1</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gsml/4.1/GeoSciML-Basic}NaturalGeomorphologicFeatureType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gsml/4.1/GeoSciML-Basic}NaturalGeomorphologicFeatureType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gsml/4.1/GeoSciML-Basic}NaturalGeomorphologicFeatureType/count">2</property>
+    <complex-property name="variables">
+        <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+            <core:property name="INSPIRE_DATASET_NAMESPACE">
+                <core:value value="https://www.wetransform.to/end-validation-example-mroadsource/"/>
+            </core:property>
+        </core:properties>
+    </complex-property>
+</hale-project>

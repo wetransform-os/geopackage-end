@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="Cc393ef7f-7316-4157-bcd4-01c54631fb39" priority="normal">
+        <target>
+            <class>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def codelistProperties = [&#xD;
+  ["AgglomerationSource", "environmentalDomain", &#xD;
+  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain"],&#xD;
+  ["AgglomerationSource", "specialisedZoneType", &#xD;
+  "https://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode"],&#xD;
+  ["AgglomerationSource", "zoneType", &#xD;
+  "http://inspire.ec.europa.eu/codelist/ZoneTypeCode"],&#xD;
+  ["AgglomerationSource", "agglomerationName_localNameLanguage", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/common/iso639-3"],&#xD;
+  ["AgglomerationSource", "agglomerationId_identifierScheme", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme"],&#xD;
+  ["AgglomerationSource", "applicableSource", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/noise/NoiseSourceValue"],&#xD;
+  ["AgglomerationSource", "competentAuthority_role", &#xD;
+  "http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue"],&#xD;
+  ["AgglomerationSource", "legalBasis_level", &#xD;
+  "http://inspire.ec.europa.eu/codelist/LegislationLevelValue"]&#xD;
+]&#xD;
+  &#xD;
+codelistProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName ( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		codelist ( value[2] )&#xD;
+	}&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C28fc3283-23e1-4345-817e-05e3bbd1fb05" priority="normal">
+        <target>
+            <property>
+                <type name="CodelistProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.create" id="C05d14c56-752f-496f-9f17-7c78e08fa033" priority="normal">
+        <target>
+            <class>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def dataSetProperties = [&#xD;
+  ["AgglomerationSource", "agglomerationId_identifierScheme", null, &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/IdentifierScheme/EUENDCode"],&#xD;
+  ["AgglomerationSource", "zoneType", "href", &#xD;
+  "http://inspire.ec.europa.eu/codelist/ZoneTypeCode/noiseRestrictionZone"],&#xD;
+  ["AgglomerationSource", "specialisedZoneType", "href", &#xD;
+  "http://dd.eionet.europa.eu/vocabulary/inspire/SpecialisedZoneTypeCode/ENDAgglomeration"],&#xD;
+  ["AgglomerationSource", "environmentalDomain", "href",&#xD;
+  "http://inspire.ec.europa.eu/codelist/EnvironmentalDomain/noise"],&#xD;
+  ["AgglomerationSource", "designationPeriod","nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["AgglomerationSource", "competentAuthority", "nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"],&#xD;
+  ["AgglomerationSource", "legalBasis_link", "href", &#xD;
+  "http://data.europa.eu/eli/dir/2002/49/oj"],&#xD;
+  ["AgglomerationSource", "legalBasis_level", "href", &#xD;
+  "http://inspire.ec.europa.eu/codelist/LegislationLevelValue/european"],&#xD;
+  ["AgglomerationSource", "beginLifespanVersion", "nilReason", &#xD;
+  "http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"]&#xD;
+]&#xD;
+  &#xD;
+dataSetProperties.each {&#xD;
+  value -&gt;&#xD;
+	_target {&#xD;
+	    tableName ( value[0] )&#xD;
+		propertyName ( value[1] )&#xD;
+		attribute ( value[2] )&#xD;
+		defaultValue ( value[3] )&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.numeric.sequentialid" id="C20a9aab9-5a69-4170-a9f1-af155ddef1f5" priority="normal">
+        <target>
+            <property>
+                <type name="DatasetDefaultProperties" ns="http://www.esdi-humboldt.eu/hale/gpkg"/>
+                <child name="id"/>
+            </property>
+        </target>
+        <parameter value="" name="prefix"/>
+        <parameter value="type" name="sequence"/>
+        <parameter value="" name="suffix"/>
+    </cell>
+</alignment>
